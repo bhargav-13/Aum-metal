@@ -1,17 +1,24 @@
-import { Section } from '../components/Section'
-import { Button } from '../components/Button'
+import { HeroHome } from '../components/sections/HeroHome'
+import { AboutHome } from '../components/sections/AboutHome'
+import { ProductHome } from '../components/sections/ProductHome'
+import { IndustryHome } from '../components/sections/IndustryHome'
+import { WhyAumHome } from '../components/sections/WhyAumHome'
+import { CapabilitiesHome } from '../components/sections/CapabilitiesHome'
+import { TestimonialsHome } from '../components/sections/TestimonialsHome'
+import { FooterHome } from '../components/sections/FooterHome'
 
 export const Home = () => {
   return (
-    <Section id="home" className="bg-red-50 min-h-screen">
-      <div className="text-center">
-        <h1 className="text-4xl font-bold mb-4 text-blue-600">Welcome to Our Website</h1>
-        <p className="text-xl text-gray-600 mb-8">
-          A clean, simple, and modern static website
-        </p>
-        <Button>Get Started</Button>
-      </div>
-    </Section>
+    <>
+      <HeroHome />
+      <AboutHome />
+      <ProductHome />
+      <IndustryHome />
+      <WhyAumHome />
+      <CapabilitiesHome />
+      <TestimonialsHome />
+      <FooterHome />
+    </>
   )
 }
 
