@@ -12,7 +12,7 @@ export const Header = () => {
   ]
 
   return (
-    <header className="bg-[#8B1A1A] text-white w-full pt-12">
+    <header className="bg-[#98012E] text-white w-full pt-4">
       <nav className="content-padding pt-4">
         <div className="flex items-center justify-between">
 

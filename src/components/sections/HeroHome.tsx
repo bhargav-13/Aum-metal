@@ -2,7 +2,8 @@ export const HeroHome = () => {
   return (
     <section 
       id="hero-home" 
-      className="relative min-h-screen w-full flex items-center justify-center overflow-hidden"
+      className="relative w-full flex items-start justify-center overflow-hidden"
+      style={{ height: 'calc(100dvh - 79px)', minHeight: 'calc(100vh - 79px)' }}
     >
       {/* Background Image with Gradient Overlay */}
       <div className="absolute inset-0 z-0">
@@ -27,23 +28,28 @@ export const HeroHome = () => {
           }}
         />
         {/* Gradient overlay from dark red to white */}
-        <div className="absolute inset-0 bg-gradient-to-b from-[#8B1A1A] via-[#8B1A1A]/70 to-white/90" />
+        <div 
+          className="absolute inset-0" 
+          style={{
+            background: 'linear-gradient(180deg, #98012E 0%, #FFFFFF 64.93%)'
+          }}
+        />
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-12 md:py-20 text-center">
+      <div className="relative z-10 w-full content-padding pt-[90px] pb-4 sm:pb-6 md:pb-8 text-center flex flex-col items-center max-w-full">
         {/* Welcome Badge */}
-        <div className="inline-block bg-white rounded-full px-4 md:px-6 py-2 mb-4 md:mb-6 shadow-lg">
-          <p className="text-sm md:text-base text-gray-700 font-medium">Welcome to, AUM Metal Alloy</p>
+        <div className="inline-block bg-white rounded-full px-3 sm:px-4 md:px-6 py-1.5 sm:py-2 mb-3 sm:mb-4 md:mb-6 shadow-lg">
+          <p className="text-xs sm:text-sm md:text-base text-gray-700 font-medium">Welcome to, AUM Metal Alloy</p>
         </div>
 
         {/* Main Heading */}
-        <h1 className="text-3xl md:text-5xl lg:text-6xl font-bold text-[#8B1A1A] mb-4 md:mb-6 max-w-4xl mx-auto leading-tight px-2">
+        <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-bold text-[#8B1A1A] mb-3 sm:mb-4 md:mb-6 max-w-4xl mx-auto leading-tight px-2">
           Manufacturer of Brass Rods, Ingots & Billets
         </h1>
 
         {/* Description Paragraph */}
-        <p className="text-sm md:text-base lg:text-lg text-gray-700 mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed px-4">
+        <p className="text-xs sm:text-sm md:text-base lg:text-lg text-gray-700 mb-4 sm:mb-6 md:mb-8 max-w-3xl mx-auto leading-relaxed px-2 sm:px-4">
           Aum Metal Alloys specializes in manufacturing high-quality{' '}
           <span className="text-[#FF8C42] font-semibold">brass rods, Ingots, and billets engineered</span>
           {' '}for superior strength, dimensional accuracy, and consistent metallurgical properties—serving industrial, engineering, and export markets.
