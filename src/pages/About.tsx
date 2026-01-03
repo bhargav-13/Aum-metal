@@ -1,4 +1,5 @@
 import { HeroAbout } from '../components/sections/HeroAbout'
+import { CapabilitiesAbout } from '../components/sections/CapabilitiesAbout'
 import { AboutProfile } from '../components/sections/AboutProfile'
 import { ProductsAbout } from '../components/sections/ProductsAbout'
 import { TeamAbout } from '../components/sections/TeamAbout'
@@ -10,6 +11,7 @@ export const About = () => {
   return (
     <>
       <HeroAbout />
+      <CapabilitiesAbout />
       <AboutProfile />
       <ProductsAbout />
       <TeamAbout />

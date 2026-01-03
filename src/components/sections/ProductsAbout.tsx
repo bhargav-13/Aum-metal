@@ -11,8 +11,8 @@ export const ProductsAbout = () => {
   ];
 
   return (
-    <section className="relative w-full bg-gradient-to-br from-[#FFF5F7] to-[#FFEEF3] py-16 lg:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12">
+    <section className="relative w-full h-screen min-h-screen bg-gradient-to-br from-[#FFF5F7] to-[#FFEEF3] flex items-center overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] mb-4 leading-tight">
