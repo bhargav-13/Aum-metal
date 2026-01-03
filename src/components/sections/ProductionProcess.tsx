@@ -17,7 +17,7 @@ export const ProductionProcess = () => {
   ];
 
   return (
-    <section className="relative w-full h-screen min-h-screen bg-white flex items-center overflow-hidden">
+    <section className="relative min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
         {/* Heading */}
         <div className="text-center mb-12">

@@ -1,8 +1,8 @@
 export const AboutProfile = () => {
   return (
-    <section className="relative w-full h-screen min-h-screen flex items-center justify-center bg-white overflow-hidden">
-      <div className="w-full h-full px-4 sm:px-6 md:content-padding py-12">
-        <div className="max-w-7xl mx-auto h-full flex items-center">
+    <section className="relative min-h-screen w-full flex items-center justify-center bg-white py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+      <div className="w-full px-4 sm:px-6 md:content-padding">
+        <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
             {/* Left Side - Content */}
             <div className="flex flex-col justify-center order-2 lg:order-1">

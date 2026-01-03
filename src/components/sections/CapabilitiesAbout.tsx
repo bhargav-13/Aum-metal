@@ -33,7 +33,7 @@ export const CapabilitiesAbout = () => {
   ];
 
   return (
-    <section className="relative w-full bg-white h-screen min-h-screen flex items-center overflow-hidden">
+    <section className="relative min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
         {/* Cards Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 lg:gap-6">
