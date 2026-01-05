@@ -4,10 +4,10 @@ export const HeroAbout = () => {
       <div className="w-full h-full px-4 sm:px-6 md:content-padding py-16 lg:py-20 flex items-center">
         <div className="max-w-7xl mx-auto w-full text-center">
           {/* Tagline/Breadcrumb */}
-          <div className="mb-12 lg:mb-16">
+          <div className="mb-8 sm:mb-12 lg:mb-16">
             <div className="inline-block">
-              <div className="border-2 border-white/80 rounded-full px-8 sm:px-10 md:px-12 py-4 sm:py-5">
-                <p className="font-['Sansation'] font-normal text-white text-[14px] sm:text-[16px] md:text-[18px] lg:text-[19px] leading-relaxed">
+              <div className="border-2 border-white/80 rounded-full px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 py-3 xs:py-3.5 sm:py-4 md:py-5">
+                <p className="font-['Sansation'] font-normal text-white text-[12px] xs:text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[19px] leading-relaxed text-center">
                   Precision Brass Manufacturing Built on Quality, Consistency & Trust
                 </p>
               </div>
@@ -15,7 +15,7 @@ export const HeroAbout = () => {
           </div>
 
           {/* Main Heading */}
-          <h1 className="font-['DM_Sans'] font-black text-[#98012E] text-[44px] sm:text-[56px] md:text-[68px] lg:text-[80px] xl:text-[96px] leading-tight tracking-tight">
+          <h1 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[40px] sm:text-[48px] md:text-[60px] lg:text-[72px] xl:text-[96px] leading-tight tracking-tight">
             About Aum Metal Alloy
           </h1>
         </div>

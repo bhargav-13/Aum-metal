@@ -50,7 +50,7 @@ export const IndustryHome = () => {
         <img
           src={industryImageBg}
           alt=""
-          className="w-[50vw] h-80vh md:h-full  object-cover opacity-100"
+          className="w-full sm:w-[50vw] h-[40vh] xs:h-[50vh] sm:h-[80vh] md:h-full object-cover object-center sm:object-left opacity-100"
         />
       </div>
 
@@ -58,30 +58,24 @@ export const IndustryHome = () => {
       <div className="relative z-10 w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
-          <div className="text-center mb-12 sm:mb-14 md:mb-16">
-            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[82px] mb-3 sm:mb-4 leading-none tracking-normal">
+          <div className="text-center mb-8 sm:mb-12 md:mb-14 lg:mb-16">
+            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[82px] mb-3 sm:mb-4 leading-none tracking-normal">
               Industry we serve
             </h2>
-            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] max-w-4xl mx-auto leading-[32px] tracking-[0.01em]">
+            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] max-w-4xl mx-auto leading-[26px] sm:leading-[32px] tracking-[0.01em] px-4">
               Supplying Precision Brass Solutions Across Diverse Sectors
             </p>
           </div>
 
           {/* Industry Cards Grid */}
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8 md:gap-10 lg:gap-6 justify-items-center">
+          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-6 justify-items-center">
             {industries.map((industry, index) => (
               <div
                 key={index}
-                className="relative bg-white rounded-[20px] border border-[#98012E] w-full max-w-[280px] sm:max-w-[300px] md:max-w-[320px] lg:w-[280px] xl:w-[300px] 2xl:w-[320px] h-auto sm:h-[130px] md:h-[140px] lg:h-[146px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl"
-                style={{
-                  paddingTop: "31px",
-                  paddingBottom: "31px",
-                  paddingLeft: "21px",
-                  paddingRight: "21px",
-                }}
+                className="relative bg-white rounded-[20px] border border-[#98012E] w-full max-w-full xs:max-w-[280px] sm:max-w-[300px] md:max-w-[320px] lg:w-[280px] xl:w-[300px] 2xl:w-[320px] h-auto min-h-[120px] xs:h-[130px] sm:h-[140px] lg:h-[146px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl px-4 py-6 xs:px-5 xs:py-7 sm:px-[21px] sm:py-[31px]"
               >
                 {/* Icon */}
-                <div className="mb-2.5 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
+                <div className="mb-2 xs:mb-2.5 w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
                   <img
                     src={industry.icon}
                     alt={industry.name}
@@ -90,7 +84,7 @@ export const IndustryHome = () => {
                 </div>
 
                 {/* Industry Name */}
-                <h3 className="font-['DM_Sans'] font-medium text-[#1A1A1A] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] leading-tight">
+                <h3 className="font-['DM_Sans'] font-medium text-[#1A1A1A] text-[14px] xs:text-[15px] sm:text-[16px] md:text-[18px] lg:text-[20px] leading-tight">
                   {industry.name}
                 </h3>
               </div>

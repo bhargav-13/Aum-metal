@@ -35,28 +35,28 @@ export const CapabilitiesAbout = () => {
     <section className="relative min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 w-full">
         {/* Cards Grid */}
-        <div className="flex flex-col lg:flex-row gap-4 lg:gap-6 items-stretch">
+        <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 lg:gap-6 items-stretch">
           {capabilities.map((capability, index) => (
             <button
               key={capability.number}
               onClick={() => setActiveIndex(index)}
-              className={`relative rounded-2xl border-2 p-6 flex flex-col justify-between transition-all duration-500 hover:shadow-xl text-left ${
+              className={`relative rounded-xl sm:rounded-2xl border-2 p-4 sm:p-5 md:p-6 flex flex-col justify-between transition-all duration-500 hover:shadow-xl text-left ${
                 activeIndex === index
                   ? 'bg-[#98012E] border-[#98012E] lg:flex-[2]'
                   : 'bg-gradient-to-b from-[#FFF5F7] to-white border-[#E5C4CC] hover:border-[#98012E] lg:flex-[0.8]'
-              } ${activeIndex === index ? 'min-h-[380px] lg:min-h-[450px]' : 'min-h-[280px] lg:min-h-[400px]'}`}
+              } ${activeIndex === index ? 'min-h-[320px] xs:min-h-[360px] sm:min-h-[380px] lg:min-h-[450px]' : 'min-h-[240px] xs:min-h-[260px] sm:min-h-[280px] lg:min-h-[400px]'}`}
             >
               {/* Top Section */}
               <div>
                 <h3
-                  className={`font-['DM_Sans'] font-bold text-[18px] lg:text-[20px] mb-2 ${
+                  className={`font-['DM_Sans'] font-bold text-[16px] sm:text-[18px] lg:text-[20px] mb-1.5 sm:mb-2 ${
                     activeIndex === index ? 'text-white' : 'text-[#98012E]'
                   }`}
                 >
                   {capability.number}
                 </h3>
                 <h4
-                  className={`font-['DM_Sans'] font-bold text-[16px] lg:text-[18px] leading-tight ${
+                  className={`font-['DM_Sans'] font-bold text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] leading-tight ${
                     activeIndex === index ? 'text-white' : 'text-[#98012E]'
                   }`}
                 >
@@ -67,11 +67,11 @@ export const CapabilitiesAbout = () => {
               {/* Bottom Section - Description or Icon */}
               <div className="flex justify-end items-end">
                 {activeIndex === index ? (
-                  <p className="font-['Sansation'] font-normal text-white text-[14px] lg:text-[15px] leading-relaxed w-full">
+                  <p className="font-['Sansation'] font-normal text-white text-[13px] xs:text-[14px] sm:text-[14px] lg:text-[15px] leading-relaxed w-full">
                     {capability.description}
                   </p>
                 ) : (
-                  <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <svg width="20" height="20" className="sm:w-6 sm:h-6" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <rect 
                       x="0.292683" 
                       y="0.292683" 

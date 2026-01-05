@@ -49,28 +49,28 @@ export const CapabilitiesHome = () => {
   return (
     <section
       id="capabilities-home"
-      className="h-screen w-full flex items-center justify-center bg-white py-8 sm:py-10 md:py-12 overflow-hidden"
+      className="min-h-screen lg:h-screen w-full flex items-center justify-center bg-white py-8 sm:py-10 md:py-12 overflow-hidden"
     >
       <div className="w-full h-full px-4 sm:px-6 md:content-padding flex flex-col">
         <div className="max-w-7xl mx-auto w-full h-full flex flex-col">
           {/* Header */}
-          <div className="text-center mb-6 sm:mb-8 shrink-0">
-            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[82px] mb-3 leading-none tracking-normal">
+          <div className="text-center mb-4 sm:mb-6 lg:mb-8 shrink-0">
+            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[82px] mb-2 sm:mb-3 leading-none tracking-normal">
               Manufacturing Capability
             </h2>
-            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] max-w-4xl mx-auto leading-[36px] tracking-[0.01em]">
+            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] max-w-4xl mx-auto leading-[28px] sm:leading-[36px] tracking-[0.01em] px-4">
               Advanced Processes for Precision Brass Production
             </p>
           </div>
 
           {/* Tabs with Arrow Indicator */}
-          <div className="mb-6 sm:mb-8 shrink-0">
-            <div className="flex flex-wrap justify-center gap-3 sm:gap-4">
+          <div className="mb-4 sm:mb-6 lg:mb-8 shrink-0">
+            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
               {capabilities.map((capability, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[15px] md:text-[17px] transition-all duration-300 ${
+                  className={`px-3 xs:px-4 sm:px-5 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[11px] xs:text-[12px] sm:text-[13px] md:text-[15px] lg:text-[17px] transition-all duration-300 ${
                     activeTab === index
                       ? "bg-[#98012E] text-white"
                       : "bg-white text-[#1A1A1A] border-2 border-[#E5E5E5] hover:border-[#98012E]"
@@ -108,10 +108,10 @@ export const CapabilitiesHome = () => {
             </div> */}
 
             {/* Content with Border */}
-            <div className="border-2 border-[#E5E5E5] rounded-[30px] p-4 sm:p-6 md:p-8 lg:p-10 h-full">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 lg:gap-8 h-full items-start">
+            <div className="border-2 border-[#E5E5E5] rounded-[20px] sm:rounded-[25px] lg:rounded-[30px] p-3 xs:p-4 sm:p-6 md:p-8 lg:p-10 h-full">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 h-full items-start">
                 {/* Left - Image */}
-                <div className="w-full h-full min-h-[250px] sm:min-h-[300px] lg:min-h-0 rounded-[20px] overflow-hidden order-2 lg:order-1">
+                <div className="w-full h-full min-h-[200px] xs:min-h-[250px] sm:min-h-[300px] lg:min-h-0 rounded-[15px] sm:rounded-[20px] overflow-hidden order-2 lg:order-1">
                   <img
                     src={capabilities[activeTab].image}
                     alt={capabilities[activeTab].title}
@@ -121,13 +121,13 @@ export const CapabilitiesHome = () => {
 
                 {/* Right - Content */}
                 <div className="order-1 lg:order-2 flex flex-col justify-start">
-                  <h3 className="font-['DM_Sans'] font-black text-[#98012E] text-[22px] sm:text-[26px] md:text-[30px] lg:text-[34px] xl:text-[40px] mb-3 sm:mb-4 leading-tight">
+                  <h3 className="font-['DM_Sans'] font-black text-[#98012E] text-[22px] xs:text-[24px] sm:text-[26px] md:text-[30px] lg:text-[34px] xl:text-[40px] mb-2 sm:mb-3 md:mb-4 leading-tight">
                     {capabilities[activeTab].title}
                   </h3>
-                  <p className="font-['Sansation'] font-normal text-[#DC6B8F] text-[13px] sm:text-[15px] md:text-[17px] lg:text-[20px] mb-3 sm:mb-5 leading-relaxed">
+                  <p className="font-['Sansation'] font-normal text-[#DC6B8F] text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[20px] mb-2 sm:mb-3 md:mb-5 leading-relaxed">
                     {capabilities[activeTab].subtitle}
                   </p>
-                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-relaxed">
+                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-relaxed">
                     {capabilities[activeTab].description}
                   </p>
                 </div>

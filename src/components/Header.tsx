@@ -20,10 +20,10 @@ export const Header = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center justify-center opacity-100 font-bold not-italic leading-none tracking-normal rounded text-white w-[96px] h-[47px] md:w-24 md:h-[47px] hover:opacity-80 transition-opacity"
+            className="flex items-center justify-center opacity-100 font-bold not-italic leading-none tracking-normal rounded text-white w-[80px] sm:w-[96px] h-[47px] md:w-24 md:h-[47px] hover:opacity-80 transition-opacity"
             style={{ fontFamily: 'Sansation, sans-serif' }}
           >
-            <span className="text-[28px] md:text-[42px]">Logo</span>
+            <span className="text-[24px] sm:text-[28px] md:text-[42px]">Logo</span>
           </Link>
 
           {/* Desktop Nav */}

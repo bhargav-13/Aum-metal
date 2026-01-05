@@ -154,64 +154,68 @@ We manufacture brass billets in standard and customized lengths, with cutting op
     <>
       <section className="relative min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 w-full">
-          <div className="flex flex-col lg:flex-col gap-6 lg:gap-8">
+          <div className="flex flex-col lg:flex-col gap-4 sm:gap-6 lg:gap-8">
             {/* Left Sidebar - Tabs */}
             <div className="">
-              <div className="flex flex-row lg:flex-row gap-3">
-                <div className="flex flex-row lg:flex-col gap-3">
-                  <button
-                    onClick={() => setActiveTab("brass-road")}
-                    className={`px-6 py-3 rounded-full font-['DM_Sans'] font-medium text-[15px] transition-all duration-300 ${
-                      activeTab === "brass-road"
-                        ? "bg-[#98012E] text-white"
-                        : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                    }`}
-                  >
-                    Brass Road
-                  </button>
-                  <button
-                    onClick={() => setActiveTab("wire")}
-                    className={`px-6 py-3 rounded-full font-['DM_Sans'] font-medium text-[15px] transition-all duration-300 ${
-                      activeTab === "wire"
-                        ? "bg-[#98012E] text-white"
-                        : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                    }`}
-                  >
-                    Wire
-                  </button>
-                  <button
-                    onClick={() => setActiveTab("ingots")}
-                    className={`px-6 py-3 rounded-full font-['DM_Sans'] font-medium text-[15px] transition-all duration-300 ${
-                      activeTab === "ingots"
-                        ? "bg-[#98012E] text-white"
-                        : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                    }`}
-                  >
-                    Ingots
-                  </button>
-                  <button
-                    onClick={() => setActiveTab("section-profiles")}
-                    className={`px-6 py-3 rounded-full font-['DM_Sans'] font-medium text-[15px] transition-all duration-300 whitespace-nowrap ${
-                      activeTab === "section-profiles"
-                        ? "bg-[#98012E] text-white"
-                        : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                    }`}
-                  >
-                    Section & Profiles
-                  </button>
-                  <button
-                    onClick={() => setActiveTab("billet")}
-                    className={`px-6 py-3 rounded-full font-['DM_Sans'] font-medium text-[15px] transition-all duration-300 ${
-                      activeTab === "billet"
-                        ? "bg-[#98012E] text-white"
-                        : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                    }`}
-                  >
-                    Billet
-                  </button>
+              <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
+                {/* Tabs - Scrollable on mobile */}
+                <div className="overflow-x-auto pb-2 -mx-4 px-4 sm:mx-0 sm:px-0 lg:overflow-visible">
+                  <div className="flex flex-row lg:flex-col gap-2 sm:gap-3 min-w-max lg:min-w-0">
+                    <button
+                      onClick={() => setActiveTab("brass-road")}
+                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                        activeTab === "brass-road"
+                          ? "bg-[#98012E] text-white"
+                          : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                      }`}
+                    >
+                      Brass Road
+                    </button>
+                    <button
+                      onClick={() => setActiveTab("wire")}
+                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                        activeTab === "wire"
+                          ? "bg-[#98012E] text-white"
+                          : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                      }`}
+                    >
+                      Wire
+                    </button>
+                    <button
+                      onClick={() => setActiveTab("ingots")}
+                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                        activeTab === "ingots"
+                          ? "bg-[#98012E] text-white"
+                          : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                      }`}
+                    >
+                      Ingots
+                    </button>
+                    <button
+                      onClick={() => setActiveTab("section-profiles")}
+                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                        activeTab === "section-profiles"
+                          ? "bg-[#98012E] text-white"
+                          : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                      }`}
+                    >
+                      Section & Profiles
+                    </button>
+                    <button
+                      onClick={() => setActiveTab("billet")}
+                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                        activeTab === "billet"
+                          ? "bg-[#98012E] text-white"
+                          : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                      }`}
+                    >
+                      Billet
+                    </button>
+                  </div>
                 </div>
-                <div className="mb-8">
-                  <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] md:text-[16px] leading-relaxed whitespace-pre-line">
+                {/* Description */}
+                <div className="mb-4 sm:mb-6 lg:mb-8">
+                  <p className="font-['Sansation'] text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed whitespace-pre-line">
                     {currentProduct.description}
                   </p>
                 </div>
@@ -225,10 +229,10 @@ We manufacture brass billets in standard and customized lengths, with cutting op
               {/* Product Cards */}
               {currentProduct.products.length === 1 ? (
                 // Single Product - Horizontal Layout
-                <div className="border-2 border-[#E5C4CC] rounded-2xl p-6 lg:p-8 bg-gradient-to-b from-[#FFF5F7] to-white mb-12">
-                  <div className="flex flex-col lg:flex-row gap-6 lg:gap-8 items-start">
+                <div className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 bg-gradient-to-b from-[#FFF5F7] to-white mb-8 sm:mb-12">
+                  <div className="flex flex-col md:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
                     {/* Product Image */}
-                    <div className="w-full lg:w-[45%] rounded-xl overflow-hidden bg-white p-6">
+                    <div className="w-full md:w-[45%] rounded-lg sm:rounded-xl overflow-hidden bg-white p-4 sm:p-6">
                       <img
                         src={currentProduct.products[0].image}
                         alt={currentProduct.products[0].name}
@@ -237,24 +241,24 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                     </div>
 
                     {/* Product Details */}
-                    <div className="w-full lg:w-[55%] flex flex-col justify-center">
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[24px] lg:text-[32px] mb-6 lg:mb-8">
+                    <div className="w-full md:w-[55%] flex flex-col justify-center">
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[20px] xs:text-[22px] sm:text-[24px] lg:text-[28px] xl:text-[32px] mb-4 sm:mb-6 lg:mb-8">
                         {currentProduct.products[0].name}
                       </h3>
-                      <div className="space-y-5 lg:space-y-6">
+                      <div className="space-y-4 sm:space-y-5 lg:space-y-6">
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] lg:text-[18px] mb-2">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] xs:text-[15px] sm:text-[16px] lg:text-[18px] mb-1.5 sm:mb-2">
                             Metric Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] lg:text-[16px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[15px] lg:text-[16px]">
                             {currentProduct.products[0].metricSize}
                           </p>
                         </div>
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] lg:text-[18px] mb-2">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] xs:text-[15px] sm:text-[16px] lg:text-[18px] mb-1.5 sm:mb-2">
                             Imperial Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] lg:text-[16px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[15px] lg:text-[16px]">
                             {currentProduct.products[0].imperialSize}
                           </p>
                         </div>
@@ -264,36 +268,36 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                 </div>
               ) : (
                 // Multiple Products - Grid Layout
-                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 lg:gap-5 mb-12 w-full">
+                <div className="grid grid-cols-1 xs:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-3 sm:gap-4 lg:gap-5 mb-8 sm:mb-12 w-full">
                   {currentProduct.products.map((product, index) => (
                     <div
                       key={index}
-                      className="border-2 border-[#E5C4CC] rounded-2xl p-4 lg:p-5 bg-gradient-to-b from-[#FFF5F7] to-white hover:shadow-lg transition-all duration-300"
+                      className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 bg-gradient-to-b from-[#FFF5F7] to-white hover:shadow-lg transition-all duration-300"
                     >
-                      <div className="aspect-square rounded-xl overflow-hidden mb-4 bg-white">
+                      <div className="aspect-square rounded-lg sm:rounded-xl overflow-hidden mb-3 sm:mb-4 bg-white">
                         <img
                           src={product.image}
                           alt={product.name}
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[18px] mb-4 text-center">
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[16px] sm:text-[18px] mb-3 sm:mb-4 text-center">
                         {product.name}
                       </h3>
-                      <div className="space-y-3">
+                      <div className="space-y-2.5 sm:space-y-3">
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] mb-1">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[13px] sm:text-[14px] mb-1">
                             Metric Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[14px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[12px] xs:text-[13px] sm:text-[14px]">
                             {product.metricSize}
                           </p>
                         </div>
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] mb-1">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[13px] sm:text-[14px] mb-1">
                             Imperial Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[14px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[12px] xs:text-[13px] sm:text-[14px]">
                             {product.imperialSize}
                           </p>
                         </div>
@@ -310,10 +314,10 @@ We manufacture brass billets in standard and customized lengths, with cutting op
       {/* Applications Across Industries Section */}
       <section className="relative w-full bg-white flex items-center justify-center py-8 sm:py-10 md:py-12 lg:py-16 overflow-hidden">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 w-full">
-          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] text-center mb-6 sm:mb-8 md:mb-10 leading-tight">
+          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[24px] xs:text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] text-center mb-5 sm:mb-6 md:mb-8 lg:mb-10 leading-tight">
             Applications Across Industries
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
+          <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
             {currentProduct.industries.map((industryIndex, index) => {
               const industry = industryData[industryIndex];
               return (

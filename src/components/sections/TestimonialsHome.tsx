@@ -27,13 +27,13 @@ export const TestimonialsHome = () => {
               {/* Left Side - Content */}
               <div className="flex flex-col justify-center order-2 lg:order-1 lg:pr-12 text-left lg:max-w-2xl">
                 {/* Main Heading */}
-                <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[28px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[56px] 2xl:text-[64px] leading-tight mb-4 sm:mb-5 md:mb-6">
+                <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[28px] xs:text-[32px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[56px] 2xl:text-[64px] leading-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6">
                   Your Trusted Partner for Precision Brass Rods, Ingots &
                   Billets
                 </h2>
 
                 {/* Description */}
-                <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-relaxed mb-6 sm:mb-7 md:mb-8">
+                <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-relaxed mb-5 sm:mb-6 md:mb-7 lg:mb-8">
                   Looking for reliable brass materials with consistent quality
                   and precise specifications? Aum Metal Alloys delivers
                   high-performance brass rods, bars, and billets tailored to
@@ -69,26 +69,26 @@ export const TestimonialsHome = () => {
         <div className="w-full px-4 sm:px-6 md:content-padding">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
-            <div className="text-center mb-12 sm:mb-14 md:mb-16">
-              <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] mb-4 sm:mb-5 leading-none tracking-normal">
+            <div className="text-center mb-8 sm:mb-12 md:mb-14 lg:mb-16">
+              <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] mb-3 sm:mb-4 md:mb-5 leading-none tracking-normal">
                 Trusted by Our Clients
               </h2>
-              <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] max-w-4xl mx-auto leading-relaxed tracking-normal">
+              <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] max-w-4xl mx-auto leading-relaxed tracking-normal px-4">
                 Hear from partners who trust our precision and manufacturing
                 reliability.
               </p>
             </div>
 
             {/* Mobile Layout */}
-            <div className="block lg:hidden relative max-w-6xl mx-auto mb-20">
+            <div className="block lg:hidden relative max-w-6xl mx-auto mb-12 sm:mb-16 md:mb-20">
               <div className="flex flex-row">
                 <div className="w-full">
-                  <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between h-[135.92px]">
-                    <div className="p-4 sm:p-6">
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] sm:text-[20px] leading-tight mb-1 sm:mb-2">
+                  <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between h-auto min-h-[120px] xs:h-[135.92px]">
+                    <div className="p-3 xs:p-4 sm:p-6">
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px] leading-tight mb-1 sm:mb-2">
                         Ankit Mungra
                       </h3>
-                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[10px] sm:text-[12px]">
+                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[14px]">
                         Procurement Head
                       </p>
                     </div>
@@ -101,32 +101,32 @@ export const TestimonialsHome = () => {
                     alt=""
                     className="w-auto h-auto"
                   />
-                  <div className="bg-white border border-[#E5C4CC] min-h-[350px] sm:min-h-[400px] flex flex-col justify-between">
-                    <div className="mb-4 sm:mb-6 p-4 sm:p-6">
-                      <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#98012E] rounded-full flex items-center justify-center">
-                        <span className="text-white text-[16px] sm:text-[20px] font-serif">
+                  <div className="bg-white border border-[#E5C4CC] min-h-[320px] xs:min-h-[350px] sm:min-h-[400px] flex flex-col justify-between">
+                    <div className="mb-3 xs:mb-4 sm:mb-6 p-3 xs:p-4 sm:p-6">
+                      <div className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 bg-[#98012E] rounded-full flex items-center justify-center">
+                        <span className="text-white text-[14px] xs:text-[16px] sm:text-[20px] font-serif">
                           "
                         </span>
                       </div>
                     </div>
-                    <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[10px] sm:text-[14px] leading-relaxed p-4 sm:p-6">
+                    <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px] leading-relaxed p-3 xs:p-4 sm:p-6">
                       "Aum Metal Alloys consistently delivers high-quality brass
                       rods and billets with precise dimensions. Their
                       reliability and process discipline make them a trusted
                       supplier for our production requirements."
                     </blockquote>
-                    <div className="bg-[#FFB8CC] p-3 sm:p-4">
-                      <div className="flex gap-0.5 sm:gap-1 mb-2 sm:mb-3">
+                    <div className="bg-[#FFB8CC] p-2.5 xs:p-3 sm:p-4">
+                      <div className="flex gap-0.5 sm:gap-1 mb-1.5 xs:mb-2 sm:mb-3">
                         {[...Array(5)].map((_, i) => (
                           <span
                             key={i}
-                            className="text-[#98012E] text-[12px] sm:text-[16px]"
+                            className="text-[#98012E] text-[13px] xs:text-[14px] sm:text-[16px]"
                           >
                             ★
                           </span>
                         ))}
                       </div>
-                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[10px] sm:text-[12px]">
+                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px]">
                         Parmeshwari Brass
                       </p>
                     </div>

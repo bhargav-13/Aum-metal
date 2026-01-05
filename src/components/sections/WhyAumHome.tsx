@@ -55,10 +55,10 @@ export const WhyAumHome = () => {
         <div className="max-w-7xl mx-auto w-full">
           {/* Header */}
           <div className="text-center mb-8 sm:mb-10 md:mb-12">
-            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[82px] mb-3 leading-none tracking-normal text-center">
+            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[82px] mb-3 leading-none tracking-normal text-center">
               Why Aum Metal Alloy
             </h2>
-            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] max-w-4xl mx-auto leading-[36px] tracking-[0.01em] text-center">
+            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] max-w-4xl mx-auto leading-[32px] sm:leading-[36px] tracking-[0.01em] text-center px-4">
               Built on Quality, Consistency, and Manufacturing Excellence
             </p>
           </div>
@@ -75,7 +75,7 @@ export const WhyAumHome = () => {
                     onClick={() => toggleAccordion(index)}
                     className="w-full flex items-center justify-between p-4 text-left hover:bg-[#FFF5F7] transition"
                   >
-                    <h3 className="font-['DM_Sans'] font-medium text-[#98012E] text-sm sm:text-base lg:text-lg pr-4">
+                    <h3 className="font-['DM_Sans'] font-medium text-[#98012E] text-[15px] xs:text-base sm:text-base lg:text-lg pr-4">
                       {feature.title}
                     </h3>
 
@@ -96,7 +96,7 @@ export const WhyAumHome = () => {
                     }`}
                   >
                     <div className="px-4 pb-4">
-                      <p className="font-['Sansation'] text-[#7D7D7D] text-sm leading-relaxed">
+                      <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] leading-relaxed">
                         {feature.description}
                       </p>
                     </div>
