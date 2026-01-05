@@ -31,15 +31,15 @@ export const CTAButton: React.FC<CTAButtonProps> = ({
   showArrow = true,
   className = "",
   minWidth = "160px",
-  padding = "py-2 px-5 sm:py-2.5 sm:px-6 md:py-2.5 md:px-7 lg:py-2.5 lg:px-7",
-  textSize = "text-[15px] sm:text-[17px] md:text-[18px] lg:text-[18px] xl:text-[20px]",
+      padding = "py-2.5 px-5 sm:py-2.5 sm:px-6 md:py-2.5 md:px-7 lg:py-2.5 lg:px-7",
+      textSize = "text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[18px] xl:text-[20px]",
   gap = "8px",
 }) => {
   return (
     <button
       type={type}
       onClick={onClick}
-      className={`border flex items-center justify-center hover:text-white transition-all duration-300 w-auto h-auto ${padding} ${className}`}
+      className={`border flex items-center justify-center hover:text-white transition-all duration-300 w-auto min-h-[44px] ${padding} ${className}`}
       style={{
         borderRadius: "60px",
         gap: gap,

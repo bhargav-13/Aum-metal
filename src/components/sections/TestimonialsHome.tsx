@@ -11,50 +11,37 @@ export const TestimonialsHome = () => {
         className="relative min-h-screen lg:h-screen w-full flex items-center justify-center bg-white overflow-hidden"
       >
         <div className="w-full h-full px-4 sm:px-6 md:content-padding py-8 lg:py-0 flex items-center">
-          <div className="max-w-7xl mx-auto w-full">
-            <div className="flex flex-col lg:grid lg:grid-cols-2 gap-6 lg:gap-12 items-center lg:h-full">
-              {/* Mobile/Tablet - Image First */}
-              <div className="flex items-center justify-center lg:hidden order-1 w-full">
-                <div className="relative w-full max-w-md">
-                  <img
-                    src={trustRightHomeImg}
-                    alt="Precision brass rods"
-                    className="w-full h-auto object-contain"
-                  />
-                </div>
+          <div className="max-w-7xl mx-auto w-full relative">
+            {/* Image - Absolute on Mobile, Absolute on Desktop */}
+            <div className="absolute right-0 bottom-0 flex items-end justify-end z-0 opacity-80 lg:opacity-100">
+              <div className="relative">
+                <img
+                  src={trustRightHomeImg}
+                  alt="Precision brass rods"
+                  className="w-auto h-[250px] xs:h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[500px] 2xl:h-[550px] object-contain"
+                />
               </div>
+            </div>
 
-              {/* Left Side - Content */}
-              <div className="flex flex-col justify-center order-2 lg:order-1 lg:pr-12 text-left lg:max-w-2xl">
-                {/* Main Heading */}
-                <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[28px] xs:text-[32px] sm:text-[36px] md:text-[44px] lg:text-[48px] xl:text-[56px] 2xl:text-[64px] leading-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                  Your Trusted Partner for Precision Brass Rods, Ingots &
-                  Billets
-                </h2>
+            {/* Left Side - Content */}
+            <div className="relative z-10 flex flex-col justify-center lg:pr-12 text-left lg:max-w-2xl w-full lg:w-auto">
+              {/* Main Heading */}
+              <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[44px] lg:text-[48px] xl:text-[56px] 2xl:text-[64px] leading-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6">
+                Your Trusted Partner for Precision Brass Rods, Ingots &
+                Billets
+              </h2>
 
-                {/* Description */}
-                <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-relaxed mb-5 sm:mb-6 md:mb-7 lg:mb-8">
-                  Looking for reliable brass materials with consistent quality
-                  and precise specifications? Aum Metal Alloys delivers
-                  high-performance brass rods, bars, and billets tailored to
-                  your industrial and export requirements.
-                </p>
+              {/* Description */}
+              <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px] xs:text-[17px] sm:text-[18px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-relaxed mb-5 sm:mb-6 md:mb-7 lg:mb-8">
+                Looking for reliable brass materials with consistent quality
+                and precise specifications? Aum Metal Alloys delivers
+                high-performance brass rods, bars, and billets tailored to
+                your industrial and export requirements.
+              </p>
 
-                {/* CTA Button */}
-                <div>
-                  <CTAButton text="Contact now" />
-                </div>
-              </div>
-
-              {/* Desktop - Image at Bottom Right (Absolute) */}
-              <div className="hidden lg:flex items-end justify-end order-2 lg:absolute lg:right-0 lg:bottom-0 h-full">
-                <div className="relative">
-                  <img
-                    src={trustRightHomeImg}
-                    alt="Precision brass rods"
-                    className="w-auto h-[450px] xl:h-[500px] 2xl:h-[550px] object-contain"
-                  />
-                </div>
+              {/* CTA Button */}
+              <div>
+                <CTAButton text="Contact now" />
               </div>
             </div>
           </div>

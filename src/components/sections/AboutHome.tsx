@@ -31,13 +31,13 @@ export const AboutHome = () => {
   return (
     <section
       id="about-home"
-      className="min-h-screen w-full flex items-center justify-center bg-white py-12 sm:py-16 md:py-20 lg:py-24"
+      className="min-h-screen w-full flex items-center justify-center bg-white pt-6 sm:pt-12 md:pt-16 lg:pt-24 pb-8 sm:pb-12 md:pb-16 lg:pb-24"
     >
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
           {/* Header */}
           <div className="text-center mb-1">
-            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[82px] mb-3 sm:mb-4 leading-none tracking-normal text-center">
+            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[82px] mb-2 sm:mb-3 md:mb-4 leading-none tracking-normal text-center">
               About Aum Metal Alloy
             </h2>
             <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] 2xl:text-[24px] max-w-3xl mx-auto leading-[28px] sm:leading-[32px] tracking-[0.01em] text-center px-4">
@@ -47,7 +47,7 @@ export const AboutHome = () => {
           </div>
 
           {/* Feature Cards Grid */}
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mt-8 sm:mt-10 md:mt-14">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5 md:gap-6 mt-8 sm:mt-10 md:mt-14">
             {features.map((feature, index) => (
               <div
                 key={index}

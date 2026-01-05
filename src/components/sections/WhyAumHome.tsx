@@ -65,7 +65,7 @@ export const WhyAumHome = () => {
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-6 lg:gap-8 items-stretch">
             {/* LEFT — Accordion */}
-            <div className="space-y-2">
+            <div className="space-y-2 order-2 lg:order-1">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -106,7 +106,7 @@ export const WhyAumHome = () => {
             </div>
 
             {/* RIGHT — Image */}
-            <div className="w-full h-full rounded-[20px] overflow-hidden">
+            <div className="w-full h-full rounded-[20px] overflow-hidden order-1 lg:order-2">
               <img
                 src={whyAumHomeImg}
                 alt="Brass rods manufacturing"

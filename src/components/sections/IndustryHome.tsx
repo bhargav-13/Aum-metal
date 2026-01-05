@@ -46,7 +46,7 @@ export const IndustryHome = () => {
       className="relative min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-white"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0">
+      <div className="absolute inset-0 z-0 top-16 lg:top-0 right-10 lg:right-0">
         <img
           src={industryImageBg}
           alt=""
@@ -68,7 +68,7 @@ export const IndustryHome = () => {
           </div>
 
           {/* Industry Cards Grid */}
-          <div className="grid grid-cols-1 xs:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 md:gap-8 lg:gap-6 justify-items-center">
+          <div className="grid grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 md:gap-6 lg:gap-6 justify-items-center">
             {industries.map((industry, index) => (
               <div
                 key={index}

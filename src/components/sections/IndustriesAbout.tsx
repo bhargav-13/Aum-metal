@@ -28,10 +28,10 @@ export const IndustriesAbout = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] mb-4 leading-tight">
+          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] mb-4 leading-tight">
             Where Our Brass Products Deliver Reliable Performance
           </h2>
-          <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px] sm:text-[18px] md:text-[20px] max-w-5xl mx-auto">
+          <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] max-w-5xl mx-auto px-4">
             As a Brass Rod and Ingot exporter, we've worked across industries like valves, sanitary ware, plumbing, hardware, automotive, and electrical—supporting customers looking for reliable sourcing...
           </p>
         </div>
@@ -50,7 +50,7 @@ export const IndustriesAbout = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <p className="font-['Sansation'] font-medium text-[#98012E] text-[13px] sm:text-[14px] md:text-[15px]">
+              <p className="font-['Sansation'] font-medium text-[#98012E] text-[14px] xs:text-[14px] sm:text-[15px] md:text-[16px]">
                 {industry.name}
               </p>
             </div>

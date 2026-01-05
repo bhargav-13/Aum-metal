@@ -10,10 +10,10 @@ export const ClientTestimonials = () => {
       <div className="max-w-7xl mx-auto">
         {/* Header */}
         <div className="text-center mb-12 sm:mb-14 md:mb-16">
-          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] mb-4 sm:mb-5 leading-none tracking-normal">
+          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] mb-4 sm:mb-5 leading-none tracking-normal">
             Trusted by Our Clients
           </h2>
-          <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] xl:text-[22px] max-w-4xl mx-auto leading-relaxed tracking-normal">
+          <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] max-w-4xl mx-auto leading-relaxed tracking-normal px-4">
             Hear from partners who trust our precision and manufacturing
             reliability.
           </p>
@@ -25,10 +25,10 @@ export const ClientTestimonials = () => {
             <div className="w-full">
               <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between h-[135.92px]">
                 <div className="p-4 sm:p-6">
-                  <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] sm:text-[20px] leading-tight mb-1 sm:mb-2">
+                  <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px] leading-tight mb-1 sm:mb-2">
                     Ankit Mungra
                   </h3>
-                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[10px] sm:text-[12px]">
+                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[14px]">
                     -Procurement Head
                   </p>
                 </div>
@@ -49,7 +49,7 @@ export const ClientTestimonials = () => {
                     </span>
                   </div>
                 </div>
-                <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[10px] sm:text-[14px] leading-relaxed p-4 sm:p-6">
+                <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px] leading-relaxed p-4 sm:p-6">
                   "Aum Metal Alloys consistently delivers high-quality brass
                   rods and billets with precise dimensions. Their
                   reliability and process discipline make them a trusted
@@ -60,13 +60,13 @@ export const ClientTestimonials = () => {
                     {[...Array(5)].map((_, i) => (
                       <span
                         key={i}
-                        className="text-[#98012E] text-[12px] sm:text-[16px]"
+                        className="text-[#98012E] text-[14px] xs:text-[15px] sm:text-[16px]"
                       >
                         ★
                       </span>
                     ))}
                   </div>
-                  <p className="font-['Sansation'] font-normal text-[#98012E] text-[10px] sm:text-[12px]">
+                  <p className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px]">
                     -Parmeshwari Brass
                   </p>
                 </div>

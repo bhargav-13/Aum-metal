@@ -20,10 +20,10 @@ export const TeamAbout = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
         {/* Heading */}
         <div className="text-center mb-12">
-          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] mb-4 leading-tight">
+          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] mb-4 leading-tight">
             Our Valuable team
           </h2>
-          <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px] sm:text-[18px] md:text-[20px] max-w-3xl mx-auto">
+          <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] max-w-3xl mx-auto px-4">
             A Committed Partner Ensuring Quality of Service for Made to Order Brass Metal Products
           </p>
         </div>
@@ -41,10 +41,10 @@ export const TeamAbout = () => {
                 />
               </div>
               {/* Name and Role */}
-              <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[24px] sm:text-[28px] mb-2">
+              <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[22px] xs:text-[24px] sm:text-[26px] md:text-[28px] mb-2">
                 {member.name}
               </h3>
-              <p className="font-['Sansation'] font-normal text-[#A05370] text-[16px] sm:text-[18px]">
+              <p className="font-['Sansation'] font-normal text-[#A05370] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px]">
                 {member.role}
               </p>
             </div>

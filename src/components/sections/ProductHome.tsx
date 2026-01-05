@@ -5,7 +5,7 @@ export const ProductHome = () => {
   return (
     <section
       id="product-home"
-      className="relative min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
+      className="relative h-[50vh] lg:min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
     >
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
@@ -42,9 +42,9 @@ export const ProductHome = () => {
               </div>
             </div>
 
-            {/* Right Side - Image */}
-            <div className="flex items-center justify-center order-1 lg:order-2 lg:absolute lg:right-0 lg:bottom-0">
-              <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[500px] xl:max-w-[600px]">
+            {/* Right Side - Image (Mobile: absolute with opacity, Desktop: absolute normal) */}
+            <div className="absolute right-0 bottom-0 flex items-center justify-center order-1 lg:order-2 lg:absolute lg:right-0 lg:bottom-0 z-10 lg:z-auto">
+              <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[500px] xl:max-w-[600px] opacity-80 lg:opacity-100">
                 <img
                   src={productHomeRightImg}
                   alt="Brass rods and cylinders - Our product range"

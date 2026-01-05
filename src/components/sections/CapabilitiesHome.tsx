@@ -70,7 +70,7 @@ export const CapabilitiesHome = () => {
                 <button
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`px-3 xs:px-4 sm:px-5 md:px-7 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[11px] xs:text-[12px] sm:text-[13px] md:text-[15px] lg:text-[17px] transition-all duration-300 ${
+                  className={`px-3 xs:px-4 sm:px-5 md:px-7 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] transition-all duration-300 min-h-[44px] ${
                     activeTab === index
                       ? "bg-[#98012E] text-white"
                       : "bg-white text-[#1A1A1A] border-2 border-[#E5E5E5] hover:border-[#98012E]"

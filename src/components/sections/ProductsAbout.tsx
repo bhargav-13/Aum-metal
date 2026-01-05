@@ -52,10 +52,10 @@ export const ProductsAbout = () => {
         <div className="max-w-7xl mx-auto w-full h-full flex flex-col">
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8 shrink-0">
-            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[28px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] mb-3 leading-tight">
+            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[28px] xs:text-[32px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] mb-3 leading-tight px-4">
               Precision Brass Products Designed to Power Industrial Performance
             </h2>
-            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[16px] md:text-[18px] lg:text-[20px] max-w-5xl mx-auto leading-relaxed">
+            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] max-w-5xl mx-auto leading-relaxed px-4">
               We manufacture high-quality brass rods, bars, and billets engineered to deliver consistent strength, dimensional accuracy, and reliable performance across industrial and export applications.
             </p>
           </div>
@@ -67,7 +67,7 @@ export const ProductsAbout = () => {
                 <button
                   key={product.id}
                   onClick={() => setActiveTab(index)}
-                  className={`px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[15px] md:text-[17px] transition-all duration-300 ${
+                  className={`px-4 xs:px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] transition-all duration-300 min-h-[44px] ${
                     activeTab === index
                       ? 'bg-[#98012E] text-white shadow-lg'
                       : 'bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]'
@@ -116,13 +116,13 @@ export const ProductsAbout = () => {
 
                 {/* Right - Content */}
                 <div className="order-1 lg:order-2 flex flex-col justify-start">
-                  <h3 className="font-['DM_Sans'] font-black text-[#98012E] text-[22px] sm:text-[26px] md:text-[30px] lg:text-[34px] xl:text-[40px] mb-3 sm:mb-4 leading-tight">
+                  <h3 className="font-['DM_Sans'] font-black text-[#98012E] text-[24px] xs:text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] mb-3 sm:mb-4 leading-tight">
                     {products[activeTab].title}
                   </h3>
-                  <p className="font-['Sansation'] font-normal text-[#DC6B8F] text-[13px] sm:text-[15px] md:text-[17px] lg:text-[20px] mb-3 sm:mb-5 leading-relaxed">
+                  <p className="font-['Sansation'] font-normal text-[#DC6B8F] text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[20px] mb-3 sm:mb-5 leading-relaxed">
                     {products[activeTab].subtitle}
                   </p>
-                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-relaxed">
+                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-relaxed">
                     {products[activeTab].description}
                   </p>
                 </div>

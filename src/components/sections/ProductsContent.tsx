@@ -163,7 +163,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                   <div className="flex flex-row lg:flex-col gap-2 sm:gap-3 min-w-max lg:min-w-0">
                     <button
                       onClick={() => setActiveTab("brass-road")}
-                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                      className={`px-4 xs:px-5 sm:px-6 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] transition-all duration-300 whitespace-nowrap min-h-[44px] ${
                         activeTab === "brass-road"
                           ? "bg-[#98012E] text-white"
                           : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
@@ -173,7 +173,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                     </button>
                     <button
                       onClick={() => setActiveTab("wire")}
-                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                      className={`px-4 xs:px-5 sm:px-6 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] transition-all duration-300 whitespace-nowrap min-h-[44px] ${
                         activeTab === "wire"
                           ? "bg-[#98012E] text-white"
                           : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
@@ -183,7 +183,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                     </button>
                     <button
                       onClick={() => setActiveTab("ingots")}
-                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                      className={`px-4 xs:px-5 sm:px-6 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] transition-all duration-300 whitespace-nowrap min-h-[44px] ${
                         activeTab === "ingots"
                           ? "bg-[#98012E] text-white"
                           : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
@@ -193,7 +193,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                     </button>
                     <button
                       onClick={() => setActiveTab("section-profiles")}
-                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                      className={`px-4 xs:px-5 sm:px-6 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] transition-all duration-300 whitespace-nowrap min-h-[44px] ${
                         activeTab === "section-profiles"
                           ? "bg-[#98012E] text-white"
                           : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
@@ -203,7 +203,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                     </button>
                     <button
                       onClick={() => setActiveTab("billet")}
-                      className={`px-4 xs:px-5 sm:px-6 py-2 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] sm:text-[14px] md:text-[15px] transition-all duration-300 whitespace-nowrap ${
+                      className={`px-4 xs:px-5 sm:px-6 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] transition-all duration-300 whitespace-nowrap min-h-[44px] ${
                         activeTab === "billet"
                           ? "bg-[#98012E] text-white"
                           : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
@@ -215,7 +215,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                 </div>
                 {/* Description */}
                 <div className="mb-4 sm:mb-6 lg:mb-8">
-                  <p className="font-['Sansation'] text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] leading-relaxed whitespace-pre-line">
+                  <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] leading-relaxed whitespace-pre-line">
                     {currentProduct.description}
                   </p>
                 </div>
@@ -242,23 +242,23 @@ We manufacture brass billets in standard and customized lengths, with cutting op
 
                     {/* Product Details */}
                     <div className="w-full md:w-[55%] flex flex-col justify-center">
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[20px] xs:text-[22px] sm:text-[24px] lg:text-[28px] xl:text-[32px] mb-4 sm:mb-6 lg:mb-8">
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[22px] xs:text-[24px] sm:text-[26px] lg:text-[28px] xl:text-[32px] mb-4 sm:mb-6 lg:mb-8">
                         {currentProduct.products[0].name}
                       </h3>
                       <div className="space-y-4 sm:space-y-5 lg:space-y-6">
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] xs:text-[15px] sm:text-[16px] lg:text-[18px] mb-1.5 sm:mb-2">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[18px] mb-1.5 sm:mb-2">
                             Metric Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[15px] lg:text-[16px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] lg:text-[16px]">
                             {currentProduct.products[0].metricSize}
                           </p>
                         </div>
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] xs:text-[15px] sm:text-[16px] lg:text-[18px] mb-1.5 sm:mb-2">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[18px] mb-1.5 sm:mb-2">
                             Imperial Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[15px] lg:text-[16px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] lg:text-[16px]">
                             {currentProduct.products[0].imperialSize}
                           </p>
                         </div>
@@ -281,23 +281,23 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[16px] sm:text-[18px] mb-3 sm:mb-4 text-center">
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[18px] mb-3 sm:mb-4 text-center">
                         {product.name}
                       </h3>
                       <div className="space-y-2.5 sm:space-y-3">
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[13px] sm:text-[14px] mb-1">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] xs:text-[14px] sm:text-[15px] mb-1">
                             Metric Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[12px] xs:text-[13px] sm:text-[14px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[14px]">
                             {product.metricSize}
                           </p>
                         </div>
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[13px] sm:text-[14px] mb-1">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] xs:text-[14px] sm:text-[15px] mb-1">
                             Imperial Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[12px] xs:text-[13px] sm:text-[14px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[14px]">
                             {product.imperialSize}
                           </p>
                         </div>
@@ -314,7 +314,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
       {/* Applications Across Industries Section */}
       <section className="relative w-full bg-white flex items-center justify-center py-8 sm:py-10 md:py-12 lg:py-16 overflow-hidden">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 w-full">
-          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[24px] xs:text-[28px] sm:text-[36px] md:text-[42px] lg:text-[48px] text-center mb-5 sm:mb-6 md:mb-8 lg:mb-10 leading-tight">
+          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[28px] xs:text-[32px] sm:text-[36px] md:text-[42px] lg:text-[48px] text-center mb-5 sm:mb-6 md:mb-8 lg:mb-10 leading-tight">
             Applications Across Industries
           </h2>
           <div className="grid grid-cols-2 xs:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-3 sm:gap-4 md:gap-5 lg:gap-6">
@@ -329,7 +329,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <p className="font-['Sansation'] text-[#98012E] text-[12px] sm:text-[13px] md:text-[14px] text-center leading-tight px-1">
+                  <p className="font-['Sansation'] text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px] md:text-[15px] text-center leading-tight px-1">
                     {industry.name}
                   </p>
                 </div>
