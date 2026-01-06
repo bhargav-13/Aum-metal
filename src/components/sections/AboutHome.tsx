@@ -31,7 +31,7 @@ export const AboutHome = () => {
   return (
     <section
       id="about-home"
-      className="min-h-screen w-full flex items-center justify-center bg-white pt-6 sm:pt-12 md:pt-16 lg:pt-24 pb-8 sm:pb-12 md:pb-16 lg:pb-24"
+      className="min-h-0 lg:min-h-screen w-full flex items-center justify-center bg-white pt-6 sm:pt-12 md:pt-16 lg:pt-24 pb-8 sm:pb-12 md:pb-16 lg:pb-24"
     >
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
@@ -90,7 +90,7 @@ export const AboutHome = () => {
 
                   {/* Description */}
                   <p
-                    className={`font-['Sansation'] font-normal text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[20px] leading-[24px] xs:leading-[26px] sm:leading-[28px] md:leading-[32px] tracking-[0.01em] ${
+                    className={`font-['Sansation'] font-normal text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-[24px] xs:leading-[26px] sm:leading-[28px] md:leading-[32px] tracking-[0.01em] ${
                       feature.highlighted ? "text-white" : "text-[#616161]"
                     }`}
                   >

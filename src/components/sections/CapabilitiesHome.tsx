@@ -49,7 +49,7 @@ export const CapabilitiesHome = () => {
   return (
     <section
       id="capabilities-home"
-      className="min-h-screen lg:h-screen w-full flex items-center justify-center bg-white py-8 sm:py-10 md:py-12 overflow-hidden"
+      className="min-h-0 lg:min-h-screen lg:h-screen w-full flex items-center justify-center bg-white py-8 sm:py-10 md:py-12 overflow-hidden"
     >
       <div className="w-full h-full px-4 sm:px-6 md:content-padding flex flex-col">
         <div className="max-w-7xl mx-auto w-full h-full flex flex-col">
@@ -70,7 +70,7 @@ export const CapabilitiesHome = () => {
                 <button
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`px-3 xs:px-4 sm:px-5 md:px-7 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] lg:text-[17px] transition-all duration-300 min-h-[44px] ${
+                  className={`px-3 xs:px-4 sm:px-5 md:px-7 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] transition-all duration-300 min-h-[44px] ${
                     activeTab === index
                       ? "bg-[#98012E] text-white"
                       : "bg-white text-[#1A1A1A] border-2 border-[#E5E5E5] hover:border-[#98012E]"
@@ -124,10 +124,10 @@ export const CapabilitiesHome = () => {
                   <h3 className="font-['DM_Sans'] font-black text-[#98012E] text-[22px] xs:text-[24px] sm:text-[26px] md:text-[30px] lg:text-[34px] xl:text-[40px] mb-2 sm:mb-3 md:mb-4 leading-tight">
                     {capabilities[activeTab].title}
                   </h3>
-                  <p className="font-['Sansation'] font-normal text-[#DC6B8F] text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[20px] mb-2 sm:mb-3 md:mb-5 leading-relaxed">
+                  <p className="font-['Sansation'] font-normal text-[#DC6B8F] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] mb-2 sm:mb-3 md:mb-5 leading-relaxed">
                     {capabilities[activeTab].subtitle}
                   </p>
-                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-relaxed">
+                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed">
                     {capabilities[activeTab].description}
                   </p>
                 </div>

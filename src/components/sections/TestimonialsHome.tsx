@@ -154,7 +154,7 @@ export const TestimonialsHome = () => {
                       <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px] leading-tight mb-1 sm:mb-2">
                         Ankit Mungra
                       </h3>
-                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[14px]">
+                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px]">
                         Procurement Head
                       </p>
                     </div>
@@ -181,7 +181,7 @@ export const TestimonialsHome = () => {
                         </span>
                       </div>
                     </div>
-                    <blockquote className="relative z-10 font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px] leading-relaxed p-3 xs:p-4 sm:p-6">
+                    <blockquote className="relative z-10 font-['Sansation'] font-normal text-[#98012E] text-[14px] xs:text-[15px] sm:text-[15px] leading-relaxed p-3 xs:p-4 sm:p-6">
                       "Aum Metal Alloys consistently delivers high-quality brass
                       rods and billets with precise dimensions. Their
                       reliability and process discipline make them a trusted
@@ -192,13 +192,13 @@ export const TestimonialsHome = () => {
                         {[...Array(5)].map((_, i) => (
                           <span
                             key={i}
-                            className="text-[#98012E] text-[13px] xs:text-[14px] sm:text-[16px]"
+                            className="text-[#98012E] text-[14px] xs:text-[15px] sm:text-[16px]"
                           >
                             ★
                           </span>
                         ))}
                       </div>
-                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px]">
+                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[14px] xs:text-[15px] sm:text-[15px]">
                         Parmeshwari Brass
                       </p>
                     </div>

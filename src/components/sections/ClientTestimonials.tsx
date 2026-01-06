@@ -4,7 +4,7 @@ export const ClientTestimonials = () => {
   return (
     <section
     id="testimonials-home"
-    className="h-[80vh] lg:h-full w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
+    className="min-h-0 lg:h-full w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
   >
     <div className="w-full px-4 sm:px-6 md:content-padding flex flex-col items-center justify-between h-full">
       <div className="max-w-7xl mx-auto">

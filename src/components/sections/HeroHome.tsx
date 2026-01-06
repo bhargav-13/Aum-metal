@@ -62,7 +62,7 @@ export const HeroHome = () => {
         {/* Welcome Badge */}
         <div className="inline-flex mb-3 sm:mb-3 md:mb-4 lg:mb-3 w-auto max-w-[95vw] sm:max-w-[90vw] h-auto min-h-[42px] sm:min-h-[42px] md:min-h-[45px] lg:min-h-[42px] rounded-[110px] border border-white py-2.5 sm:py-2.5 px-5 sm:px-5 md:px-7 items-center justify-center gap-2 opacity-100 bg-transparent">
           <p
-            className="whitespace-normal text-center sm:whitespace-nowrap text-[15px] xs:text-[16px] sm:text-[17px] md:text-[20px] lg:text-[22px] xl:text-[26px]"
+            className="whitespace-normal text-center sm:whitespace-nowrap text-[16px] xs:text-[17px] sm:text-[18px] md:text-[20px] lg:text-[22px] xl:text-[26px]"
             style={{
               fontFamily: "Sansation, sans-serif",
               fontWeight: 700,
@@ -85,7 +85,7 @@ export const HeroHome = () => {
         </h1>
 
         {/* Description Paragraph */}
-        <p className="w-full sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%] max-w-5xl px-4 sm:px-6 text-center text-[#616161] font-['Sansation'] font-normal tracking-[0.01em] leading-relaxed text-[13px] xs:text-[14px] sm:text-[13px] md:text-[14px] lg:text-[15px] xl:text-[16px] mb-4 sm:mb-4 md:mb-5 lg:mb-5">
+        <p className="w-full sm:w-[90%] md:w-[85%] lg:w-[80%] xl:w-[70%] max-w-5xl px-4 sm:px-6 text-center text-[#616161] font-['Sansation'] font-normal tracking-[0.01em] leading-relaxed text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] lg:text-[17px] xl:text-[18px] mb-4 sm:mb-4 md:mb-5 lg:mb-5">
           Aum Metal Alloys specializes in manufacturing high-quality{" "}
           <span className="text-[#FFAE00] font-bold">
             brass rods, ingots, and billets engineered

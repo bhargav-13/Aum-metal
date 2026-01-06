@@ -84,7 +84,7 @@ export const IndustryHome = () => {
                 </div>
 
                 {/* Industry Name */}
-                <h3 className="font-['DM_Sans'] font-medium text-[#1A1A1A] text-[14px] xs:text-[15px] sm:text-[16px] md:text-[18px] lg:text-[20px] leading-tight">
+                <h3 className="font-['DM_Sans'] font-medium text-[#1A1A1A] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] leading-tight">
                   {industry.name}
                 </h3>
               </div>

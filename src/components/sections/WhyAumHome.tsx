@@ -75,7 +75,7 @@ export const WhyAumHome = () => {
                     onClick={() => toggleAccordion(index)}
                     className="w-full flex items-center justify-between p-4 text-left hover:bg-[#FFF5F7] transition"
                   >
-                    <h3 className="font-['DM_Sans'] font-medium text-[#98012E] text-[15px] xs:text-base sm:text-base lg:text-lg pr-4">
+                    <h3 className="font-['DM_Sans'] font-medium text-[#98012E] text-[16px] xs:text-[17px] sm:text-[18px] lg:text-[20px] pr-4">
                       {feature.title}
                     </h3>
 
@@ -96,7 +96,7 @@ export const WhyAumHome = () => {
                     }`}
                   >
                     <div className="px-4 pb-4">
-                      <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] leading-relaxed">
+                      <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] leading-relaxed">
                         {feature.description}
                       </p>
                     </div>

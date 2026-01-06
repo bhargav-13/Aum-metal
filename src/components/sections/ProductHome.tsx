@@ -5,7 +5,7 @@ export const ProductHome = () => {
   return (
     <section
       id="product-home"
-      className="relative h-[50vh] lg:min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
+      className="relative min-h-0 lg:min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
     >
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
@@ -18,7 +18,7 @@ export const ProductHome = () => {
               </h2>
 
               {/* First Paragraph */}
-              <p className="font-['Sansation'] font-normal text-[#616161] text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed mb-4 sm:mb-5 md:mb-6">
+              <p className="font-['Sansation'] font-normal text-[#616161] text-[16px] xs:text-[17px] sm:text-[17px] md:text-[18px] lg:text-[19px] leading-relaxed mb-4 sm:mb-5 md:mb-6">
                 Aum Metal Alloys offers a comprehensive range of brass rods,
                 Ingots, and billets manufactured with controlled alloy
                 composition and precision processes. Our products are designed
@@ -28,7 +28,7 @@ export const ProductHome = () => {
               </p>
 
               {/* Second Paragraph */}
-              <p className="font-['Sansation'] font-normal text-[#616161] text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed mb-10 sm:mb-14">
+              <p className="font-['Sansation'] font-normal text-[#616161] text-[16px] xs:text-[17px] sm:text-[17px] md:text-[18px] lg:text-[19px] leading-relaxed mb-10 sm:mb-14">
                 Each product is produced with strict quality control to ensure
                 dimensional accuracy, uniform structure, and smooth surface
                 finish. From standard specifications to customized sizes and
