@@ -2,6 +2,7 @@ import { CTAButton } from "../CTAButton";
 import trustRightHomeImgWeb from "../../assets/TrustRightHomeWeb.png";
 import trustRightHomeImgMobile from "../../assets/TrustRightHomeMobile.png";
 import trustedHomeImg from "../../assets/trustedHome.png";
+import vectorFooterImg from "../../assets/Vector footer.svg";
 import { useEffect, useState } from "react";
 
 export const TestimonialsHome = () => {
@@ -115,20 +116,32 @@ export const TestimonialsHome = () => {
 
                 <div className="absolute right-0 top-0 lg:w-[64.8%]">
                   <img src={trustedHomeImg} alt="" className="w-auto h-auto" />
-                  <div className="bg-white border border-[#E5C4CC] p-12 pl-14 min-h-[450px] flex flex-col justify-center rounded-r-[20px]">
-                    <div className="mb-8">
-                      <div className="w-14 h-14 bg-[#98012E] rounded-full flex items-center justify-center">
-                        <span className="text-white text-[28px] font-serif">
-                          "
-                        </span>
-                      </div>
+                  <div className="bg-[#FFF4F8] border border-[#E5C4CC] p-12 pl-14 min-h-[450px] flex flex-col justify-center rounded-r-[20px] relative overflow-hidden">
+                    {/* Background Image - Centered behind text */}
+                    <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+                      <img 
+                        src={vectorFooterImg} 
+                        alt="" 
+                        className="h-full w-auto object-contain opacity-100"
+                      />
                     </div>
-                    <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[22px] xl:text-[24px] leading-relaxed">
-                      "Aum Metal Alloys consistently delivers high-quality brass
-                      rods and billets with precise dimensions. Their
-                      reliability and process discipline make them a trusted
-                      supplier for our production requirements."
-                    </blockquote>
+                    
+                    {/* Content with z-index to appear above background */}
+                    <div className="relative z-10">
+                      <div className="mb-8">
+                        <div className="w-14 h-14 bg-[#98012E] rounded-full flex items-center justify-center">
+                          <span className="text-white text-[28px] font-serif">
+                            "
+                          </span>
+                        </div>
+                      </div>
+                      <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[22px] xl:text-[24px] leading-relaxed">
+                        "Aum Metal Alloys consistently delivers high-quality brass
+                        rods and billets with precise dimensions. Their
+                        reliability and process discipline make them a trusted
+                        supplier for our production requirements."
+                      </blockquote>
+                    </div>
                   </div>
                 </div>
               </div>
@@ -150,21 +163,31 @@ export const TestimonialsHome = () => {
 
                 <div className="absolute right-0 top-[69.8%] flex flex-row items-start">
                   <img src={trustedHomeImg} alt="" className="w-auto h-auto" />
-                  <div className="bg-white border border-[#E5C4CC] min-h-[320px] xs:min-h-[350px] sm:min-h-[400px] flex flex-col justify-between">
-                    <div className="mb-3 xs:mb-4 sm:mb-6 p-3 xs:p-4 sm:p-6">
+                  <div className="bg-[#FFF4F8] border border-[#E5C4CC] min-h-[320px] xs:min-h-[350px] sm:min-h-[400px] flex flex-col justify-between relative overflow-hidden">
+                    {/* Background Image - Centered behind text */}
+                    <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+                      <img 
+                        src={vectorFooterImg} 
+                        alt="" 
+                        className="h-full w-auto object-contain opacity-100"
+                      />
+                    </div>
+                    
+                    {/* Content with z-index to appear above background */}
+                    <div className="relative z-10 mb-3 xs:mb-4 sm:mb-6 p-3 xs:p-4 sm:p-6">
                       <div className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 bg-[#98012E] rounded-full flex items-center justify-center">
                         <span className="text-white text-[14px] xs:text-[16px] sm:text-[20px] font-serif">
                           "
                         </span>
                       </div>
                     </div>
-                    <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px] leading-relaxed p-3 xs:p-4 sm:p-6">
+                    <blockquote className="relative z-10 font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px] leading-relaxed p-3 xs:p-4 sm:p-6">
                       "Aum Metal Alloys consistently delivers high-quality brass
                       rods and billets with precise dimensions. Their
                       reliability and process discipline make them a trusted
                       supplier for our production requirements."
                     </blockquote>
-                    <div className="bg-[#FFB8CC] p-2.5 xs:p-3 sm:p-4">
+                    <div className="relative z-10 bg-[#FFB8CC] p-2.5 xs:p-3 sm:p-4">
                       <div className="flex gap-0.5 sm:gap-1 mb-1.5 xs:mb-2 sm:mb-3">
                         {[...Array(5)].map((_, i) => (
                           <span

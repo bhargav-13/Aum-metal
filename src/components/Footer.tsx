@@ -1,11 +1,22 @@
+import vectorFooterImg from "../assets/Vector footer.svg";
+
 export const Footer = () => {
   return (
     <footer className="bg-[#98012E] pt-12 overflow-hidden relative pb-0">
       {/* Footer Content Card */}
       <div className="z-10 max-w-[95%] lg:max-w-[90%] mx-auto mb-6">
-        <div className="bg-[#FFF5F7] rounded-[30px] px-6 sm:px-8 md:px-12 lg:px-16 pt-10 pb-8">
+        <div className="bg-[#FFF5F7] rounded-[30px] px-6 sm:px-8 md:px-12 lg:px-16 pt-10 pb-8 relative overflow-hidden">
+          {/* Background Image - Centered behind text */}
+          <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+            <img 
+              src={vectorFooterImg} 
+              alt="" 
+              className="h-full w-auto object-contain opacity-100"
+            />
+          </div>
+          
           {/* Main Footer Content */}
-          <div className="flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-6 mb-8 sm:mb-10">
+          <div className="relative z-10 flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-6 mb-8 sm:mb-10">
             {/* Brand Section */}
             <div className="w-full lg:col-span-1 text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-2 sm:mb-3">
@@ -131,10 +142,10 @@ export const Footer = () => {
           </div>
 
           {/* Divider */}
-          <div className="border-t border-[#E5C4CC] mb-6"></div>
+          <div className="relative z-10 border-t border-[#E5C4CC] mb-6"></div>
 
           {/* Bottom Bar */}
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
+          <div className="relative z-10 flex flex-col sm:flex-row justify-between items-center gap-3 sm:gap-4 text-center sm:text-left">
             <p className="font-['Sansation'] font-normal text-[#98012E] text-[13px] sm:text-[13px] lg:text-[13px]">
               © {new Date().getFullYear()} Aum Metal Alloy — All Copyright Reserved
             </p>
