@@ -29,11 +29,11 @@ export const TeamAbout = () => {
         </div>
 
         {/* Team Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 lg:gap-12 max-w-4xl mx-auto">
+        <div className="grid grid-cols-2 gap-4 sm:gap-6 md:gap-8 lg:gap-12 max-w-4xl mx-auto">
           {team.map((member) => (
             <div key={member.name} className="flex flex-col items-center">
               {/* Image */}
-              <div className="w-full max-w-sm mb-6 overflow-hidden rounded-2xl">
+              <div className="w-full max-w-sm mb-4 sm:mb-6 overflow-hidden rounded-2xl">
                 <img
                   src={member.image}
                   alt={member.name}
@@ -41,10 +41,10 @@ export const TeamAbout = () => {
                 />
               </div>
               {/* Name and Role */}
-              <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[22px] xs:text-[24px] sm:text-[26px] md:text-[28px] mb-2">
+              <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] xs:text-[16px] sm:text-[22px] md:text-[24px] lg:text-[28px] mb-1 sm:mb-2 text-center">
                 {member.name}
               </h3>
-              <p className="font-['Sansation'] font-normal text-[#A05370] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px]">
+              <p className="font-['Sansation'] font-normal text-[#A05370] text-[12px] xs:text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] text-center">
                 {member.role}
               </p>
             </div>

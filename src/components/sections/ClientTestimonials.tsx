@@ -1,16 +1,16 @@
 import trustedHomeImg from '../../assets/trustedHome.png';
-
+import vectorFooterImg from '../../assets/Vector footer.svg';
 export const ClientTestimonials = () => {
   return (
     <section
     id="testimonials-home"
-    className="min-h-screen w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
+    className="h-[80vh] lg:h-full w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
   >
-    <div className="w-full px-4 sm:px-6 md:content-padding">
+    <div className="w-full px-4 sm:px-6 md:content-padding flex flex-col items-center justify-between h-full">
       <div className="max-w-7xl mx-auto">
         {/* Header */}
-        <div className="text-center mb-12 sm:mb-14 md:mb-16">
-          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] mb-4 sm:mb-5 leading-none tracking-normal">
+        <div className="text-center mb-8 sm:mb-12 md:mb-14 lg:mb-16">
+          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] xl:text-[64px] 2xl:text-[72px] mb-3 sm:mb-4 md:mb-5 leading-none tracking-normal">
             Trusted by Our Clients
           </h2>
           <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] xl:text-[22px] max-w-4xl mx-auto leading-relaxed tracking-normal px-4">
@@ -18,64 +18,8 @@ export const ClientTestimonials = () => {
             reliability.
           </p>
         </div>
-
-        {/* Mobile Layout */}
-        <div className="block lg:hidden relative max-w-6xl mx-auto mb-20">
-          <div className="flex flex-row">
-            <div className="w-full">
-              <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between h-[135.92px]">
-                <div className="p-4 sm:p-6">
-                  <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px] leading-tight mb-1 sm:mb-2">
-                    Ankit Mungra
-                  </h3>
-                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[14px]">
-                    -Procurement Head
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            <div className="absolute right-0 top-[69.8%] flex flex-row items-start">
-              <img
-                src={trustedHomeImg}
-                alt=""
-                className="w-auto h-auto"
-              />
-              <div className="bg-white border border-[#E5C4CC] min-h-[350px] sm:min-h-[400px] flex flex-col justify-between">
-                <div className="mb-4 sm:mb-6 p-4 sm:p-6">
-                  <div className="w-8 h-8 sm:w-10 sm:h-10 bg-[#98012E] rounded-full flex items-center justify-center">
-                    <span className="text-white text-[16px] sm:text-[20px] font-serif">
-                      "
-                    </span>
-                  </div>
-                </div>
-                <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px] leading-relaxed p-4 sm:p-6">
-                  "Aum Metal Alloys consistently delivers high-quality brass
-                  rods and billets with precise dimensions. Their
-                  reliability and process discipline make them a trusted
-                  supplier for our production requirements."
-                </blockquote>
-                <div className="bg-[#FFB8CC] p-3 sm:p-4">
-                  <div className="flex gap-0.5 sm:gap-1 mb-2 sm:mb-3">
-                    {[...Array(5)].map((_, i) => (
-                      <span
-                        key={i}
-                        className="text-[#98012E] text-[14px] xs:text-[15px] sm:text-[16px]"
-                      >
-                        ★
-                      </span>
-                    ))}
-                  </div>
-                  <p className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px]">
-                    -Parmeshwari Brass
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        {/* Desktop Layout */}
+      </div>
+      <div className="w-full h-full">
         <div className="hidden lg:block relative max-w-6xl mx-auto mb-20">
           <div className="flex flex-row">
             <div className="lg:w-[40%]">
@@ -85,7 +29,7 @@ export const ClientTestimonials = () => {
                     Ankit Mungra
                   </h3>
                   <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px]">
-                    -Procurement Head
+                    Procurement Head
                   </p>
                 </div>
 
@@ -98,53 +42,119 @@ export const ClientTestimonials = () => {
                     ))}
                   </div>
                   <p className="font-['Sansation'] font-normal text-[#98012E] text-[16px]">
-                    -Parmeshwari Brass
+                    Parmeshwari Brass
                   </p>
                 </div>
               </div>
             </div>
 
             <div className="absolute right-0 top-0 lg:w-[64.8%]">
-              <img
-                src={trustedHomeImg}
-                alt=""
-                className="w-auto h-auto"
-              />
-              <div className="bg-white border border-[#E5C4CC] p-12 pl-14 min-h-[450px] flex flex-col justify-center rounded-r-[20px]">
-                <div className="mb-8">
-                  <div className="w-14 h-14 bg-[#98012E] rounded-full flex items-center justify-center">
-                    <span className="text-white text-[28px] font-serif">
+              <img src={trustedHomeImg} alt="" className="w-auto h-auto" />
+              <div className="bg-[#FFF4F8] border border-[#E5C4CC] p-12 pl-14 min-h-[450px] flex flex-col justify-center rounded-r-[20px] relative overflow-hidden">
+                {/* Background Image - Centered behind text */}
+                <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+                  <img 
+                    src={vectorFooterImg} 
+                    alt="" 
+                    className="h-full w-auto object-contain opacity-100"
+                  />
+                </div>
+                
+                {/* Content with z-index to appear above background */}
+                <div className="relative z-10">
+                  <div className="mb-8">
+                    <div className="w-14 h-14 bg-[#98012E] rounded-full flex items-center justify-center">
+                      <span className="text-white text-[28px] font-serif">
+                        "
+                      </span>
+                    </div>
+                  </div>
+                  <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[22px] xl:text-[24px] leading-relaxed">
+                    "Aum Metal Alloys consistently delivers high-quality brass
+                    rods and billets with precise dimensions. Their
+                    reliability and process discipline make them a trusted
+                    supplier for our production requirements."
+                  </blockquote>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div className="block lg:hidden relative max-w-6xl mx-auto mb-12 sm:mb-16 md:mb-20">
+          <div className="flex flex-row">
+            <div className="w-full">
+              <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between h-auto min-h-[120px] xs:h-[135.92px]">
+                <div className="p-3 xs:p-4 sm:p-6">
+                  <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px] leading-tight mb-1 sm:mb-2">
+                    Ankit Mungra
+                  </h3>
+                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[13px] xs:text-[14px] sm:text-[14px]">
+                    Procurement Head
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div className="absolute right-0 top-[69.8%] flex flex-row items-start">
+              <img src={trustedHomeImg} alt="" className="w-auto h-auto" />
+              <div className="bg-[#FFF4F8] border border-[#E5C4CC] min-h-[320px] xs:min-h-[350px] sm:min-h-[400px] flex flex-col justify-between relative overflow-hidden">
+                {/* Background Image - Centered behind text */}
+                <div className="absolute inset-0 flex items-center justify-center z-0 pointer-events-none">
+                  <img 
+                    src={vectorFooterImg} 
+                    alt="" 
+                    className="h-full w-auto object-contain opacity-100"
+                  />
+                </div>
+                
+                {/* Content with z-index to appear above background */}
+                <div className="relative z-10 mb-3 xs:mb-4 sm:mb-6 p-3 xs:p-4 sm:p-6">
+                  <div className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 bg-[#98012E] rounded-full flex items-center justify-center">
+                    <span className="text-white text-[14px] xs:text-[16px] sm:text-[20px] font-serif">
                       "
                     </span>
                   </div>
                 </div>
-                <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[22px] xl:text-[24px] leading-relaxed">
+                <blockquote className="relative z-10 font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px] leading-relaxed p-3 xs:p-4 sm:p-6">
                   "Aum Metal Alloys consistently delivers high-quality brass
                   rods and billets with precise dimensions. Their
                   reliability and process discipline make them a trusted
                   supplier for our production requirements."
                 </blockquote>
+                <div className="relative z-10 bg-[#FFB8CC] p-2.5 xs:p-3 sm:p-4">
+                  <div className="flex gap-0.5 sm:gap-1 mb-1.5 xs:mb-2 sm:mb-3">
+                    {[...Array(5)].map((_, i) => (
+                      <span
+                        key={i}
+                        className="text-[#98012E] text-[13px] xs:text-[14px] sm:text-[16px]"
+                      >
+                        ★
+                      </span>
+                    ))}
+                  </div>
+                  <p className="font-['Sansation'] font-normal text-[#98012E] text-[13px] xs:text-[14px] sm:text-[14px]">
+                    Parmeshwari Brass
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
-
-        {/* Navigation Dots */}
-        <div className="flex justify-center gap-3 ">
-          <button
-            className="w-3 h-3 rounded-full bg-[#98012E] transition-all duration-300"
-            aria-label="Testimonial 1"
-          ></button>
-          <button
-            className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
-            aria-label="Testimonial 2"
-          ></button>
-          <button
-            className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
-            aria-label="Testimonial 3"
-          ></button>
-        </div>
       </div>
+      <div className="flex justify-center gap-3">
+        <button
+          className="w-3 h-3 rounded-full bg-[#98012E] transition-all duration-300"
+          aria-label="Testimonial 1"
+        ></button>
+        <button
+          className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
+          aria-label="Testimonial 2"
+        ></button>
+        <button
+          className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
+          aria-label="Testimonial 3"
+        ></button>
+      </div>{" "}
     </div>
   </section>
   );
