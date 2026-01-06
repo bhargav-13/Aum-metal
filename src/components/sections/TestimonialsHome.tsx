@@ -1,46 +1,64 @@
 import { CTAButton } from "../CTAButton";
-import trustRightHomeImg from "../../assets/TrustRightHome.png";
+import trustRightHomeImgWeb from "../../assets/TrustRightHomeWeb.png";
+import trustRightHomeImgMobile from "../../assets/TrustRightHomeMobile.png";
 import trustedHomeImg from "../../assets/trustedHome.png";
+import { useEffect, useState } from "react";
 
 export const TestimonialsHome = () => {
+  const [isMobile, setIsMobile] = useState(() => {
+    if (typeof window !== "undefined") {
+      return window.innerWidth < 768;
+    }
+    return false;
+  });
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    // Set initial value immediately
+    handleResize();
+    window.addEventListener("resize", handleResize);
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <>
       {/* Section 1: Trusted Partner */}
       <section
         id="trust-home"
-        className="relative min-h-screen lg:h-screen w-full flex items-center justify-center bg-white overflow-hidden"
+        className="relative h-[75vh] lg:h-screen w-full flex  items-start lg:items-center justify-center bg-white overflow-hidden"
       >
-        <div className="w-full h-full px-4 sm:px-6 md:content-padding py-8 lg:py-0 flex items-center">
-          <div className="max-w-7xl mx-auto w-full relative">
-            {/* Image - Absolute on Mobile, Absolute on Desktop */}
-            <div className="absolute right-0 bottom-0 flex items-end justify-end z-0 opacity-80 lg:opacity-100">
-              <div className="relative">
-                <img
-                  src={trustRightHomeImg}
-                  alt="Precision brass rods"
-                  className="w-auto h-[250px] xs:h-[300px] sm:h-[350px] md:h-[400px] lg:h-[450px] xl:h-[500px] 2xl:h-[550px] object-contain"
-                />
-              </div>
-            </div>
+        {/* Image - Attached to right side 100%, overlapping text on mobile */}
+        <div className="absolute right-0 bottom-0 flex items-end justify-end z-0 opacity-80 lg:opacity-100">
+          <div className="relative">
+            <img
+              src={isMobile ? trustRightHomeImgMobile : trustRightHomeImgWeb}
+              alt="Precision brass rods"
+              className="w-auto h-[300px] xs:h-[340px] sm:h-[400px] md:h-[420px] lg:h-[450px] xl:h-[500px] 2xl:h-[550px] object-contain translate-x-[10%] md:translate-x-0"
+            />
+          </div>
+        </div>
 
+        <div className="w-full h-full px-4 sm:px-6 md:content-padding py-8 lg:py-0 flex items-start lg:items-center">
+          <div className="max-w-7xl mx-auto w-full relative">
             {/* Left Side - Content */}
             <div className="relative z-10 flex flex-col justify-center lg:pr-12 text-left lg:max-w-2xl w-full lg:w-auto">
               {/* Main Heading */}
               <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[44px] lg:text-[48px] xl:text-[56px] 2xl:text-[64px] leading-tight mb-3 sm:mb-4 md:mb-5 lg:mb-6">
-                Your Trusted Partner for Precision Brass Rods, Ingots &
-                Billets
+                Your Trusted Partner for Precision Brass Rods, Ingots & Billets
               </h2>
 
               {/* Description */}
-              <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px] xs:text-[17px] sm:text-[18px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-relaxed mb-5 sm:mb-6 md:mb-7 lg:mb-8">
-                Looking for reliable brass materials with consistent quality
-                and precise specifications? Aum Metal Alloys delivers
-                high-performance brass rods, bars, and billets tailored to
-                your industrial and export requirements.
+              <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px] xs:text-[17px] sm:text-[18px] md:text-[18px] lg:text-[19px] xl:text-[20px] leading-relaxed mb-5 sm:mb-6 md:mb-7 lg:mb-8 relative z-20 pr-8 sm:pr-12 md:pr-0">
+                Looking for reliable brass materials with consistent quality and
+                precise specifications? Aum Metal Alloys delivers
+                high-performance brass rods, bars, and billets tailored to your
+                industrial and export requirements.
               </p>
 
               {/* CTA Button */}
-              <div>
+              <div className="relative z-20">
                 <CTAButton text="Contact now" />
               </div>
             </div>
@@ -51,9 +69,9 @@ export const TestimonialsHome = () => {
       {/* Section 2: Client Testimonials */}
       <section
         id="testimonials-home"
-        className="min-h-screen w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
+        className="h-[80vh] lg:h-full w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
       >
-        <div className="w-full px-4 sm:px-6 md:content-padding">
+        <div className="w-full px-4 sm:px-6 md:content-padding flex flex-col items-center justify-between h-full">
           <div className="max-w-7xl mx-auto">
             {/* Header */}
             <div className="text-center mb-8 sm:mb-12 md:mb-14 lg:mb-16">
@@ -65,8 +83,56 @@ export const TestimonialsHome = () => {
                 reliability.
               </p>
             </div>
+          </div>
+          <div className="w-full h-full">
+            <div className="hidden lg:block relative max-w-6xl mx-auto mb-20">
+              <div className="flex flex-row">
+                <div className="lg:w-[40%]">
+                  <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between min-h-[450px] rounded-l-[20px]">
+                    <div className="p-10">
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[30px] leading-tight mb-2">
+                        Ankit Mungra
+                      </h3>
+                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px]">
+                        Procurement Head
+                      </p>
+                    </div>
 
-            {/* Mobile Layout */}
+                    <div className="bg-[#FFB8CC] rounded-bl-[15px] p-6">
+                      <div className="flex gap-1 mb-3">
+                        {[...Array(5)].map((_, i) => (
+                          <span key={i} className="text-[#98012E] text-[20px]">
+                            ★
+                          </span>
+                        ))}
+                      </div>
+                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[16px]">
+                        Parmeshwari Brass
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="absolute right-0 top-0 lg:w-[64.8%]">
+                  <img src={trustedHomeImg} alt="" className="w-auto h-auto" />
+                  <div className="bg-white border border-[#E5C4CC] p-12 pl-14 min-h-[450px] flex flex-col justify-center rounded-r-[20px]">
+                    <div className="mb-8">
+                      <div className="w-14 h-14 bg-[#98012E] rounded-full flex items-center justify-center">
+                        <span className="text-white text-[28px] font-serif">
+                          "
+                        </span>
+                      </div>
+                    </div>
+                    <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[22px] xl:text-[24px] leading-relaxed">
+                      "Aum Metal Alloys consistently delivers high-quality brass
+                      rods and billets with precise dimensions. Their
+                      reliability and process discipline make them a trusted
+                      supplier for our production requirements."
+                    </blockquote>
+                  </div>
+                </div>
+              </div>
+            </div>
             <div className="block lg:hidden relative max-w-6xl mx-auto mb-12 sm:mb-16 md:mb-20">
               <div className="flex flex-row">
                 <div className="w-full">
@@ -83,11 +149,7 @@ export const TestimonialsHome = () => {
                 </div>
 
                 <div className="absolute right-0 top-[69.8%] flex flex-row items-start">
-                  <img
-                    src={trustedHomeImg}
-                    alt=""
-                    className="w-auto h-auto"
-                  />
+                  <img src={trustedHomeImg} alt="" className="w-auto h-auto" />
                   <div className="bg-white border border-[#E5C4CC] min-h-[320px] xs:min-h-[350px] sm:min-h-[400px] flex flex-col justify-between">
                     <div className="mb-3 xs:mb-4 sm:mb-6 p-3 xs:p-4 sm:p-6">
                       <div className="w-7 h-7 xs:w-8 xs:h-8 sm:w-10 sm:h-10 bg-[#98012E] rounded-full flex items-center justify-center">
@@ -121,77 +183,21 @@ export const TestimonialsHome = () => {
                 </div>
               </div>
             </div>
-
-            {/* Desktop Layout */}
-            <div className="hidden lg:block relative max-w-6xl mx-auto mb-20">
-              <div className="flex flex-row">
-                <div className="lg:w-[40%]">
-                  <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between min-h-[450px] rounded-l-[20px]">
-                    <div className="p-10">
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[30px] leading-tight mb-2">
-                        Ankit Mungra
-                      </h3>
-                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px]">
-                        Procurement Head
-                      </p>
-                    </div>
-
-                    <div className="bg-[#FFB8CC] rounded-bl-[15px] p-6">
-                      <div className="flex gap-1 mb-3">
-                        {[...Array(5)].map((_, i) => (
-                          <span key={i} className="text-[#98012E] text-[20px]">
-                            ★
-                          </span>
-                        ))}
-                      </div>
-                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[16px]">
-                        Parmeshwari Brass
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="absolute right-0 top-0 lg:w-[64.8%]">
-                  <img
-                    src={trustedHomeImg}
-                    alt=""
-                    className="w-auto h-auto"
-                  />
-                  <div className="bg-white border border-[#E5C4CC] p-12 pl-14 min-h-[450px] flex flex-col justify-center rounded-r-[20px]">
-                    <div className="mb-8">
-                      <div className="w-14 h-14 bg-[#98012E] rounded-full flex items-center justify-center">
-                        <span className="text-white text-[28px] font-serif">
-                          "
-                        </span>
-                      </div>
-                    </div>
-                    <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[22px] xl:text-[24px] leading-relaxed">
-                      "Aum Metal Alloys consistently delivers high-quality brass
-                      rods and billets with precise dimensions. Their
-                      reliability and process discipline make them a trusted
-                      supplier for our production requirements."
-                    </blockquote>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Navigation Dots */}
-            <div className="flex justify-center gap-3 ">
-              <button
-                className="w-3 h-3 rounded-full bg-[#98012E] transition-all duration-300"
-                aria-label="Testimonial 1"
-              ></button>
-              <button
-                className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
-                aria-label="Testimonial 2"
-              ></button>
-              <button
-                className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
-                aria-label="Testimonial 3"
-              ></button>
-            </div>
           </div>
+          <div className="flex justify-center gap-3">
+            <button
+              className="w-3 h-3 rounded-full bg-[#98012E] transition-all duration-300"
+              aria-label="Testimonial 1"
+            ></button>
+            <button
+              className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
+              aria-label="Testimonial 2"
+            ></button>
+            <button
+              className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
+              aria-label="Testimonial 3"
+            ></button>
+          </div>{" "}
         </div>
       </section>
     </>
