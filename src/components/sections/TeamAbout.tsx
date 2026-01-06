@@ -41,10 +41,10 @@ export const TeamAbout = () => {
                 />
               </div>
               {/* Name and Role */}
-              <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[14px] xs:text-[16px] sm:text-[22px] md:text-[24px] lg:text-[28px] mb-1 sm:mb-2 text-center">
+              <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[17px] sm:text-[22px] md:text-[24px] lg:text-[28px] mb-1 sm:mb-2 text-center">
                 {member.name}
               </h3>
-              <p className="font-['Sansation'] font-normal text-[#A05370] text-[12px] xs:text-[13px] sm:text-[15px] md:text-[17px] lg:text-[18px] text-center">
+              <p className="font-['Sansation'] font-normal text-[#A05370] text-[13px] xs:text-[14px] sm:text-[15px] md:text-[17px] lg:text-[18px] text-center">
                 {member.role}
               </p>
             </div>

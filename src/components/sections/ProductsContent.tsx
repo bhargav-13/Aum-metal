@@ -198,7 +198,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                     <div className="flex justify-center gap-2 sm:gap-3 lg:gap-4 lg:flex-col">
                       <button
                         onClick={() => setActiveTab("section-profiles")}
-                        className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center leading-tight ${
+                        className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center leading-tight ${
                           activeTab === "section-profiles"
                             ? "bg-[#98012E] text-white"
                             : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
@@ -221,7 +221,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                 </div>
                 {/* Description */}
                 <div className="mb-6 sm:mb-8 lg:mb-10">
-                  <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed whitespace-pre-line">
+                  <p className="font-['Sansation'] text-[#7D7D7D] text-[16px] xs:text-[17px] sm:text-[17px] md:text-[18px] lg:text-[18px] leading-relaxed whitespace-pre-line">
                     {currentProduct.description}
                   </p>
                 </div>
@@ -253,18 +253,18 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                       </h3>
                       <div className="space-y-4 sm:space-y-5 lg:space-y-6">
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[18px] mb-1.5 sm:mb-2">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] lg:text-[18px] mb-1.5 sm:mb-2">
                             Metric Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] lg:text-[16px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px]">
                             {currentProduct.products[0].metricSize}
                           </p>
                         </div>
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[18px] mb-1.5 sm:mb-2">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] lg:text-[18px] mb-1.5 sm:mb-2">
                             Imperial Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] lg:text-[16px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px]">
                             {currentProduct.products[0].imperialSize}
                           </p>
                         </div>
@@ -287,23 +287,23 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                           className="w-full h-full object-cover"
                         />
                       </div>
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[18px] xs:text-[19px] sm:text-[20px] md:text-[22px] mb-3 sm:mb-4 text-center">
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[20px] xs:text-[21px] sm:text-[22px] md:text-[24px] mb-3 sm:mb-4 text-center">
                         {product.name}
                       </h3>
                       <div className="space-y-2.5 sm:space-y-3">
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[16px] sm:text-[17px] mb-1.5">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] mb-1.5">
                             Metric Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px]">
                             {product.metricSize}
                           </p>
                         </div>
                         <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[15px] xs:text-[16px] sm:text-[17px] mb-1.5">
+                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] mb-1.5">
                             Imperial Size
                           </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px]">
+                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px]">
                             {product.imperialSize}
                           </p>
                         </div>

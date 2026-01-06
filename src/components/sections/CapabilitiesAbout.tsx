@@ -67,7 +67,7 @@ export const CapabilitiesAbout = () => {
               {/* Bottom Section - Description or Icon */}
               <div className="flex justify-end items-end">
                 {activeIndex === index ? (
-                  <p className="font-['Sansation'] font-normal text-white text-[14px] xs:text-[15px] sm:text-[15px] lg:text-[16px] leading-relaxed w-full">
+                  <p className="font-['Sansation'] font-normal text-white text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px] leading-relaxed w-full">
                     {capability.description}
                   </p>
                 ) : (

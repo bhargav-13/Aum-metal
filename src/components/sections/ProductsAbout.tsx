@@ -67,7 +67,7 @@ export const ProductsAbout = () => {
                 <button
                   key={product.id}
                   onClick={() => setActiveTab(index)}
-                  className={`px-4 xs:px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] transition-all duration-300 min-h-[44px] ${
+                  className={`px-4 xs:px-5 sm:px-7 py-2.5 sm:py-3 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] transition-all duration-300 min-h-[44px] ${
                     activeTab === index
                       ? 'bg-[#98012E] text-white shadow-lg'
                       : 'bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]'

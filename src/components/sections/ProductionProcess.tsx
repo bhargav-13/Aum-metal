@@ -72,7 +72,7 @@ export const ProductionProcess = () => {
               </div>
 
               {/* Name - Below icon, centered, black color */}
-              <h3 className="font-['Sansation'] font-medium text-black text-[12px] xs:text-[13px] sm:text-[14px] md:text-[15px] lg:text-[16px] text-center w-full">
+              <h3 className="font-['Sansation'] font-medium text-black text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] lg:text-[16px] text-center w-full">
                 {process.name}
               </h3>
             </div>
