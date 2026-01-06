@@ -32,7 +32,7 @@ export const CapabilitiesAbout = () => {
   ];
 
   return (
-    <section className="relative min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-[1400px] mx-auto px-4 sm:px-6 md:px-12 w-full">
         {/* Cards Grid */}
         <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 lg:gap-6 items-stretch">
@@ -56,7 +56,7 @@ export const CapabilitiesAbout = () => {
                   {capability.number}
                 </h3>
                 <h4
-                  className={`font-['DM_Sans'] font-bold text-[14px] sm:text-[15px] md:text-[16px] lg:text-[18px] leading-tight ${
+                  className={`font-['DM_Sans'] font-bold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] leading-tight ${
                     activeIndex === index ? 'text-white' : 'text-[#98012E]'
                   }`}
                 >
@@ -67,7 +67,7 @@ export const CapabilitiesAbout = () => {
               {/* Bottom Section - Description or Icon */}
               <div className="flex justify-end items-end">
                 {activeIndex === index ? (
-                  <p className="font-['Sansation'] font-normal text-white text-[13px] xs:text-[14px] sm:text-[14px] lg:text-[15px] leading-relaxed w-full">
+                  <p className="font-['Sansation'] font-normal text-white text-[14px] xs:text-[15px] sm:text-[15px] lg:text-[16px] leading-relaxed w-full">
                     {capability.description}
                   </p>
                 ) : (

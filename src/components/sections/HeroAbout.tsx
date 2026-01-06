@@ -7,7 +7,7 @@ export const HeroAbout = () => {
           <div className="mb-8 sm:mb-12 lg:mb-16">
             <div className="inline-block">
               <div className="border-2 border-white/80 rounded-full px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 py-3 xs:py-3.5 sm:py-4 md:py-5">
-                <p className="font-['Sansation'] font-normal text-white text-[12px] xs:text-[13px] sm:text-[14px] md:text-[16px] lg:text-[18px] xl:text-[19px] leading-relaxed text-center">
+                <p className="font-['Sansation'] font-normal text-white text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] leading-relaxed text-center">
                   Precision Brass Manufacturing Built on Quality, Consistency & Trust
                 </p>
               </div>

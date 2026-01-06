@@ -47,15 +47,15 @@ export const ProductsAbout = () => {
   ];
 
   return (
-    <section className="relative min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="w-full px-4 sm:px-6 md:content-padding flex flex-col">
         <div className="max-w-7xl mx-auto w-full h-full flex flex-col">
           {/* Header */}
           <div className="text-center mb-6 sm:mb-8 shrink-0">
-            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[28px] xs:text-[32px] sm:text-[36px] md:text-[44px] lg:text-[52px] xl:text-[60px] mb-3 leading-tight px-4">
+            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[30px] xs:text-[34px] sm:text-[38px] md:text-[44px] lg:text-[52px] xl:text-[60px] mb-3 leading-tight px-4">
               Precision Brass Products Designed to Power Industrial Performance
             </h2>
-            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] max-w-5xl mx-auto leading-relaxed px-4">
+            <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px] xs:text-[17px] sm:text-[18px] md:text-[19px] lg:text-[20px] max-w-5xl mx-auto leading-relaxed px-4">
               We manufacture high-quality brass rods, bars, and billets engineered to deliver consistent strength, dimensional accuracy, and reliable performance across industrial and export applications.
             </p>
           </div>
@@ -119,10 +119,10 @@ export const ProductsAbout = () => {
                   <h3 className="font-['DM_Sans'] font-black text-[#98012E] text-[24px] xs:text-[26px] sm:text-[28px] md:text-[30px] lg:text-[34px] xl:text-[40px] mb-3 sm:mb-4 leading-tight">
                     {products[activeTab].title}
                   </h3>
-                  <p className="font-['Sansation'] font-normal text-[#DC6B8F] text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[20px] mb-3 sm:mb-5 leading-relaxed">
+                  <p className="font-['Sansation'] font-normal text-[#DC6B8F] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] mb-3 sm:mb-5 leading-relaxed">
                     {products[activeTab].subtitle}
                   </p>
-                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] md:text-[17px] lg:text-[18px] leading-relaxed">
+                  <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] leading-relaxed">
                     {products[activeTab].description}
                   </p>
                 </div>

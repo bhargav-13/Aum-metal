@@ -24,7 +24,7 @@ export const IndustriesAbout = () => {
   ];
 
   return (
-    <section className="relative min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative min-h-0 lg:min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
         {/* Heading */}
         <div className="text-center mb-12">
@@ -50,7 +50,7 @@ export const IndustriesAbout = () => {
                   className="w-full h-full object-contain"
                 />
               </div>
-              <p className="font-['Sansation'] font-medium text-[#98012E] text-[14px] xs:text-[14px] sm:text-[15px] md:text-[16px]">
+              <p className="font-['Sansation'] font-medium text-[#98012E] text-[15px] xs:text-[15px] sm:text-[16px] md:text-[17px]">
                 {industry.name}
               </p>
             </div>

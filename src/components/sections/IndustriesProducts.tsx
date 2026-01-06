@@ -24,7 +24,7 @@ export const IndustriesProducts = () => {
   const industries = industriesByProduct[activeTab] || industriesByProduct['brass-road'];
 
   return (
-    <section className="relative min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
         <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] sm:text-[40px] md:text-[48px] lg:text-[56px] text-center mb-12 leading-tight">
           Applications Across Industries

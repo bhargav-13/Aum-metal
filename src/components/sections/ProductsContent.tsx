@@ -152,7 +152,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
 
   return (
     <>
-      <section className="relative min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+      <section className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
         <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 w-full">
           <div className="flex flex-col lg:flex-col gap-4 sm:gap-6 lg:gap-8">
             {/* Left Sidebar - Tabs */}
