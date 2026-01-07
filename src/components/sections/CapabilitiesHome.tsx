@@ -65,12 +65,12 @@ export const CapabilitiesHome = () => {
 
           {/* Tabs with Arrow Indicator */}
           <div className="mb-4 sm:mb-6 lg:mb-8 shrink-0">
-            <div className="flex flex-wrap justify-center gap-2 sm:gap-3 md:gap-4">
+            <div className="flex flex-nowrap justify-center gap-1 xs:gap-1.5 sm:gap-3 md:gap-4">
               {capabilities.map((capability, index) => (
                 <button
                   key={index}
                   onClick={() => setActiveTab(index)}
-                  className={`px-3 xs:px-4 sm:px-5 md:px-7 py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px] lg:text-[18px] transition-all duration-300 min-h-[44px] ${
+                  className={`px-2 xs:px-2.5 sm:px-5 md:px-7 py-2 xs:py-2.5 sm:py-2.5 md:py-3 rounded-full font-['DM_Sans'] font-medium text-[11px] xs:text-[12px] sm:text-[16px] md:text-[17px] lg:text-[18px] transition-all duration-300 min-h-[44px] whitespace-nowrap flex-shrink-0 ${
                     activeTab === index
                       ? "bg-[#98012E] text-white"
                       : "bg-white text-[#1A1A1A] border-2 border-[#E5E5E5] hover:border-[#98012E]"
