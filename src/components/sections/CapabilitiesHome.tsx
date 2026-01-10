@@ -49,7 +49,7 @@ export const CapabilitiesHome = () => {
   return (
     <section
       id="capabilities-home"
-      className="min-h-0 lg:min-h-screen lg:h-screen w-full flex items-center justify-center bg-white py-8 sm:py-10 md:py-12 overflow-hidden"
+      className="min-h-0 lg:min-h-screen lg:h-screen w-full flex items-center justify-center bg-white py-8 sm:py-10 md:py-12 lg:pt-12 lg:pb-4 overflow-hidden"
     >
       <div className="w-full h-full px-4 sm:px-6 md:content-padding flex flex-col">
         <div className="max-w-7xl mx-auto w-full h-full flex flex-col">
