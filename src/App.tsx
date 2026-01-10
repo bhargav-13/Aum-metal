@@ -7,13 +7,13 @@ import { Products } from './pages/Products'
 export default function App() {
   return (
     <BrowserRouter>
-      <MainLayout>
+    <MainLayout>
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
         </Routes>
-      </MainLayout>
+    </MainLayout>
     </BrowserRouter>
   )
 }

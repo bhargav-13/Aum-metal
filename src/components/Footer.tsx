@@ -160,9 +160,9 @@ export const Footer = () => {
       <div className="w-full flex justify-center items-end pb-0 overflow-hidden">
         <div className="max-w-[95%] lg:max-w-[90%] w-full">
           <h2 className="font-['DM_Sans'] font-black text-[24px] xs:text-[32px] sm:text-[48px] md:text-[64px] lg:text-[80px] xl:text-[100px] 2xl:text-[120px] opacity-50 text-center leading-none text-[#B8124A] translate-y-[20%]">
-            AUM METAL ALLOY
-          </h2>
-        </div>
+          AUM METAL ALLOY
+        </h2>
+      </div>
       </div>
     </footer>
   );

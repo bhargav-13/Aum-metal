@@ -38,12 +38,12 @@ export const Header = () => {
                     {item.label}
                   </Link>
                 ) : (
-                  <a
-                    href={item.href}
-                    className="transition-opacity hover:opacity-80"
-                  >
-                    {item.label}
-                  </a>
+                <a
+                  href={item.href}
+                  className="transition-opacity hover:opacity-80"
+                >
+                  {item.label}
+                </a>
                 )}
               </li>
             ))}
@@ -91,13 +91,13 @@ export const Header = () => {
                     {item.label}
                   </Link>
                 ) : (
-                  <a
-                    href={item.href}
-                    onClick={() => setIsMenuOpen(false)}
-                    className="block transition-opacity hover:opacity-80"
-                  >
-                    {item.label}
-                  </a>
+                <a
+                  href={item.href}
+                  onClick={() => setIsMenuOpen(false)}
+                  className="block transition-opacity hover:opacity-80"
+                >
+                  {item.label}
+                </a>
                 )}
               </li>
             ))}
