@@ -5,11 +5,11 @@ export const ProductHome = () => {
   return (
     <section
       id="product-home"
-      className="relative min-h-0 lg:min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden"
+      className="relative min-h-0 lg:min-h-screen w-full block items-center justify-center overflow-hidden"
     >
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
-          <div className="lg:grid lg:grid-cols-2 flex flex-col gap-8 md:gap-12 lg:gap-16 items-center">
+          <div className="lg:grid lg:grid-cols-[3fr_2fr] flex flex-col gap-8 md:gap-12 lg:gap-16 items-center">
             {/* Left Side - Content */}
             <div className="flex flex-col justify-center order-2 lg:order-1 lg:pr-8 text-center lg:text-left items-center lg:items-start">
               {/* Heading */}
