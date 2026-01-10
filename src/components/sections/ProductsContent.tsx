@@ -329,16 +329,18 @@ We manufacture brass billets in standard and customized lengths, with cutting op
               return (
                 <div
                   key={index}
-                  className="flex flex-col items-center gap-2 sm:gap-2.5"
+                  className="flex flex-col items-center justify-center text-center"
                 >
-                  <div className="aspect-square w-full rounded-xl overflow-hidden border-2 border-[#E5C4CC] bg-gradient-to-br from-[#FFF5F7] to-white hover:shadow-lg transition-all duration-300 p-3 sm:p-4 flex items-center justify-center">
+                  {/* Image with border only */}
+                  <div className="w-full aspect-square   mb-3 sm:mb-4 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300">
                     <img
                       src={industry.image}
                       alt={industry.name}
                       className="w-full h-full object-contain"
                     />
                   </div>
-                  <p className="font-['Sansation'] text-[#98012E] text-[14px] xs:text-[15px] sm:text-[15px] md:text-[16px] text-center leading-tight px-1">
+                  {/* Text label outside border */}
+                  <p className="font-['Sansation'] font-medium  text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px]">
                     {industry.name}
                   </p>
                 </div>

@@ -16,9 +16,9 @@ export const Footer = () => {
           </div>
           
           {/* Main Footer Content */}
-          <div className="relative z-10 flex flex-col lg:grid lg:grid-cols-5 gap-6 sm:gap-8 lg:gap-6 mb-8 sm:mb-10">
-            {/* Brand Section */}
-            <div className="w-full lg:col-span-1 text-center lg:text-left">
+          <div className="relative z-10 flex flex-col lg:grid lg:grid-cols-2 gap-6 sm:gap-8 lg:gap-8 mb-8 sm:mb-10">
+            {/* Left Side - Brand Section */}
+            <div className="w-full text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-2 sm:mb-3">
                 <div className="w-7 h-7 sm:w-8 sm:h-8 relative flex-shrink-0">
                   <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -37,8 +37,8 @@ export const Footer = () => {
               </p>
             </div>
 
-            {/* Four Columns Grid - Mobile: 2x2, Desktop: 4 columns */}
-            <div className="grid grid-cols-2 lg:grid-cols-4 lg:col-span-4 gap-6 sm:gap-8 lg:gap-6">
+            {/* Right Side - Four Columns Grid */}
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-3">
 
             {/* Company Links */}
             <div>
@@ -150,7 +150,7 @@ export const Footer = () => {
               © {new Date().getFullYear()} Aum Metal Alloy — All Copyright Reserved
             </p>
             <p className="font-['Sansation'] font-normal text-[#98012E] text-[13px] sm:text-[13px] lg:text-[13px]">
-              Powered By - <span className="font-medium">Codelix IT Solutions Pvt. Ltd.</span>
+              Powered By - <a href="https://www.codelixitsolutions.com/" target="_blank" rel="noopener noreferrer" className="font-medium hover:underline transition-all duration-200">Codelix IT Solutions Pvt. Ltd.</a>
             </p>
           </div>
         </div>
