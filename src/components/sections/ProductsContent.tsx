@@ -138,7 +138,7 @@ Aum Metal Alloys offers reliable supply and fast delivery of brass billets, supp
 We manufacture brass billets in standard and customized lengths, with cutting options available as per customer specifications. All billets are available in Metric and Imperial sizes, ensuring flexibility across global applications.`,
       products: [
         {
-          name: "Brass Ingots (Sqaure)",
+          name: "Brass Billet",
           image: brassBilletsImg,
           metricSize: "Dia 100, 104, 125 and 175",
           imperialSize: "Dia 3.93 (3 15/16), 5 and 6.89 (6 7/8)",
@@ -153,165 +153,167 @@ We manufacture brass billets in standard and customized lengths, with cutting op
   return (
     <>
       <section className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 w-full">
-          <div className="flex flex-col lg:flex-col gap-4 sm:gap-6 lg:gap-8">
-            {/* Left Sidebar - Tabs */}
-            <div className="w-full">
-              <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
-                {/* Tabs - Grid layout on mobile (2 rows: 3+2), vertical on desktop */}
-                <div className="w-full lg:w-auto lg:shrink-0">
-                  <div className="flex flex-col lg:grid lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
-                    {/* Top Row - 3 buttons */}
-                    <div className="grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
-                      <button
-                        onClick={() => setActiveTab("brass-road")}
-                        className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
-                          activeTab === "brass-road"
-                            ? "bg-[#98012E] text-white"
-                            : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                        }`}
-                      >
-                        Rods
-                      </button>
-                      <button
-                        onClick={() => setActiveTab("wire")}
-                        className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
-                          activeTab === "wire"
-                            ? "bg-[#98012E] text-white"
-                            : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                        }`}
-                      >
-                        Wire
-                      </button>
-                      <button
-                        onClick={() => setActiveTab("ingots")}
-                        className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
-                          activeTab === "ingots"
-                            ? "bg-[#98012E] text-white"
-                            : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                        }`}
-                      >
-                        Ingots
-                      </button>
-                    </div>
-                    {/* Bottom Row - 2 buttons centered */}
-                    <div className="flex justify-center gap-2 sm:gap-3 lg:gap-4 lg:flex-col">
-                      <button
-                        onClick={() => setActiveTab("section-profiles")}
-                        className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center leading-tight ${
-                          activeTab === "section-profiles"
-                            ? "bg-[#98012E] text-white"
-                            : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                        }`}
-                      >
-                        Section & Profiles
-                      </button>
-                      <button
-                        onClick={() => setActiveTab("billet")}
-                        className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
-                          activeTab === "billet"
-                            ? "bg-[#98012E] text-white"
-                            : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
-                        }`}
-                      >
-                        Billet
-                      </button>
+        <div className="w-full px-4 sm:px-6 md:content-padding">
+          <div className="max-w-7xl mx-auto w-full">
+            <div className="flex flex-col lg:flex-col gap-4 sm:gap-6 lg:gap-8">
+              {/* Left Sidebar - Tabs */}
+              <div className="w-full">
+                <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
+                  {/* Tabs - Grid layout on mobile (2 rows: 3+2), vertical on desktop */}
+                  <div className="w-full lg:w-auto lg:shrink-0">
+                    <div className="flex flex-col lg:grid lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
+                      {/* Top Row - 3 buttons */}
+                      <div className="grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
+                        <button
+                          onClick={() => setActiveTab("brass-road")}
+                          className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                            activeTab === "brass-road"
+                              ? "bg-[#98012E] text-white"
+                              : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                          }`}
+                        >
+                          Rods
+                        </button>
+                        <button
+                          onClick={() => setActiveTab("wire")}
+                          className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                            activeTab === "wire"
+                              ? "bg-[#98012E] text-white"
+                              : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                          }`}
+                        >
+                          Wire
+                        </button>
+                        <button
+                          onClick={() => setActiveTab("ingots")}
+                          className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                            activeTab === "ingots"
+                              ? "bg-[#98012E] text-white"
+                              : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                          }`}
+                        >
+                          Ingots
+                        </button>
+                      </div>
+                      {/* Bottom Row - 2 buttons centered */}
+                      <div className="flex justify-center gap-2 sm:gap-3 lg:gap-4 lg:flex-col">
+                        <button
+                          onClick={() => setActiveTab("section-profiles")}
+                          className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center leading-tight ${
+                            activeTab === "section-profiles"
+                              ? "bg-[#98012E] text-white"
+                              : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                          }`}
+                        >
+                          Section & Profiles
+                        </button>
+                        <button
+                          onClick={() => setActiveTab("billet")}
+                          className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                            activeTab === "billet"
+                              ? "bg-[#98012E] text-white"
+                              : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                          }`}
+                        >
+                          Billet
+                        </button>
+                      </div>
                     </div>
                   </div>
-                </div>
-                {/* Description */}
-                <div className="mb-6 sm:mb-8 lg:mb-10">
-                  <p className="font-['Sansation'] text-[#7D7D7D] text-[16px] xs:text-[17px] sm:text-[17px] md:text-[18px] lg:text-[18px] leading-relaxed whitespace-pre-line">
-                    {currentProduct.description}
-                  </p>
+                  {/* Description */}
+                  <div className="mb-6 sm:mb-8 lg:mb-10">
+                    <p className="font-['Sansation'] text-[#7D7D7D] text-[16px] xs:text-[17px] sm:text-[17px] md:text-[18px] lg:text-[18px] leading-relaxed whitespace-pre-line">
+                      {currentProduct.description}
+                    </p>
+                  </div>
                 </div>
               </div>
-            </div>
 
-            {/* Right Content Area */}
-            <div className="flex-1">
-              {/* Description */}
+              {/* Right Content Area */}
+              <div className="flex-1">
+                {/* Description */}
 
-              {/* Product Cards */}
-              {currentProduct.products.length === 1 ? (
-                // Single Product - Horizontal Layout
-                <div className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 bg-gradient-to-b from-[#FFF5F7] to-white mb-8 sm:mb-12">
-                  <div className="flex flex-col md:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
-                    {/* Product Image */}
-                    <div className="w-full md:w-[45%] rounded-lg sm:rounded-xl overflow-hidden bg-white p-4 sm:p-6">
-                      <img
-                        src={currentProduct.products[0].image}
-                        alt={currentProduct.products[0].name}
-                        className="w-full h-auto object-contain"
-                      />
-                    </div>
+                {/* Product Cards */}
+                {currentProduct.products.length === 1 ? (
+                  // Single Product - Horizontal Layout
+                  <div className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 bg-gradient-to-b from-[#FFF5F7] to-white mb-8 sm:mb-12">
+                    <div className="flex flex-col md:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
+                      {/* Product Image */}
+                      <div className="w-full md:w-[45%] rounded-lg sm:rounded-xl overflow-hidden bg-white p-4 sm:p-6">
+                        <img
+                          src={currentProduct.products[0].image}
+                          alt={currentProduct.products[0].name}
+                          className="w-full h-auto object-contain"
+                        />
+                      </div>
 
-                    {/* Product Details */}
-                    <div className="w-full md:w-[55%] flex flex-col justify-center">
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[22px] xs:text-[24px] sm:text-[26px] lg:text-[28px] xl:text-[32px] mb-4 sm:mb-6 lg:mb-8">
-                        {currentProduct.products[0].name}
-                      </h3>
-                      <div className="space-y-4 sm:space-y-5 lg:space-y-6">
-                        <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] lg:text-[18px] mb-1.5 sm:mb-2">
-                            Metric Size
-                          </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px]">
-                            {currentProduct.products[0].metricSize}
-                          </p>
-                        </div>
-                        <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] lg:text-[18px] mb-1.5 sm:mb-2">
-                            Imperial Size
-                          </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px]">
-                            {currentProduct.products[0].imperialSize}
-                          </p>
+                      {/* Product Details */}
+                      <div className="w-full md:w-[55%] flex flex-col justify-center">
+                        <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[22px] xs:text-[24px] sm:text-[26px] lg:text-[28px] xl:text-[32px] mb-4 sm:mb-6 lg:mb-8">
+                          {currentProduct.products[0].name}
+                        </h3>
+                        <div className="space-y-4 sm:space-y-5 lg:space-y-6">
+                          <div>
+                            <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] lg:text-[18px] mb-1.5 sm:mb-2">
+                              Metric Size
+                            </p>
+                            <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px]">
+                              {currentProduct.products[0].metricSize}
+                            </p>
+                          </div>
+                          <div>
+                            <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] lg:text-[18px] mb-1.5 sm:mb-2">
+                              Imperial Size
+                            </p>
+                            <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px]">
+                              {currentProduct.products[0].imperialSize}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   </div>
-                </div>
-              ) : (
-                // Multiple Products - Grid Layout
-                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-12 w-full">
-                  {currentProduct.products.map((product, index) => (
-                    <div
-                      key={index}
-                      className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 bg-gradient-to-b from-[#FFF5F7] to-white hover:shadow-lg transition-all duration-300"
-                    >
-                      <div className="aspect-square rounded-lg sm:rounded-xl overflow-hidden mb-3 sm:mb-4 bg-white">
-                        <img
-                          src={product.image}
-                          alt={product.name}
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[20px] xs:text-[21px] sm:text-[22px] md:text-[24px] mb-3 sm:mb-4 text-center">
-                        {product.name}
-                      </h3>
-                      <div className="space-y-2.5 sm:space-y-3">
-                        <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] mb-1.5">
-                            Metric Size
-                          </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px]">
-                            {product.metricSize}
-                          </p>
+                ) : (
+                  // Multiple Products - Grid Layout
+                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-12 w-full">
+                    {currentProduct.products.map((product, index) => (
+                      <div
+                        key={index}
+                        className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 bg-gradient-to-b from-[#FFF5F7] to-white hover:shadow-lg transition-all duration-300"
+                      >
+                        <div className="aspect-square rounded-lg sm:rounded-xl overflow-hidden mb-3 sm:mb-4 bg-white">
+                          <img
+                            src={product.image}
+                            alt={product.name}
+                            className="w-full h-full object-cover"
+                          />
                         </div>
-                        <div>
-                          <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] mb-1.5">
-                            Imperial Size
-                          </p>
-                          <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px]">
-                            {product.imperialSize}
-                          </p>
+                        <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[20px] xs:text-[21px] sm:text-[22px] md:text-[24px] mb-3 sm:mb-4 text-center">
+                          {product.name}
+                        </h3>
+                        <div className="space-y-2.5 sm:space-y-3">
+                          <div>
+                            <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] mb-1.5">
+                              Metric Size
+                            </p>
+                            <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px]">
+                              {product.metricSize}
+                            </p>
+                          </div>
+                          <div>
+                            <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] mb-1.5">
+                              Imperial Size
+                            </p>
+                            <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px]">
+                              {product.imperialSize}
+                            </p>
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
-                </div>
-              )}
+                    ))}
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </div>
@@ -319,33 +321,35 @@ We manufacture brass billets in standard and customized lengths, with cutting op
 
       {/* Applications Across Industries Section */}
       <section className="relative w-full bg-white flex items-center justify-center py-8 sm:py-10 md:py-12 lg:py-16 overflow-hidden">
-        <div className="max-w-[1600px] mx-auto px-4 sm:px-6 md:px-8 w-full">
-          <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[30px] xs:text-[34px] sm:text-[38px] md:text-[44px] lg:text-[48px] text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-tight">
-            Applications Across Industries
-          </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6 lg:gap-6">
-            {currentProduct.industries.map((industryIndex, index) => {
-              const industry = industryData[industryIndex];
-              return (
-                <div
-                  key={index}
-                  className="flex flex-col items-center justify-center text-center"
-                >
-                  {/* Image with border only */}
-                  <div className="w-full aspect-square   mb-3 sm:mb-4 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300">
-                    <img
-                      src={industry.image}
-                      alt={industry.name}
-                      className="w-full h-full object-contain"
-                    />
+        <div className="w-full px-4 sm:px-6 md:content-padding">
+          <div className="max-w-7xl mx-auto w-full">
+            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[30px] xs:text-[34px] sm:text-[38px] md:text-[44px] lg:text-[48px] text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-tight">
+              Applications Across Industries
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6 lg:gap-6">
+              {currentProduct.industries.map((industryIndex, index) => {
+                const industry = industryData[industryIndex];
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center justify-center text-center"
+                  >
+                    {/* Image with border only */}
+                    <div className="w-full aspect-square   mb-3 sm:mb-4 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300">
+                      <img
+                        src={industry.image}
+                        alt={industry.name}
+                        className="w-full h-full object-contain"
+                      />
+                    </div>
+                    {/* Text label outside border */}
+                    <p className="font-['Sansation'] font-medium  text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px]">
+                      {industry.name}
+                    </p>
                   </div>
-                  {/* Text label outside border */}
-                  <p className="font-['Sansation'] font-medium  text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px]">
-                    {industry.name}
-                  </p>
-                </div>
-              );
-            })}
+                );
+              })}
+            </div>
           </div>
         </div>
       </section>
