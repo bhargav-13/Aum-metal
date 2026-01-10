@@ -13,6 +13,29 @@ export const TestimonialsHome = () => {
     return false;
   });
 
+  const [currentTestimonial, setCurrentTestimonial] = useState(0);
+
+  const testimonials = [
+    {
+      name: "Ankit Mungra",
+      role: "Procurement Head",
+      company: "Parmeshwari Brass",
+      quote: "Aum Metal Alloys consistently delivers high-quality brass rods and billets with precise dimensions. Their reliability and process discipline make them a trusted supplier for our production requirements.",
+    },
+    {
+      name: "Rajesh Kumar",
+      role: "Production Manager",
+      company: "Precision Manufacturing Co.",
+      quote: "Excellent quality and on-time delivery. Aum Metal Alloys has been our preferred supplier for brass materials. Their products meet our exact specifications every time.",
+    },
+    {
+      name: "Priya Sharma",
+      role: "Quality Assurance Lead",
+      company: "Industrial Solutions Ltd.",
+      quote: "The consistency in quality and dimensional accuracy of their brass rods is outstanding. We've been working with Aum Metal Alloys for years and they never disappoint.",
+    },
+  ];
+
   useEffect(() => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768);
@@ -22,6 +45,15 @@ export const TestimonialsHome = () => {
     window.addEventListener("resize", handleResize);
     return () => window.removeEventListener("resize", handleResize);
   }, []);
+
+  // Auto-slide functionality - change testimonial every 5 seconds
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
+    }, 5000); // 5 seconds
+
+    return () => clearInterval(interval);
+  }, [testimonials.length]);
 
   return (
     <>
@@ -87,15 +119,15 @@ export const TestimonialsHome = () => {
           </div>
           <div className="w-full h-full">
             <div className="hidden lg:block relative max-w-6xl mx-auto mb-20">
-              <div className="flex flex-row">
+              <div className="flex flex-row transition-all duration-500">
                 <div className="lg:w-[40%]">
                   <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between min-h-[450px] rounded-l-[20px]">
                     <div className="p-10">
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[30px] leading-tight mb-2">
-                        Ankit Mungra
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[30px] leading-tight mb-2 transition-all duration-500">
+                        {testimonials[currentTestimonial].name}
                       </h3>
-                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px]">
-                        Procurement Head
+                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[16px] transition-all duration-500">
+                        {testimonials[currentTestimonial].role}
                       </p>
                     </div>
 
@@ -107,8 +139,8 @@ export const TestimonialsHome = () => {
                           </span>
                         ))}
                       </div>
-                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[16px]">
-                        Parmeshwari Brass
+                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[16px] transition-all duration-500">
+                        {testimonials[currentTestimonial].company}
                       </p>
                     </div>
                   </div>
@@ -135,11 +167,8 @@ export const TestimonialsHome = () => {
                           </span>
                         </div>
                       </div>
-                      <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[22px] xl:text-[24px] leading-relaxed">
-                        "Aum Metal Alloys consistently delivers high-quality brass
-                        rods and billets with precise dimensions. Their
-                        reliability and process discipline make them a trusted
-                        supplier for our production requirements."
+                      <blockquote className="font-['Sansation'] font-normal text-[#98012E] text-[22px] xl:text-[24px] leading-relaxed transition-all duration-500">
+                        "{testimonials[currentTestimonial].quote}"
                       </blockquote>
                     </div>
                   </div>
@@ -147,15 +176,15 @@ export const TestimonialsHome = () => {
               </div>
             </div>
             <div className="block lg:hidden relative max-w-6xl mx-auto mb-12 sm:mb-16 md:mb-20">
-              <div className="flex flex-row">
+              <div className="flex flex-row transition-all duration-500">
                 <div className="w-full">
                   <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between h-auto min-h-[120px] xs:h-[135.92px]">
                     <div className="p-3 xs:p-4 sm:p-6">
-                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px] leading-tight mb-1 sm:mb-2">
-                        Ankit Mungra
+                      <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px] leading-tight mb-1 sm:mb-2 transition-all duration-500">
+                        {testimonials[currentTestimonial].name}
                       </h3>
-                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px]">
-                        Procurement Head
+                      <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] xs:text-[15px] sm:text-[15px] transition-all duration-500">
+                        {testimonials[currentTestimonial].role}
                       </p>
                     </div>
                   </div>
@@ -181,11 +210,8 @@ export const TestimonialsHome = () => {
                         </span>
                       </div>
                     </div>
-                    <blockquote className="relative z-10 font-['Sansation'] font-normal text-[#98012E] text-[14px] xs:text-[15px] sm:text-[15px] leading-relaxed p-3 xs:p-4 sm:p-6">
-                      "Aum Metal Alloys consistently delivers high-quality brass
-                      rods and billets with precise dimensions. Their
-                      reliability and process discipline make them a trusted
-                      supplier for our production requirements."
+                    <blockquote className="relative z-10 font-['Sansation'] font-normal text-[#98012E] text-[14px] xs:text-[15px] sm:text-[15px] leading-relaxed p-3 xs:p-4 sm:p-6 transition-all duration-500">
+                      "{testimonials[currentTestimonial].quote}"
                     </blockquote>
                     <div className="relative z-10 bg-[#FFB8CC] p-2.5 xs:p-3 sm:p-4">
                       <div className="flex gap-0.5 sm:gap-1 mb-1.5 xs:mb-2 sm:mb-3">
@@ -198,8 +224,8 @@ export const TestimonialsHome = () => {
                           </span>
                         ))}
                       </div>
-                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[14px] xs:text-[15px] sm:text-[15px]">
-                        Parmeshwari Brass
+                      <p className="font-['Sansation'] font-normal text-[#98012E] text-[14px] xs:text-[15px] sm:text-[15px] transition-all duration-500">
+                        {testimonials[currentTestimonial].company}
                       </p>
                     </div>
                   </div>
@@ -208,19 +234,19 @@ export const TestimonialsHome = () => {
             </div>
           </div>
           <div className="flex justify-center gap-3">
-            <button
-              className="w-3 h-3 rounded-full bg-[#98012E] transition-all duration-300"
-              aria-label="Testimonial 1"
-            ></button>
-            <button
-              className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
-              aria-label="Testimonial 2"
-            ></button>
-            <button
-              className="w-3 h-3 rounded-full bg-[#E5C4CC] hover:bg-[#98012E] transition-all duration-300"
-              aria-label="Testimonial 3"
-            ></button>
-          </div>{" "}
+            {testimonials.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => setCurrentTestimonial(index)}
+                className={`w-3 h-3 rounded-full transition-all duration-300 ${
+                  currentTestimonial === index
+                    ? "bg-[#98012E]"
+                    : "bg-[#E5C4CC] hover:bg-[#98012E]"
+                }`}
+                aria-label={`Testimonial ${index + 1}`}
+              ></button>
+            ))}
+          </div>
         </div>
       </section>
     </>
