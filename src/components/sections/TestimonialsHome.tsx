@@ -102,7 +102,7 @@ export const TestimonialsHome = () => {
       {/* Section 2: Client Testimonials */}
       <section
         id="testimonials-home"
-        className="h-[80vh] lg:h-full w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
+        className="h-[85vh] lg:h-full w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
       >
         <div className="w-full px-4 sm:px-6 md:content-padding flex flex-col items-center justify-between h-full">
           <div className="max-w-7xl mx-auto">
@@ -177,7 +177,7 @@ export const TestimonialsHome = () => {
             </div>
             <div className="block lg:hidden relative max-w-6xl mx-auto mb-12 sm:mb-16 md:mb-20">
               <div className="flex flex-row transition-all duration-500">
-                <div className="w-full">
+                <div className="w-[90%]">
                   <div className="bg-gradient-to-b from-[#FFE5EB] to-[#FFF5F7] border border-[#E5C4CC] flex flex-col justify-between h-auto min-h-[120px] xs:h-[135.92px]">
                     <div className="p-3 xs:p-4 sm:p-6">
                       <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px] leading-tight mb-1 sm:mb-2 transition-all duration-500">
