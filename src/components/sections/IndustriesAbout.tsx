@@ -1,26 +1,26 @@
-import oilGasValveImg from '../../assets/AboutPage/Oil, Gas & Industrial Valve.png';
-import automativeImg from '../../assets/AboutPage/Automative.png';
-import constructionImg from '../../assets/AboutPage/Construction.png';
-import homeApplianceImg from '../../assets/AboutPage/Home Appliance.png';
-import lockHardwareImg from '../../assets/AboutPage/Lock , Hardware.png';
-import plumbingImg from '../../assets/AboutPage/Plumbing.png';
-import watchImg from '../../assets/AboutPage/Watch.png';
-import surgicalEquipmentImg from '../../assets/AboutPage/Surgical Equipment.png';
-import electricalElectronicsImg from '../../assets/AboutPage/Electrical & Electronics.png';
-import agricultureEquipmentImg from '../../assets/AboutPage/Agriculture Equipment.png';
+import oilGasValveImg from "../../assets/AboutPage/Oil, Gas & Industrial Valve.png";
+import automativeImg from "../../assets/AboutPage/Automative.png";
+import constructionImg from "../../assets/AboutPage/Construction.png";
+import homeApplianceImg from "../../assets/AboutPage/Home Appliance.png";
+import lockHardwareImg from "../../assets/AboutPage/Lock , Hardware.png";
+import plumbingImg from "../../assets/AboutPage/Plumbing.png";
+import watchImg from "../../assets/AboutPage/Watch.png";
+import surgicalEquipmentImg from "../../assets/AboutPage/Surgical Equipment.png";
+import electricalElectronicsImg from "../../assets/AboutPage/Electrical & Electronics.png";
+import agricultureEquipmentImg from "../../assets/AboutPage/Agriculture Equipment.png";
 
 export const IndustriesAbout = () => {
   const industries = [
-    { name: 'Oil, Gas and Plumbing', image: oilGasValveImg },
-    { name: 'Automative', image: automativeImg },
-    { name: 'Chemical & Petrochemical', image: constructionImg },
-    { name: 'HVAC systems', image: homeApplianceImg },
-    { name: 'Lock , Hardware', image: lockHardwareImg },
-    { name: 'Oil, Gas & Industrial Valve', image: plumbingImg },
-    { name: 'Watch', image: watchImg },
-    { name: 'Surgical', image: surgicalEquipmentImg },
-    { name: 'Plumbing', image: electricalElectronicsImg },
-    { name: 'Agriculture', image: agricultureEquipmentImg },
+    { name: "Agriculture Equipment", image: agricultureEquipmentImg },
+    { name: "Automotive", image: automativeImg },
+    { name: "Electrical & Electronics", image: electricalElectronicsImg },
+    { name: "Home Appliance", image: homeApplianceImg },
+    { name: "Lock, Hardware", image: lockHardwareImg },
+    { name: "Oil, Gas & Industrial Valve", image: oilGasValveImg },
+    { name: "Plumbing", image: plumbingImg },
+    { name: "Watch", image: watchImg },
+    { name: "Surgical Equipment", image: surgicalEquipmentImg },
+    { name: "Construction", image: constructionImg },
   ];
 
   return (
@@ -32,25 +32,29 @@ export const IndustriesAbout = () => {
             Where Our Brass Products Deliver Reliable Performance
           </h2>
           <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] max-w-5xl mx-auto px-4">
-            As a Brass Rod and Ingot exporter, we've worked across industries like valves, sanitary ware, plumbing, hardware, automotive, and electrical—supporting customers looking for reliable sourcing...
+            As a Brass Rod and Ingot exporter, we've worked across industries
+            like valves, sanitary ware, plumbing, hardware, automotive, and
+            electrical—supporting customers looking for reliable sourcing...
           </p>
         </div>
 
         {/* Industries Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 lg:gap-6">
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-6 lg:gap-8">
           {industries.map((industry) => (
             <div
               key={industry.name}
-              className="bg-white rounded-xl p-4 sm:p-6 flex flex-col items-center justify-center text-center hover:shadow-lg transition-shadow duration-300 border border-[#E5C4CC]"
+              className="flex flex-col items-center justify-center text-center"
             >
-              <div className="w-20 h-20 sm:w-24 sm:h-24 mb-4 flex items-center justify-center">
+              {/* Image with border only */}
+              <div className="w-full aspect-square   mb-3 sm:mb-4 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300">
                 <img
                   src={industry.image}
                   alt={industry.name}
                   className="w-full h-full object-contain"
                 />
               </div>
-              <p className="font-['Sansation'] font-medium text-[#98012E] text-[15px] xs:text-[15px] sm:text-[16px] md:text-[17px]">
+              {/* Text label outside border */}
+              <p className="font-['Sansation'] font-medium  text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px]">
                 {industry.name}
               </p>
             </div>
@@ -60,4 +64,3 @@ export const IndustriesAbout = () => {
     </section>
   );
 };
-
