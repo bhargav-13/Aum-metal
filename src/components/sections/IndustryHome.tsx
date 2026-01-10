@@ -75,7 +75,7 @@ export const IndustryHome = () => {
                 className="relative bg-white rounded-[20px] border border-[#98012E] w-full max-w-full xs:max-w-[280px] sm:max-w-[300px] md:max-w-[320px] lg:w-[280px] xl:w-[300px] 2xl:w-[320px] h-auto min-h-[120px] xs:h-[130px] sm:h-[140px] lg:h-[146px] flex flex-col items-center justify-center text-center transition-all duration-300 hover:shadow-xl px-4 py-6 xs:px-5 xs:py-7 sm:px-[21px] sm:py-[31px]"
               >
                 {/* Icon */}
-                <div className="mb-2 xs:mb-2.5 w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-20 lg:h-20 flex items-center justify-center">
+                <div className="mb-2 xs:mb-2.5 w-8 h-8 flex items-center justify-center">
                   <img
                     src={industry.icon}
                     alt={industry.name}
