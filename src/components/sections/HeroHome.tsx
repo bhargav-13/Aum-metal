@@ -40,7 +40,7 @@ export const HeroHome = () => {
 
       {/* Decorative Hero Image - Left Side */}
       <div
-        className="absolute z-10 w-[150px] h-[102px] xs:w-[200px] xs:h-[135px] sm:w-[280px] sm:h-[190px] md:w-[350px] md:h-[237px] lg:w-[450px] lg:h-[305px] xl:w-[600px] xl:h-[406px] 2xl:w-[750px] 2xl:h-[508px]"
+        className="absolute z-10 w-[200px] h-[136px] xs:w-[220px] xs:h-[149px] sm:w-[280px] sm:h-[190px] md:w-[350px] md:h-[237px] lg:w-[450px] lg:h-[305px] xl:w-[600px] xl:h-[406px] 2xl:w-[750px] 2xl:h-[508px]"
         style={{
           left: "0px",
           bottom: "0px",
