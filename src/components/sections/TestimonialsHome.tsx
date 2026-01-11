@@ -102,7 +102,7 @@ export const TestimonialsHome = () => {
       {/* Section 2: Client Testimonials */}
       <section
         id="testimonials-home"
-        className="h-full w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
+        className="h-[85vh] lg:h-full w-full flex items-center justify-center bg-[#FAFAFA] py-12 sm:py-16 md:py-20 lg:py-24"
       >
         <div className="w-full px-4 sm:px-6 md:content-padding flex flex-col items-center justify-between h-full">
           <div className="max-w-7xl mx-auto">
@@ -117,8 +117,7 @@ export const TestimonialsHome = () => {
               </p>
             </div>
           </div>
-          <div className="flex flex-col items-center justify-center">
-          <div className="w-75vw lg:w-[100vw] h-[100vh] lg:h-full">
+          <div className="w-full h-full">
             <div className="hidden lg:block relative max-w-6xl mx-auto mb-20">
               <div className="flex flex-row transition-all duration-500">
                 <div className="lg:w-[40%]">
@@ -247,7 +246,6 @@ export const TestimonialsHome = () => {
                 aria-label={`Testimonial ${index + 1}`}
               ></button>
             ))}
-          </div>
           </div>
         </div>
       </section>
