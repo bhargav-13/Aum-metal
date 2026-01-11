@@ -43,7 +43,7 @@ export const ProductHome = () => {
             </div>
 
             {/* Right Side - Image (Mobile: absolute with opacity, Desktop: absolute normal) */}
-            <div className="absolute right-0 bottom-0 flex items-center justify-center order-1 lg:order-2 lg:absolute lg:right-0 lg:bottom-0 z-10 lg:z-auto">
+            <div className="absolute right-0 bottom-0 flex items-center justify-center order-1 lg:order-2 lg:absolute lg:right-0 lg:bottom-16 z-10 lg:z-auto">
               <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[500px] xl:max-w-[600px] opacity-80 lg:opacity-100">
                 <img
                   src={productHomeRightImg}
