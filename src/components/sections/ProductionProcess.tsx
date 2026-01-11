@@ -48,18 +48,19 @@ export const ProductionProcess = () => {
         </div>
 
         {/* Process Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 justify-items-center">
-          {processes.map((process) => (
-            <div
-              key={process.step}
-              className="flex flex-col items-center justify-center w-full max-w-[200px]"
-            >
-              {/* Step Number and Icon Container - Aligned */}
-              <div className="relative w-full flex items-start justify-center mb-3 sm:mb-4">
-                {/* Step Number - Positioned on the left, aligned with icon */}
-                <div className="absolute left-0 font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px]">
-                  {process.step}
-                </div>
+        <div className="flex justify-center w-full px-2">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 justify-items-center items-center place-items-center">
+            {processes.map((process) => (
+              <div
+                key={process.step}
+                className="flex flex-col items-center justify-center w-full sm:max-w-[200px]"
+              >
+                {/* Step Number and Icon Container - Aligned */}
+                <div className="relative w-full flex items-start justify-center mb-3 sm:mb-4">
+                  {/* Step Number - Positioned on the left, aligned with icon */}
+                  <div className="absolute left-0 font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px]">
+                    {process.step}
+                  </div>
 
                 {/* Icon - Centered */}
                 <div className="w-12 h-12 sm:w-16 sm:h-16 flex items-center justify-center">
@@ -71,12 +72,13 @@ export const ProductionProcess = () => {
                 </div>
               </div>
 
-              {/* Name - Below icon, centered, black color */}
-              <h3 className="font-['Sansation'] font-medium text-black text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] lg:text-[16px] text-center w-full">
-                {process.name}
-              </h3>
-            </div>
-          ))}
+                {/* Name - Below icon, centered, black color */}
+                <h3 className="font-['Sansation'] font-medium text-black text-[13px] xs:text-[14px] sm:text-[15px] md:text-[16px] lg:text-[16px] text-center w-full">
+                  {process.name}
+                </h3>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
