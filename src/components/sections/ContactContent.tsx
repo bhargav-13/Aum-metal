@@ -1,13 +1,10 @@
 import { useState } from 'react';
 import copyIcon from '../../assets/copy.svg';
 import addressIcon from '../../assets/address.svg';
+import whatsappIcon from '../../assets/whatsapp.svg';
 
-// WhatsApp Icon Component
-const WhatsAppIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M17.6 6.32A7.85 7.85 0 0 0 12 4a7.94 7.94 0 0 0-7.94 7.94c0 1.4.36 2.77 1.06 3.98L4 20l4.2-1.1a7.93 7.93 0 0 0 3.8.97h.01A7.94 7.94 0 0 0 20 11.94 7.88 7.88 0 0 0 17.6 6.32zM12 18.53a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 0 1-1.01-3.5 6.59 6.59 0 0 1 6.6-6.6c1.76 0 3.42.69 4.67 1.94a6.58 6.58 0 0 1 1.93 4.67 6.6 6.6 0 0 1-6.6 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.51.64-.62.77-.12.13-.23.15-.43.05a5.44 5.44 0 0 1-2.7-2.35c-.2-.35.2-.33.58-1.08.06-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.24s-.68.66-.68 1.62c0 .95.7 1.87.8 2 .1.13 1.36 2.08 3.3 2.92 1.23.53 1.7.58 2.32.49.37-.06 1.17-.48 1.33-.94.17-.47.17-.86.12-.94-.05-.08-.18-.13-.38-.23z" fill="#98012E"/>
-  </svg>
-);
+// Web3Forms - Free 250 submissions/month, no backend needed
+const WEB3FORMS_ACCESS_KEY = '4de0d260-bce1-420c-824c-f4c96218616f';
 
 export const ContactContent = () => {
   const [formData, setFormData] = useState({
@@ -19,16 +16,62 @@ export const ContactContent = () => {
     message: '',
   });
   const [copied, setCopied] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [submitStatus, setSubmitStatus] = useState<'idle' | 'success' | 'error'>('idle');
+  const [errorMessage, setErrorMessage] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { name, value } = e.target;
     setFormData(prev => ({ ...prev, [name]: value }));
+    if (submitStatus !== 'idle') {
+      setSubmitStatus('idle');
+    }
   };
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Handle form submission
-    console.log('Form submitted:', formData);
+    setIsSubmitting(true);
+    setSubmitStatus('idle');
+    setErrorMessage('');
+
+    try {
+      const response = await fetch('https://api.web3forms.com/submit', {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          subject: `Contact Form: ${formData.subject}`,
+          from_name: `${formData.firstName} ${formData.lastName}`,
+          email: formData.email,
+          phone: formData.phone || 'Not provided',
+          message: formData.message,
+        }),
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setSubmitStatus('success');
+        setFormData({
+          firstName: '',
+          lastName: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: '',
+        });
+      } else {
+        setSubmitStatus('error');
+        setErrorMessage(data.message || 'Failed to send message');
+      }
+    } catch {
+      setSubmitStatus('error');
+      setErrorMessage('Network error. Please try again.');
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   const copyEmail = () => {
@@ -83,7 +126,7 @@ export const ContactContent = () => {
                 className="bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center gap-1.5">
-                  <WhatsAppIcon />
+                  <img src={whatsappIcon} alt="WhatsApp" className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span className="font-['Sansation'] font-normal text-[#98012E] text-[15px] sm:text-[16px] md:text-[18px]">
                     Whatsapp
                   </span>
@@ -188,6 +231,37 @@ export const ContactContent = () => {
                 rows={4}
                 className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[13px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50 resize-none"
               />
+
+              {/* Submit Button */}
+              <button
+                type="submit"
+                disabled={isSubmitting}
+                className="w-full bg-[#98012E] text-white rounded-[12px] sm:rounded-[16px] px-4 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[14px] sm:text-[16px] hover:bg-[#7a0125] transition-colors disabled:opacity-60 disabled:cursor-not-allowed flex items-center justify-center gap-2"
+              >
+                {isSubmitting ? (
+                  <>
+                    <svg className="animate-spin h-5 w-5" viewBox="0 0 24 24">
+                      <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" fill="none" />
+                      <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8V0C5.373 0 0 5.373 0 12h4zm2 5.291A7.962 7.962 0 014 12H0c0 3.042 1.135 5.824 3 7.938l3-2.647z" />
+                    </svg>
+                    Sending...
+                  </>
+                ) : (
+                  'Send Message'
+                )}
+              </button>
+
+              {/* Status Messages */}
+              {submitStatus === 'success' && (
+                <div className="bg-green-50 border border-green-200 text-green-700 rounded-[12px] px-4 py-3 font-['Sansation'] text-[14px]">
+                  Message sent successfully! We'll get back to you soon.
+                </div>
+              )}
+              {submitStatus === 'error' && (
+                <div className="bg-red-50 border border-red-200 text-red-700 rounded-[12px] px-4 py-3 font-['Sansation'] text-[14px]">
+                  {errorMessage}
+                </div>
+              )}
             </form>
           </div>
 
