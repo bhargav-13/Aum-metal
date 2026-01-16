@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import logoImg from '../assets/logo.png'
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -8,7 +9,7 @@ export const Header = () => {
     { label: 'Home', href: '/', isRoute: true },
     { label: 'About Us', href: '/about', isRoute: true },
     { label: 'Our Products', href: '/products', isRoute: true },
-    { label: 'Industries', href: '#industry-home', isRoute: false },
+    { label: 'Grades', href: '#grades', isRoute: false },
     { label: 'Contact', href: '#contact', isRoute: false },
   ]
 
@@ -20,14 +21,17 @@ export const Header = () => {
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center justify-center opacity-100 font-bold not-italic leading-none tracking-normal rounded text-white w-[80px] sm:w-[96px] h-[47px] md:w-24 md:h-[47px] hover:opacity-80 transition-opacity"
-            style={{ fontFamily: 'Sansation, sans-serif' }}
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
           >
-            <span className="text-[24px] sm:text-[28px] md:text-[42px]">Logo</span>
+            <img 
+              src={logoImg} 
+              alt="AUM METAL ALLOY Logo" 
+              className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+            />
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center gap-8">
+          <ul className="hidden md:flex items-center gap-6 lg:gap-8">
             {navItems.map(item => (
               <li key={item.href}>
                 {item.isRoute ? (
