@@ -10,7 +10,7 @@ export const Header = () => {
     { label: 'About Us', href: '/about', isRoute: true },
     { label: 'Our Products', href: '/products', isRoute: true },
     { label: 'Grades', href: '/grades', isRoute: true },
-    { label: 'Contact', href: '#contact', isRoute: false },
+    { label: 'Contact', href: '/contact', isRoute: true },
   ]
 
   return (

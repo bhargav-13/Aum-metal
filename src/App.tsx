@@ -4,6 +4,7 @@ import { Home } from './pages/Home'
 import { About } from './pages/About'
 import { Products } from './pages/Products'
 import { Grades } from './pages/Grades'
+import { Contact } from './pages/Contact'
 
 export default function App() {
   return (
@@ -14,6 +15,7 @@ export default function App() {
           <Route path="/about" element={<About />} />
           <Route path="/products" element={<Products />} />
           <Route path="/grades" element={<Grades />} />
+          <Route path="/contact" element={<Contact />} />
         </Routes>
     </MainLayout>
     </BrowserRouter>
