@@ -1,9 +1,18 @@
 import { Section } from '../components/Section'
 import { Button } from '../components/Button'
+import { SEO } from '../components/SEO'
 
 export const Contact = () => {
   return (
-    <Section id="contact">
+    <>
+      <SEO
+        title="Contact Us - AUM Metal Alloys | Get in Touch"
+        description="Contact AUM Metal Alloys for inquiries about our brass products, custom manufacturing, pricing, and export services. Our team is ready to assist with your brass material requirements."
+        keywords="contact AUM Metal Alloys, brass product inquiry, brass manufacturer contact, brass export inquiry, custom brass manufacturing"
+        ogTitle="Contact Us - AUM Metal Alloys | Get in Touch"
+        ogDescription="Get in touch with AUM Metal Alloys for brass product inquiries, custom manufacturing, and export services."
+      />
+      <Section id="contact">
       <div className="max-w-2xl mx-auto">
         <h2 className="text-3xl font-bold mb-6 text-center">Contact Us</h2>
         <form className="space-y-4">
@@ -46,6 +55,7 @@ export const Contact = () => {
         </form>
       </div>
     </Section>
+    </>
   )
 }
 
