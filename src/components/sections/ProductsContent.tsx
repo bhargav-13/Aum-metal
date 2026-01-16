@@ -146,6 +146,35 @@ We manufacture brass billets in standard and customized lengths, with cutting op
       ],
       industries: [1], // Agriculture, Automative, Electrical, Home Appliance, Lock/Hardware
     },
+    hollow: {
+      title: "Brass Product Range",
+      description: `Brass hollow products are tubular metal sections with a hollow cross-section, offering an optimal balance of strength, weight reduction, material optimization, and consistent mechanical strength under multi-directional loading. These products are designed to provide structural integrity while minimizing material usage and overall weight.
+
+Aum Metal Alloys manufactures brass hollow rods in various sizes, offering significant cost and process advantages by reducing the need for drilling and boring operations. Our brass hollow products are widely used in applications such as taps, valves, plumbing fittings, heating systems, and various industrial components. We supply to both domestic and international markets with reliable delivery timelines.
+
+We offer a comprehensive range of brass hollow sizes with flexible production planning. Our professional team ensures fast delivery and consistent quality for all customers. Products are available in standard and custom lengths, with cutting options available as per customer requirements. All brass hollow products are supplied in both Metric and Imperial dimensions, ensuring compatibility with global standards and applications.`,
+      products: [
+        {
+          name: "Round",
+          image: brassRodsImg,
+          metricSize: "OD :- 30mm to 90mm",
+          imperialSize: "OD 1.18 (1 3/16) to 3.55 (3 9/16) Inches",
+        },
+        {
+          name: "Hexagon",
+          image: customBrassSolutionsImg,
+          metricSize: "OD :- 30mm to 90mm",
+          imperialSize: "A/F 1.18 (1 3/16) to 2.56 (2 9/16) Inches",
+        },
+        {
+          name: "Square",
+          image: brassIngotsImg,
+          metricSize: "OD :- 30mm to 90mm",
+          imperialSize: "A/F 1.18 (1 3/16) to 2.36 (2 3/8) Inches",
+        },
+      ],
+      industries: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], // All industries: Agriculture Equipment, Automotive, Electrical & Electronics, Home Appliance, Lock/Hardware, Oil/Gas & Industrial Valve, Plumbing, Surgical Equipment, Watch, Construction
+    },
   };
 
   const currentProduct = productData[activeTab as keyof typeof productData];
@@ -195,8 +224,8 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                           Ingots
                         </button>
                       </div>
-                      {/* Bottom Row - 2 buttons centered */}
-                      <div className="flex justify-center gap-2 sm:gap-3 lg:gap-4 lg:flex-col">
+                      {/* Bottom Row - 3 buttons centered */}
+                      <div className="grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
                         <button
                           onClick={() => setActiveTab("section-profiles")}
                           className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center leading-tight ${
@@ -216,6 +245,16 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                           }`}
                         >
                           Billet
+                        </button>
+                        <button
+                          onClick={() => setActiveTab("hollow")}
+                          className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                            activeTab === "hollow"
+                              ? "bg-[#98012E] text-white"
+                              : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                          }`}
+                        >
+                          Hollow
                         </button>
                       </div>
                     </div>
@@ -335,11 +374,11 @@ We manufacture brass billets in standard and customized lengths, with cutting op
                     className="flex flex-col items-center justify-center text-center"
                   >
                     {/* Image with border only */}
-                    <div className="w-full aspect-square   mb-3 sm:mb-4 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300">
+                    <div className="w-full aspect-square border border-[#E5C4CC] rounded-xl mb-3 sm:mb-4 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300">
                       <img
                         src={industry.image}
                         alt={industry.name}
-                        className="w-full h-full object-contain"
+                        className="w-full h-full object-contain p-2"
                       />
                     </div>
                     {/* Text label outside border */}
