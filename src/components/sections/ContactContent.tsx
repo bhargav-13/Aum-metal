@@ -1,24 +1,11 @@
 import { useState } from 'react';
+import copyIcon from '../../assets/copy.svg';
+import addressIcon from '../../assets/address.svg';
 
 // WhatsApp Icon Component
 const WhatsAppIcon = () => (
   <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
     <path d="M17.6 6.32A7.85 7.85 0 0 0 12 4a7.94 7.94 0 0 0-7.94 7.94c0 1.4.36 2.77 1.06 3.98L4 20l4.2-1.1a7.93 7.93 0 0 0 3.8.97h.01A7.94 7.94 0 0 0 20 11.94 7.88 7.88 0 0 0 17.6 6.32zM12 18.53a6.6 6.6 0 0 1-3.36-.92l-.24-.14-2.5.65.67-2.43-.16-.25a6.6 6.6 0 0 1-1.01-3.5 6.59 6.59 0 0 1 6.6-6.6c1.76 0 3.42.69 4.67 1.94a6.58 6.58 0 0 1 1.93 4.67 6.6 6.6 0 0 1-6.6 6.58zm3.62-4.93c-.2-.1-1.17-.58-1.35-.64-.18-.07-.31-.1-.44.1-.13.2-.51.64-.62.77-.12.13-.23.15-.43.05a5.44 5.44 0 0 1-2.7-2.35c-.2-.35.2-.33.58-1.08.06-.13.03-.24-.02-.34-.05-.1-.44-1.06-.6-1.45-.16-.38-.32-.33-.44-.33h-.38c-.13 0-.34.05-.52.24s-.68.66-.68 1.62c0 .95.7 1.87.8 2 .1.13 1.36 2.08 3.3 2.92 1.23.53 1.7.58 2.32.49.37-.06 1.17-.48 1.33-.94.17-.47.17-.86.12-.94-.05-.08-.18-.13-.38-.23z" fill="#98012E"/>
-  </svg>
-);
-
-// Location Icon Component
-const LocationIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 1 1 0-5 2.5 2.5 0 0 1 0 5z" fill="#98012E"/>
-  </svg>
-);
-
-// Copy Icon Component
-const CopyIcon = () => (
-  <svg width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-    <rect x="9" y="9" width="10" height="10" rx="2" stroke="#1E1E1E" strokeWidth="1.5"/>
-    <path d="M5 15V6a2 2 0 0 1 2-2h9" stroke="#1E1E1E" strokeWidth="1.5" strokeLinecap="round"/>
   </svg>
 );
 
@@ -74,7 +61,7 @@ export const ContactContent = () => {
                     <path d="M5 13l4 4L19 7" stroke="#98012E" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
                   </svg>
                 ) : (
-                  <CopyIcon />
+                  <img src={copyIcon} alt="Copy" className="w-5 h-5 sm:w-6 sm:h-6" />
                 )}
               </button>
             </div>
@@ -124,7 +111,7 @@ export const ContactContent = () => {
                 className="col-span-2 sm:col-span-1 bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center gap-1.5">
-                  <LocationIcon />
+                  <img src={addressIcon} alt="Address" className="w-5 h-5 sm:w-6 sm:h-6" />
                   <span className="font-['Sansation'] font-normal text-[#98012E] text-[15px] sm:text-[16px] md:text-[18px]">
                     Address
                   </span>
