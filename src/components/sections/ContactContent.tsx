@@ -85,45 +85,47 @@ export const ContactContent = () => {
             <h2 className="text-[#98012E] font-['Sansation'] font-normal text-[18px] sm:text-[20px] md:text-[22px] tracking-[0.01em]">
               Other Ways
             </h2>
-            <div className="grid grid-cols-1 sm:grid-cols-3 gap-3 sm:gap-4">
+
+            {/* WhatsApp and GSTIN Row */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 gap-3 sm:gap-4">
               {/* WhatsApp Card */}
               <a
                 href="https://wa.me/919265039240"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-md transition-shadow"
+                className="bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center gap-1.5">
                   <WhatsAppIcon />
-                  <span className="font-['Sansation'] font-normal text-[#98012E] text-[14px] sm:text-[15px] md:text-[16px]">
+                  <span className="font-['Sansation'] font-normal text-[#98012E] text-[15px] sm:text-[16px] md:text-[18px]">
                     Whatsapp
                   </span>
                 </div>
-                <span className="font-['Sansation'] font-normal text-[#878787] text-[13px] sm:text-[14px] md:text-[15px]">
+                <span className="font-['Sansation'] font-normal text-[#878787] text-[12px] sm:text-[14px] md:text-[15px]">
                   +91 92650 39240
                 </span>
               </a>
 
               {/* GSTIN Card */}
-              <div className="bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3">
-                <span className="font-['Sansation'] font-normal text-[#98012E] text-[14px] sm:text-[15px] md:text-[16px]">
+              <div className="bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3">
+                <span className="font-['Sansation'] font-normal text-[#98012E] text-[15px] sm:text-[16px] md:text-[18px]">
                   GSTIN
                 </span>
-                <span className="font-['Sansation'] font-normal text-[#878787] text-[13px] sm:text-[14px] md:text-[15px]">
+                <span className="font-['Sansation'] font-normal text-[#878787] text-[12px] sm:text-[14px] md:text-[15px]">
                   07AAECR2971C1Z
                 </span>
               </div>
 
-              {/* Address Card */}
+              {/* Address Card - Full width on mobile, normal on desktop */}
               <a
                 href="https://maps.google.com/?q=Plot+No+3640+Phase+III+Dared+Jamnagar"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-md transition-shadow"
+                className="col-span-2 sm:col-span-1 bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-md transition-shadow"
               >
                 <div className="flex items-center gap-1.5">
                   <LocationIcon />
-                  <span className="font-['Sansation'] font-normal text-[#98012E] text-[14px] sm:text-[15px] md:text-[16px]">
+                  <span className="font-['Sansation'] font-normal text-[#98012E] text-[15px] sm:text-[16px] md:text-[18px]">
                     Address
                   </span>
                 </div>
@@ -140,15 +142,15 @@ export const ContactContent = () => {
               Get In Touch
             </h2>
             <form onSubmit={handleSubmit} className="flex flex-col gap-3 sm:gap-4">
-              {/* First Row - First Name & Last Name */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              {/* First Row - First Name & Last Name - Always 2 columns */}
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <input
                   type="text"
                   name="firstName"
                   value={formData.firstName}
                   onChange={handleInputChange}
                   placeholder="Enter First Name"
-                  className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[14px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
+                  className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[13px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
                 />
                 <input
                   type="text"
@@ -156,27 +158,27 @@ export const ContactContent = () => {
                   value={formData.lastName}
                   onChange={handleInputChange}
                   placeholder="Enter Last Name"
-                  className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[14px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
+                  className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[13px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
                 />
               </div>
 
-              {/* Second Row - Email & Phone */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 sm:gap-4">
+              {/* Second Row - Email & Phone - Always 2 columns */}
+              <div className="grid grid-cols-2 gap-3 sm:gap-4">
                 <input
                   type="email"
                   name="email"
                   value={formData.email}
                   onChange={handleInputChange}
                   placeholder="Enter Your Email"
-                  className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[14px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
+                  className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[13px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
                 />
                 <input
                   type="tel"
                   name="phone"
                   value={formData.phone}
                   onChange={handleInputChange}
-                  placeholder="Enter Contact Number"
-                  className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[14px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
+                  placeholder="Enter Contact"
+                  className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[13px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
                 />
               </div>
 
@@ -187,7 +189,7 @@ export const ContactContent = () => {
                 value={formData.subject}
                 onChange={handleInputChange}
                 placeholder="Subject"
-                className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[14px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
+                className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[13px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50"
               />
 
               {/* Message */}
@@ -197,7 +199,7 @@ export const ContactContent = () => {
                 onChange={handleInputChange}
                 placeholder="Write an message.."
                 rows={4}
-                className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[14px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50 resize-none"
+                className="w-full bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-3 sm:px-5 py-3 sm:py-3.5 font-['Sansation'] font-normal text-[13px] sm:text-[15px] text-[#1E1E1E] placeholder:text-[#878787] focus:outline-none focus:ring-2 focus:ring-[#98012E]/50 resize-none"
               />
             </form>
           </div>
