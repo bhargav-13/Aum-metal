@@ -46,11 +46,11 @@ export const IndustryHome = () => {
       className="relative min-h-0 lg:min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-white"
     >
       {/* Background Image */}
-      <div className="absolute inset-0 z-0 top-16 lg:top-0 right-10 lg:right-0">
+      <div className="absolute inset-0 z-0 flex items-center left-0 top-0 bottom-0">
         <img
           src={industryImageBg}
           alt=""
-          className="w-[90%] sm:w-[45vw] h-[35vh] xs:h-[45vh] sm:h-[75vh] md:h-[90%] object-cover object-center sm:object-left opacity-100 rounded-2xl sm:rounded-3xl lg:rounded-[30px] xl:rounded-[40px]"
+          className="w-[90%] sm:w-[45vw] h-auto max-h-[90vh] object-contain object-center opacity-100"
         />
       </div>
 
