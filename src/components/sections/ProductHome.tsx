@@ -9,7 +9,7 @@ export const ProductHome = () => {
     >
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
-          <div className="lg:grid lg:grid-cols-[3fr_2fr] flex flex-col gap-8 md:gap-12 lg:gap-16 items-center">
+          <div className="lg:grid lg:grid-cols-[3fr_2fr] flex flex-col gap-8 md:gap-12 lg:gap-16 items-center lg:overflow-visible overflow-hidden">
             {/* Left Side - Content */}
             <div className="flex flex-col justify-center order-2 lg:order-1 lg:pr-8 text-center lg:text-left items-center lg:items-start">
               {/* Heading */}
@@ -42,8 +42,8 @@ export const ProductHome = () => {
               </div>
             </div>
 
-            {/* Right Side - Image (Mobile: absolute with opacity, Desktop: absolute normal) */}
-            <div className="absolute right-0 bottom-0 flex items-center justify-center order-1 lg:order-2 lg:absolute lg:right-0 lg:bottom-16 z-10 lg:z-auto">
+            {/* Right Side - Image (Mobile: absolute with opacity, Desktop: grid item aligned to right edge) */}
+            <div className="absolute right-0 bottom-0 flex items-center justify-center order-1 lg:order-2 lg:relative lg:bottom-auto lg:flex lg:items-center lg:justify-end lg:ml-auto z-10 lg:z-auto lg:-mr-[50px] xl:-mr-[100px] 2xl:-mr-[200px]">
               <div className="relative w-full max-w-[400px] sm:max-w-[500px] lg:max-w-[500px] xl:max-w-[600px] opacity-80 lg:opacity-100">
                 <img
                   src={productHomeRightImg}
