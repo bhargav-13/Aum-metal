@@ -35,10 +35,10 @@ export const ProductionProcess = () => {
   ];
 
   return (
-    <section className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
+    <section className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center py-6 sm:py-8 md:py-10 lg:py-12 overflow-hidden">
+      <div className="max-w-7xl mx-auto px-0 sm:px-0 md:px-0 lg:px-0 w-full">
         {/* Heading */}
-        <div className="text-center mb-12">
+        <div className="text-center mb-6 sm:mb-8 md:mb-10 px-4 sm:px-6">
           <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] leading-tight">
             Advanced Production Process
           </h2>
@@ -48,15 +48,15 @@ export const ProductionProcess = () => {
         </div>
 
         {/* Process Grid */}
-        <div className="flex justify-center w-full px-2">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8 justify-items-center items-center place-items-center">
+        <div className="w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-0 justify-items-center items-center w-full">
             {processes.map((process) => (
               <div
                 key={process.step}
-                className="flex flex-col items-center justify-center w-full sm:max-w-[200px]"
+                className="flex flex-col items-center justify-center w-full h-full p-2 sm:p-3 md:p-4 lg:p-5"
               >
                 {/* Step Number and Icon Container - Aligned */}
-                <div className="relative w-full flex items-start justify-center mb-3 sm:mb-4">
+                <div className="relative w-full flex items-start justify-center mb-1 sm:mb-1.5">
                   {/* Step Number - Positioned on the left, aligned with icon */}
                   <div className="absolute left-0 font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[18px] sm:text-[20px]">
                     {process.step}
