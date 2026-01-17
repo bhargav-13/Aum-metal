@@ -1,4 +1,5 @@
 import vectorFooterImg from "../assets/Vector footer.svg";
+import logoImg from "../assets/logofooter.png";
 
 export const Footer = () => {
   return (
@@ -20,20 +21,15 @@ export const Footer = () => {
             {/* Left Side - Brand Section */}
             <div className="w-full text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-2 sm:mb-3">
-                <div className="w-7 h-7 sm:w-8 sm:h-8 relative flex-shrink-0">
-                  <svg viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="20" cy="12" r="4" fill="#98012E"/>
-                    <circle cx="12" cy="28" r="4" fill="#98012E"/>
-                    <circle cx="28" cy="28" r="4" fill="#98012E"/>
-                    <path d="M20 16L12 24M20 16L28 24" stroke="#98012E" strokeWidth="2"/>
-                  </svg>
-                </div>
-                <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[20px] sm:text-[20px] lg:text-[22px] leading-tight">
-                  Aum Metal Alloy
-                </h3>
+                <img 
+                  src={logoImg} 
+                  alt="AUM Metal Alloy Logo" 
+                  className="h-8 sm:h-10 md:h-12 w-auto object-contain"
+                />
+             
               </div>
-              <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[14px] lg:text-[13px] leading-relaxed">
-                Delivering consistent quality, precise dimensions, and reliable brass solutions.
+              <p className="font-['Sansation'] font-normal text-[#7D7D7D] text-[14px] sm:text-[14px] lg:text-[13px] leading-relaxed max-w-md">
+                Delivering consistent quality, precise dimensions,<br className="hidden sm:block" /> and reliable brass solutions.
               </p>
             </div>
 
@@ -109,10 +105,10 @@ export const Footer = () => {
 
             {/* Connect Section */}
             <div>
-              <h4 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] sm:text-[17px] lg:text-[18px] mb-3 sm:mb-4">
+              <h4 className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] sm:text-[17px] lg:text-[18px] mb-2 sm:mb-3">
                 Connect
               </h4>
-              <ul className="space-y-2 sm:space-y-2.5">
+              <ul className="space-y-1.5 sm:space-y-2">
                 <li>
                   <a
                     href="tel:+919265039240"
@@ -124,7 +120,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="mailto:aummetalalloy@gmail.com"
-                    className="font-['Sansation'] font-normal text-[#A05370] text-[14px] sm:text-[14px] lg:text-[14px] hover:text-[#98012E] transition-colors duration-200 break-words"
+                    className="font-['Sansation'] font-normal text-[#A05370] text-[14px] sm:text-[14px] lg:text-[14px] hover:text-[#98012E] transition-colors duration-200 whitespace-nowrap"
                   >
                     aummetalalloy@gmail.com
                   </a>
