@@ -60,7 +60,7 @@ export const TestimonialsHome = () => {
       {/* Section 1: Trusted Partner */}
       <section
         id="trust-home"
-        className="relative h-[75vh] lg:h-[90vh]  pt-8 lg:pt-16 w-full flex  items-start lg:items-center justify-center bg-white overflow-hidden"
+        className="relative h-[75vh] lg:h-[90vh]   w-full flex  items-start lg:items-center justify-center bg-white overflow-hidden"
       >
         {/* Image - Attached to right side 100%, overlapping text on mobile */}
         <div className="absolute right-0 bottom-0 flex items-end justify-end z-0 opacity-80 lg:opacity-100">
