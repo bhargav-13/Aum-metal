@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import vectorFooterImg from "../assets/Vector footer.svg";
 import logoImg from "../assets/logofooter.png";
 
@@ -42,14 +43,21 @@ export const Footer = () => {
                 Company
               </h4>
               <ul className="space-y-2 sm:space-y-2.5">
-                {["Home", "Products", "About", "Grades", "Contact"].map((item) => (
-                  <li key={item}>
-                    <a
-                      href={item === "Home" ? "/" : `/${item.toLowerCase()}`}
+                {[
+                  { label: 'Home', href: '/' },
+                  { label: 'About', href: '/about' },
+                  { label: 'Our Products', href: '/products' },
+                  { label: 'Grades', href: '/grades' },
+                  { label: 'Contact', href: '/contact' },
+                ].map((item) => (
+                  <li key={item.href}>
+                    <Link
+                      to={item.href}
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                       className="font-['Sansation'] font-normal text-[#A05370] text-[14px] sm:text-[14px] lg:text-[14px] hover:text-[#98012E] transition-colors duration-200"
                     >
-                      {item}
-                    </a>
+                      {item.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
