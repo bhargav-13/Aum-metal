@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
 import brassRodsImg from "../../assets/product/Round.png";
 import brassIngotsImg from "../../assets/product/Square.png";
 import brassBilletsImg from "../../assets/product/Rectangle.png";
@@ -15,7 +16,39 @@ import watchImg from "../../assets/AboutPage/Watch.png";
 import constructionImg from "../../assets/AboutPage/Construction.png";
 
 export const ProductsContent = () => {
-  const [activeTab, setActiveTab] = useState("brass-road");
+  const [searchParams, setSearchParams] = useSearchParams();
+  const productParam = searchParams.get("product");
+  
+  // Map URL parameter to tab key
+  const getTabFromParam = (param: string | null): string => {
+    const paramMap: { [key: string]: string } = {
+      "brass-road": "brass-road",
+      "ingots": "ingots",
+      "billet": "billet",
+      "section-profiles": "section-profiles",
+      "wire": "wire",
+      "hollow": "hollow",
+    };
+    return param && paramMap[param] ? paramMap[param] : "brass-road";
+  };
+
+  // Derive activeTab from URL param, fallback to state for local changes
+  const [localTab, setLocalTab] = useState(() => getTabFromParam(productParam));
+  const activeTab = productParam ? getTabFromParam(productParam) : localTab;
+
+  // Handle tab change - update URL and local state
+  const handleTabChange = (tab: string) => {
+    setLocalTab(tab);
+    setSearchParams({ product: tab });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Scroll to top when URL parameter changes (from external navigation)
+  useEffect(() => {
+    if (productParam) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [productParam]);
 
   const industryData = [
     { name: "Agriculture Equipment", image: agricultureImg },
@@ -194,7 +227,7 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
                       {/* Top Row - 3 buttons */}
                       <div className="grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
                         <button
-                          onClick={() => setActiveTab("brass-road")}
+                          onClick={() => handleTabChange("brass-road")}
                           className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
                             activeTab === "brass-road"
                               ? "bg-[#98012E] text-white"
@@ -204,7 +237,7 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
                           Rods
                         </button>
                         <button
-                          onClick={() => setActiveTab("wire")}
+                          onClick={() => handleTabChange("wire")}
                           className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
                             activeTab === "wire"
                               ? "bg-[#98012E] text-white"
@@ -214,7 +247,7 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
                           Wire
                         </button>
                         <button
-                          onClick={() => setActiveTab("ingots")}
+                          onClick={() => handleTabChange("ingots")}
                           className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
                             activeTab === "ingots"
                               ? "bg-[#98012E] text-white"
@@ -227,7 +260,7 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
                       {/* Bottom Row - 3 buttons centered */}
                       <div className="grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
                         <button
-                          onClick={() => setActiveTab("section-profiles")}
+                          onClick={() => handleTabChange("section-profiles")}
                           className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center leading-tight ${
                             activeTab === "section-profiles"
                               ? "bg-[#98012E] text-white"
@@ -237,7 +270,7 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
                           Section & Profiles
                         </button>
                         <button
-                          onClick={() => setActiveTab("billet")}
+                          onClick={() => handleTabChange("billet")}
                           className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
                             activeTab === "billet"
                               ? "bg-[#98012E] text-white"
@@ -247,7 +280,7 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
                           Billet
                         </button>
                         <button
-                          onClick={() => setActiveTab("hollow")}
+                          onClick={() => handleTabChange("hollow")}
                           className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
                             activeTab === "hollow"
                               ? "bg-[#98012E] text-white"

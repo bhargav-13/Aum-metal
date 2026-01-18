@@ -69,14 +69,20 @@ export const Footer = () => {
                 Solutions
               </h4>
               <ul className="space-y-2 sm:space-y-2.5">
-                {["Rods", "Ingots", "Billets", "Hexagon Rods"].map((item) => (
-                  <li key={item}>
-                    <a
-                      href={`/products/${item.toLowerCase().replace(" ", "-")}`}
+                {[
+                  { label: 'Rods', product: 'brass-road' },
+                  { label: 'Bars', product: 'ingots' },
+                  { label: 'Billets', product: 'billet' },
+                  { label: 'Hexagon Rods', product: 'brass-road' },
+                ].map((item) => (
+                  <li key={item.label}>
+                    <Link
+                      to={`/products?product=${item.product}`}
+                      onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
                       className="font-['Sansation'] font-normal text-[#A05370] text-[14px] sm:text-[14px] lg:text-[14px] hover:text-[#98012E] transition-colors duration-200"
                     >
-                      {item}
-                    </a>
+                      {item.label}
+                    </Link>
                   </li>
                 ))}
               </ul>
