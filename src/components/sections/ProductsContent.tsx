@@ -305,16 +305,16 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
               </div>
 
               {/* Right Content Area */}
-              <div className="flex-1">
+              <div className="flex-1 w-full">
                 {/* Description */}
 
                 {/* Product Cards */}
                 {currentProduct.products.length === 1 ? (
                   // Single Product - Horizontal Layout
-                  <div className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 bg-gradient-to-b from-[#FFF5F7] to-white mb-8 sm:mb-12">
+                  <div className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 bg-linear-to-b from-[#FFF5F7] to-white mb-8 sm:mb-12">
                     <div className="flex flex-col md:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
                       {/* Product Image */}
-                      <div className="w-full md:w-[45%] rounded-lg sm:rounded-xl overflow-hidden bg-white p-4 sm:p-6">
+                      <div className="w-full md:w-[45%]  overflow-hidden ">
                         <img
                           src={currentProduct.products[0].image}
                           alt={currentProduct.products[0].name}
@@ -349,18 +349,18 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
                     </div>
                   </div>
                 ) : (
-                  // Multiple Products - Grid Layout
-                  <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 xl:grid-cols-4 gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-12 w-full">
+                  // Multiple Products - Flexbox Layout
+                  <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-12 w-full">
                     {currentProduct.products.map((product, index) => (
                       <div
                         key={index}
-                        className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 bg-gradient-to-b from-[#FFF5F7] to-white hover:shadow-lg transition-all duration-300"
+                        className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 bg-linear-to-b from-[#FFF5F7] to-white hover:shadow-lg transition-all duration-300 w-full sm:flex-1 min-w-0"
                       >
-                        <div className="aspect-square rounded-lg sm:rounded-xl overflow-hidden mb-3 sm:mb-4 bg-white">
+                        <div className={`mb-3 sm:mb-4 flex items-center justify-center ${activeTab === "hollow" ? " w-fit mx-auto" : "aspect-square rounded-lg sm:rounded-xl overflow-hidden w-full"}`}>
                           <img
                             src={product.image}
                             alt={product.name}
-                            className="w-full h-full object-cover"
+                            className={activeTab === "hollow" ? "h-auto max-w-full object-contain " : "w-full h-full object-cover"}
                           />
                         </div>
                         <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[20px] xs:text-[21px] sm:text-[22px] md:text-[24px] mb-3 sm:mb-4 text-center">
