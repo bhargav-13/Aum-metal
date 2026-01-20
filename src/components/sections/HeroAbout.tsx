@@ -38,7 +38,7 @@ export const HeroAbout = () => {
 
   return (
     <section className="relative w-full flex items-center justify-center flex-col overflow-hidden ">
-      <div className="w-full h-full px-4 sm:px-6 md:content-padding pt-16 lg:pt-20 flex items-center" 
+      <div className="w-full h-full px-4 sm:px-6 md:content-padding py-16 lg:py-20 flex items-center" 
        style={{
         background: "linear-gradient(180deg, #98012E 0%, #FFFFFF 64.93%)",
       }}>

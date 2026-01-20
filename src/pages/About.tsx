@@ -1,5 +1,4 @@
 import { HeroAbout } from '../components/sections/HeroAbout'
-import { CapabilitiesAbout } from '../components/sections/CapabilitiesAbout'
 import { AboutProfile } from '../components/sections/AboutProfile'
 import { ProductsAbout } from '../components/sections/ProductsAbout'
 import { TeamAbout } from '../components/sections/TeamAbout'
@@ -19,7 +18,7 @@ export const About = () => {
         ogDescription="Discover AUM Metal Alloys - our manufacturing capabilities, production process, and commitment to precision brass products."
       />
       <HeroAbout />
-      <CapabilitiesAbout />
+      {/* <CapabilitiesAbout /> */}
       <AboutProfile />
       <ProductsAbout />
       <TeamAbout />
