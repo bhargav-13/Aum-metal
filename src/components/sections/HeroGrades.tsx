@@ -7,7 +7,7 @@ export const HeroGrades = () => {
       <div
         className="absolute inset-0 z-0"
         style={{
-          background: "linear-gradient(180deg, #98012E 0%, #E8B4C6 50%, #FFFFFF 100%)",
+          background: "linear-gradient(180deg, #98012E 0%, #FFFFFF 64.93%)",
         }}
       />
 

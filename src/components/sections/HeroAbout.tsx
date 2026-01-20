@@ -1,14 +1,55 @@
+import { useState } from "react";
+
 export const HeroAbout = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+
+  const capabilities = [
+    {
+      number: "01",
+      title: "TIMELY DELIVERY",
+      description:
+        "We value our customers' production schedules and ensure on-time delivery through planned manufacturing, consistent output, and reliable logistics.",
+    },
+    {
+      number: "02",
+      title: "QUALITY",
+      description:
+        "We source our products from reputable suppliers to ensure you receive only the best quality.",
+    },
+    {
+      number: "03",
+      title: "EXPERT TEAMWORK",
+      description:
+        "Our skilled technical team and production staff work together to maintain precision, consistency, and efficiency across every manufacturing stage.",
+    },
+    {
+      number: "04",
+      title: "CUSTOMER SATISFACTION",
+      description:
+        "We focus on understanding customer requirements and delivering brass products that meet exact specifications, quality standards, and performance expectations.",
+    },
+    {
+      number: "05",
+      title: "24/7 SUPPORT",
+      description:
+        "Serving domestic and international clients, we provide responsive communication and support to ensure smooth coordination and timely assistance.",
+    },
+  ];
+
   return (
-    <section className="relative w-full flex items-center justify-center bg-gradient-to-b from-[#98012E] via-[#C84A6A] to-[#FFE5EB] overflow-hidden h-[calc(100vh-80px)] min-h-[calc(100vh-80px)]">
-      <div className="w-full h-full px-4 sm:px-6 md:content-padding py-16 lg:py-20 flex items-center">
+    <section className="relative w-full flex items-center justify-center flex-col overflow-hidden ">
+      <div className="w-full h-full px-4 sm:px-6 md:content-padding pt-16 lg:pt-20 flex items-center" 
+       style={{
+        background: "linear-gradient(180deg, #98012E 0%, #FFFFFF 64.93%)",
+      }}>
         <div className="max-w-7xl mx-auto w-full text-center">
           {/* Tagline/Breadcrumb */}
           <div className="mb-8 sm:mb-12 lg:mb-16">
             <div className="inline-block">
               <div className="border-2 border-white/80 rounded-full px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 py-3 xs:py-3.5 sm:py-4 md:py-5">
                 <p className="font-['Sansation'] font-normal text-white text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] leading-relaxed text-center">
-                  Precision Brass Manufacturing Built on Quality, Consistency & Trust
+                  Precision Brass Manufacturing Built on Quality, Consistency &
+                  Trust
                 </p>
               </div>
             </div>
@@ -20,8 +61,82 @@ export const HeroAbout = () => {
           </h1>
         </div>
       </div>
+      {/* Capabilities Cards */}
+      <div className="w-full px-4 sm:px-6 md:content-padding pb-12 sm:pb-16 md:pb-20 lg:pb-24">
+        <div className="max-w-[1400px] mx-auto w-full">
+          <div className="flex flex-col lg:flex-row gap-3 sm:gap-4 lg:gap-6 items-stretch">
+            {capabilities.map((capability, index) => (
+              <button
+                key={capability.number}
+                onClick={() => setActiveIndex(index)}
+                className={`relative rounded-xl sm:rounded-2xl border-2 p-4 sm:p-5 md:p-6 flex flex-col justify-between transition-all duration-500 hover:shadow-xl text-left ${
+                  activeIndex === index
+                    ? "bg-[#98012E] border-[#98012E] lg:flex-[2]"
+                    : "bg-white border-[#E5C4CC] hover:border-[#98012E] lg:flex-[0.8]"
+                } ${
+                  activeIndex === index
+                    ? "min-h-[320px] xs:min-h-[360px] sm:min-h-[380px] lg:min-h-[450px]"
+                    : "min-h-[240px] xs:min-h-[260px] sm:min-h-[280px] lg:min-h-[400px]"
+                }`}
+              >
+                {/* Top Section */}
+                <div>
+                  <h3
+                    className={`font-['DM_Sans'] font-bold text-[16px] sm:text-[18px] lg:text-[20px] mb-1.5 sm:mb-2 ${
+                      activeIndex === index ? "text-white" : "text-[#98012E]"
+                    }`}
+                  >
+                    {capability.number}
+                  </h3>
+                  <h4
+                    className={`font-['DM_Sans'] font-bold text-[16px] sm:text-[17px] md:text-[18px] lg:text-[20px] leading-tight ${
+                      activeIndex === index ? "text-white" : "text-[#98012E]"
+                    }`}
+                  >
+                    {capability.title}
+                  </h4>
+                </div>
+
+                {/* Bottom Section - Description or Icon */}
+                <div className="flex justify-end items-end">
+                  {activeIndex === index ? (
+                    <p className="font-['Sansation'] font-normal text-white text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px] leading-relaxed w-full">
+                      {capability.description}
+                    </p>
+                  ) : (
+                    <svg
+                      width="20"
+                      height="20"
+                      className="sm:w-6 sm:h-6"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <rect
+                        x="0.292683"
+                        y="0.292683"
+                        width="23.4146"
+                        height="23.4146"
+                        rx="11.7073"
+                        stroke="#98012E"
+                        strokeWidth="0.585366"
+                      />
+                      <circle
+                        cx="12.1463"
+                        cy="12"
+                        r="5.85366"
+                        fill="#98012E"
+                        stroke="#98012E"
+                        strokeWidth="0.585366"
+                      />
+                    </svg>
+                  )}
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      </div>
     </section>
   );
 };
-
-
