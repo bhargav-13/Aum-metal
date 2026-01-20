@@ -14,6 +14,9 @@ import plumbingImg from "../../assets/AboutPage/Plumbing.png";
 import surgicalEquipmentImg from "../../assets/AboutPage/Surgical Equipment.png";
 import watchImg from "../../assets/AboutPage/Watch.png";
 import constructionImg from "../../assets/AboutPage/Construction.png";
+import roundhollowImg from "../../assets/product/RoundHello.png";
+import hexagonhollowImg from "../../assets/product/HexagonHello.png";
+import squarehollowImg from "../../assets/product/SquareHello.png";
 
 export const ProductsContent = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -189,19 +192,19 @@ We offer a comprehensive range of brass hollow sizes with flexible production pl
       products: [
         {
           name: "Round",
-          image: brassRodsImg,
+          image: roundhollowImg,
           metricSize: "OD :- 30mm to 90mm",
           imperialSize: "OD 1.18 (1 3/16) to 3.55 (3 9/16) Inches",
         },
         {
           name: "Hexagon",
-          image: customBrassSolutionsImg,
+          image: hexagonhollowImg,
           metricSize: "OD :- 30mm to 90mm",
           imperialSize: "A/F 1.18 (1 3/16) to 2.56 (2 9/16) Inches",
         },
         {
           name: "Square",
-          image: brassIngotsImg,
+          image: squarehollowImg,
           metricSize: "OD :- 30mm to 90mm",
           imperialSize: "A/F 1.18 (1 3/16) to 2.36 (2 3/8) Inches",
         },
