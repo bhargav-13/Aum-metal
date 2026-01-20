@@ -5,7 +5,7 @@ export const ProductHome = () => {
   return (
     <section
       id="product-home"
-      className="relative min-h-0 lg:h-[75vh] w-full block items-center justify-center overflow-hidden pb-8 sm:pb-12 md:pb-16 lg:pb-24"
+      className="relative min-h-0  w-full block items-center justify-center overflow-hidden"
     >
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
