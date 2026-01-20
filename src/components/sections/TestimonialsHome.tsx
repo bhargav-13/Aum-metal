@@ -63,7 +63,7 @@ export const TestimonialsHome = () => {
         className="relative h-[75vh] lg:h-[90vh]   w-full flex  items-start lg:items-center justify-center bg-white overflow-hidden"
       >
         {/* Image - Attached to right side 100%, overlapping text on mobile */}
-        <div className="absolute right-0 bottom-0 flex items-end justify-end z-0 opacity-80 lg:opacity-100">
+        <div className="absolute right-0 bottom-0 lg:bottom-1/8 flex items-end justify-end z-0 opacity-80 lg:opacity-100">
           <div className="relative">
             <img
               src={isMobile ? trustRightHomeImgMobile : trustRightHomeImgWeb}
