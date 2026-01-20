@@ -1,5 +1,4 @@
 import { HeroProducts } from '../components/sections/HeroProducts';
-import { ProductsContent } from '../components/sections/ProductsContent';
 import { SEO } from '../components/SEO';
 
 export const Products = () => {
@@ -13,7 +12,6 @@ export const Products = () => {
         ogDescription="Comprehensive range of precision brass products: rods, ingots, billets, wires, hollow sections, and profiles. Available in Metric and Imperial dimensions."
       />
       <HeroProducts />
-      <ProductsContent />
     </>
   );
 };

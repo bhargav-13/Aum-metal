@@ -1,31 +1,451 @@
-export const HeroProducts = () => {
-  return (
-    <section 
-      className="relative w-full flex items-center justify-center overflow-hidden h-[calc(100vh-80px)] min-h-[calc(100vh-80px)]"
-    >
-      {/* Simple Gradient Background */}
-      <div 
-        className="absolute inset-0 z-0"
-        style={{
-          background: "linear-gradient(180deg, #98012E 0%, #FFFFFF 64.93%)",
-        }}
-      />
+import { useState, useEffect } from "react";
+import { useSearchParams } from "react-router-dom";
+import brassRodsImg from "../../assets/product/Round.png";
+import brassIngotsImg from "../../assets/product/Square.png";
+import brassBilletsImg from "../../assets/product/Rectangle.png";
+import customBrassSolutionsImg from "../../assets/product/Hexagon.png";
+import agricultureImg from "../../assets/AboutPage/Agriculture Equipment.png";
+import automativeImg from "../../assets/AboutPage/Automative.png";
+import electricalElectronicsImg from "../../assets/AboutPage/Electrical & Electronics.png";
+import homeApplianceImg from "../../assets/AboutPage/Home Appliance.png";
+import lockHardwareImg from "../../assets/AboutPage/Lock , Hardware.png";
+import oilGasValveImg from "../../assets/AboutPage/Oil, Gas & Industrial Valve.png";
+import plumbingImg from "../../assets/AboutPage/Plumbing.png";
+import surgicalEquipmentImg from "../../assets/AboutPage/Surgical Equipment.png";
+import watchImg from "../../assets/AboutPage/Watch.png";
+import constructionImg from "../../assets/AboutPage/Construction.png";
+import roundhollowImg from "../../assets/product/RoundHello.png";
+import hexagonhollowImg from "../../assets/product/HexagonHello.png";
+import squarehollowImg from "../../assets/product/SquareHello.png";
 
-      {/* Content */}
-      <div className="relative z-10 w-full px-4 sm:px-6 md:content-padding py-4 sm:py-6 md:py-8 lg:py-6 text-center flex flex-col items-center justify-center">
-        {/* Welcome Badge */}
-        <div className="inline-flex mb-6 sm:mb-8 w-auto max-w-[95vw] sm:max-w-[90vw] h-auto min-h-[42px] sm:min-h-[42px] md:min-h-[45px] rounded-[110px] border border-white/50 py-2.5 sm:py-2.5 px-5 sm:px-6 md:px-7 items-center justify-center gap-2 opacity-100 bg-white/10 backdrop-blur-sm">
-          <p className="text-white font-['Sansation'] font-normal text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] text-center">
-            Reliable Brass Materials for Domestic and Global Markets
-          </p>
+export const HeroProducts = () => {
+  const [searchParams, setSearchParams] = useSearchParams();
+  const productParam = searchParams.get("product");
+  
+  // Map URL parameter to tab key
+  const getTabFromParam = (param: string | null): string => {
+    const paramMap: { [key: string]: string } = {
+      "brass-road": "brass-road",
+      "ingots": "ingots",
+      "billet": "billet",
+      "section-profiles": "section-profiles",
+      "wire": "wire",
+      "hollow": "hollow",
+    };
+    return param && paramMap[param] ? paramMap[param] : "brass-road";
+  };
+
+  // Derive activeTab from URL param, fallback to state for local changes
+  const [localTab, setLocalTab] = useState(() => getTabFromParam(productParam));
+  const activeTab = productParam ? getTabFromParam(productParam) : localTab;
+
+  // Handle tab change - update URL and local state
+  const handleTabChange = (tab: string) => {
+    setLocalTab(tab);
+    setSearchParams({ product: tab });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  // Scroll to top when URL parameter changes (from external navigation)
+  useEffect(() => {
+    if (productParam) {
+      window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+  }, [productParam]);
+
+  const industryData = [
+    { name: "Agriculture Equipment", image: agricultureImg },
+    { name: "Automative", image: automativeImg },
+    { name: "Electrical & Electronics", image: electricalElectronicsImg },
+    { name: "Home Appliance", image: homeApplianceImg },
+    { name: "Lock , Hardware", image: lockHardwareImg },
+    { name: "Oil, Gas & Industrial Valve", image: oilGasValveImg },
+    { name: "Plumbing", image: plumbingImg },
+    { name: "Surgical Equipment", image: surgicalEquipmentImg },
+    { name: "Watch", image: watchImg },
+    { name: "Construction", image: constructionImg },
+  ];
+
+  const productData = {
+    "brass-road": {
+      title: "Brass Product Range",
+      description: `Brass rods are solid metal products manufactured in round, square, hexagonal, and other cross-sectional forms, widely used for machining, fabrication, and industrial applications requiring strength, precision, and reliability.
+
+Aum Metal Alloys offers a wide range of brass rods in various diameters and across-flats (A/F) sizes to meet diverse industrial requirements. With consistent size availability and flexible production capabilities, we support diverse industrial needs while ensuring consistent quality, smooth surface finish, and excellent machinability. Our brass rods are supplied to both domestic and international markets.
+
+We manufacture brass rods in standard and custom lengths, with cutting services available as per customer specifications. All products are available in both Metric and Imperial dimensions, ensuring compatibility with global standards and applications.`,
+      products: [
+        {
+          name: "Round",
+          image: brassRodsImg,
+          metricSize: "Dia :- 6mm to 60mm",
+          imperialSize: "Dia:- 0.25mm (I/4) to 5mm",
+        },
+        {
+          name: "Hexagon",
+          image: customBrassSolutionsImg,
+          metricSize: "Dia :- 6mm to 60mm",
+          imperialSize: "Dia:- 0.25mm (I/4) to 5mm",
+        },
+        {
+          name: "Rectangle",
+          image: brassBilletsImg,
+          metricSize: "Dia :- 6mm to 60mm",
+          imperialSize: "Dia:- 0.25mm (I/4) to 5mm",
+        },
+        {
+          name: "Square",
+          image: brassIngotsImg,
+          metricSize: "Dia :- 6mm to 60mm",
+          imperialSize: "Dia:- 0.25mm (I/4) to 5mm",
+        },
+      ],
+      industries: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], // All industries
+    },
+    wire: {
+      title: "Brass Product Range",
+      description: `Brass wires are solid metal products manufactured with a uniform cross-section along their entire length, designed to provide consistent strength, flexibility, and surface finish for industrial and engineering applications. They are suitable for use in machining, electrical, fastening, and general manufacturing processes.
+
+Aum Metal Alloys offers brass wires in a wide range of sizes as per customer specifications. With flexible production capability and strict quality control, we ensure consistent dimensional accuracy and metallurgical properties across all wire products. Our brass wires are supplied to both domestic and global markets with reliable lead times.
+
+We manufacture brass wires in standard and custom lengths, with cutting options available as per customer requirements. All products are available in Metric and Imperial dimensions, ensuring compatibility with diverse industrial standards and applications.`,
+      products: [
+        {
+          name: "Round",
+          image: brassRodsImg,
+          metricSize: "Dia :- 6mm to 60mm",
+          imperialSize: "Dia:- 0.25mm (I/4) to 5mm",
+        },
+        {
+          name: "Hexagon",
+          image: customBrassSolutionsImg,
+          metricSize: "Dia :- 6mm to 60mm",
+          imperialSize: "Dia:- 0.25mm (I/4) to 5mm",
+        },
+        {
+          name: "Square",
+          image: brassIngotsImg,
+          metricSize: "Dia :- 6mm to 60mm",
+          imperialSize: "Dia:- 0.25mm (I/4) to 5mm",
+        },
+      ],
+      industries: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], // All industries
+    },
+    ingots: {
+      title: "Brass Product Range",
+      description: `Brass ingots are cast metal blocks produced by melting brass alloys and solidifying them into a convenient shape for storage, transportation, and further processing. These ingots serve as a primary raw material for remelting, casting, extrusion, and manufacturing of semi-finished or finished brass products. Manufactured with controlled alloy composition, brass ingots ensure consistent metallurgical properties and reliable performance in downstream applications.
+
+Aum Metal Alloys produces high-quality brass ingots using controlled melting and casting processes to maintain uniform structure and chemical consistency. Our ingots are suitable for various industrial and engineering applications, and our professional team is available to assist customers with specific material and alloy requirements. We supply brass ingots to both domestic and international markets.
+
+We offer brass ingots in standard and customized sizes as per customer specifications. All ingots are available in Metric and Imperial dimensions, ensuring flexibility and compatibility with global manufacturing standards.`,
+      products: [
+        {
+          name: "Brass Ingots (Square)",
+          image: brassIngotsImg,
+          metricSize: "A/F 73 mm",
+          imperialSize: "A/F 2.87 (2 7I/8) Inches",
+        },
+      ],
+      industries: [1, 6], // Automative, Plumbing
+    },
+    "section-profiles": {
+      title: "Brass Product Range",
+      description: `Brass sections and profiles are specially shaped metal products designed in various customized and irregular cross-sections, offering flexibility in height, thickness, and geometry. These profiles are widely used in engineering and industrial applications where standard shapes are not sufficient and customized solutions are required.
+
+Aum Metal Alloys manufactures a wide range of brass sections and profiles developed as per customer drawings, samples, and technical specifications. With extensive experience in extrusion and profile development, we support diverse applications—from standard brass profiles to fully customized, customer-exclusive sections. Our products are supplied to both domestic and global markets with reliable delivery timelines.
+
+We produce brass sections and profiles in standard and custom lengths, with cutting options available as per customer requirements. All products are available in both Metric and Imperial dimensions, ensuring compatibility with international standards and varied industrial applications.`,
+      products: [
+        {
+          name: "Section & Profile",
+          image: brassBilletsImg,
+          metricSize: "Circumscribed Dia 2.5 to 80 mm",
+          imperialSize: "Circumscribed Dia 0.10 (3/32) to 3.15 (3 5/32)",
+        },
+      ],
+      industries: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], // All industries
+    },
+    billet: {
+      title: "Brass Product Range",
+      description: `A brass billet is a semi-finished metal product with a round or square cross-section, produced directly through controlled casting processes. Billets are designed for further processing through extrusion, rolling, or drawing. Due to their refined grain structure and metallurgical consistency, brass billets allow precise downstream processing and are widely used in the manufacturing of rods, bars, profiles, and other brass components.
+
+Aum Metal Alloys offers reliable supply and fast delivery of brass billets, supported by a professional technical and sales team ready to assist with specific alloy and application requirements. We supply to both domestic and international markets with dependable logistics.
+
+We manufacture brass billets in standard and customized lengths, with cutting options available as per customer specifications. All billets are available in Metric and Imperial sizes, ensuring flexibility across global applications.`,
+      products: [
+        {
+          name: "Brass Billet",
+          image: brassBilletsImg,
+          metricSize: "Dia 100, 104, 125 and 175",
+          imperialSize: "Dia 3.93 (3 15/16), 5 and 6.89 (6 7/8)",
+        },
+      ],
+      industries: [1], // Automative
+    },
+    hollow: {
+      title: "Brass Product Range",
+      description: `Brass hollow products are tubular metal sections with a hollow cross-section, offering an optimal balance of strength, weight reduction, material optimization, and consistent mechanical strength under multi-directional loading. These products are designed to provide structural integrity while minimizing material usage and overall weight.
+
+Aum Metal Alloys manufactures brass hollow rods in various sizes, offering significant cost and process advantages by reducing the need for drilling and boring operations. Our brass hollow products are widely used in applications such as taps, valves, plumbing fittings, heating systems, and various industrial components. We supply to both domestic and international markets with reliable delivery timelines.
+
+We offer a comprehensive range of brass hollow sizes with flexible production planning. Our professional team ensures fast delivery and consistent quality for all customers. Products are available in standard and custom lengths, with cutting options available as per customer requirements. All brass hollow products are supplied in both Metric and Imperial dimensions, ensuring compatibility with global standards and applications.`,
+      products: [
+        {
+          name: "Round",
+          image: roundhollowImg,
+          metricSize: "OD :- 30mm to 90mm",
+          imperialSize: "OD 1.18 (1 3/16) to 3.55 (3 9/16) Inches",
+        },
+        {
+          name: "Hexagon",
+          image: hexagonhollowImg,
+          metricSize: "OD :- 30mm to 90mm",
+          imperialSize: "A/F 1.18 (1 3/16) to 2.56 (2 9/16) Inches",
+        },
+        {
+          name: "Square",
+          image: squarehollowImg,
+          metricSize: "OD :- 30mm to 90mm",
+          imperialSize: "A/F 1.18 (1 3/16) to 2.36 (2 3/8) Inches",
+        },
+      ],
+      industries: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9], // All industries
+    },
+  };
+
+  const currentProduct = productData[activeTab as keyof typeof productData];
+
+  return (
+    <>
+      <section className="relative w-full flex items-center justify-center flex-col overflow-hidden">
+        {/* Hero Content */}
+        <div className="w-full h-full px-4 sm:px-6 md:content-padding py-16 lg:py-20 flex items-center"  style={{
+        background: "linear-gradient(180deg, #98012E 0%, #FFFFFF 64.93%)",
+      }}>
+          <div className="max-w-7xl mx-auto w-full text-center">
+            {/* Tagline */}
+            <div className="mb-8 sm:mb-12 lg:mb-16">
+              <div className="inline-block">
+                <div className="border-2 border-white/80 rounded-full px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 py-3 xs:py-3.5 sm:py-4 md:py-5">
+                  <p className="font-['Sansation'] font-normal text-white text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] leading-relaxed text-center">
+                    Reliable Brass Materials for Domestic and Global Markets
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Main Heading */}
+            <h1 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[40px] sm:text-[48px] md:text-[60px] lg:text-[72px] xl:text-[96px] leading-tight tracking-tight">
+              Brass Product Range
+            </h1>
+          </div>
         </div>
 
-        {/* Main Heading */}
-        <h1 className="w-full sm:w-[85%] md:w-[75%] lg:w-[75%] xl:w-[70%] font-['DM_Sans'] font-black text-[#98012E] text-center leading-none tracking-normal mx-auto px-4 text-[34px] xs:text-[38px] sm:text-[42px] md:text-[56px] lg:text-[72px] xl:text-[96px]">
-          Brass Product Range
-        </h1>
-      </div>
-    </section>
+        {/* Products Content */}
+        <div className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center ">
+          <div className="w-full px-4 sm:px-6 md:content-padding">
+            <div className="max-w-7xl mx-auto w-full">
+              <div className="flex flex-col lg:flex-col gap-4 sm:gap-6 lg:gap-8">
+                {/* Tabs & Description */}
+                <div className="w-full">
+                  <div className="flex flex-col lg:flex-row gap-4 sm:gap-6">
+                    {/* Tabs */}
+                    <div className="w-full lg:w-auto lg:shrink-0">
+                      <div className="flex flex-col lg:grid lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
+                        {/* Top Row - 3 buttons */}
+                        <div className="grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
+                          <button
+                            onClick={() => handleTabChange("brass-road")}
+                            className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                              activeTab === "brass-road"
+                                ? "bg-[#98012E] text-white"
+                                : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                            }`}
+                          >
+                            Rods
+                          </button>
+                          <button
+                            onClick={() => handleTabChange("wire")}
+                            className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                              activeTab === "wire"
+                                ? "bg-[#98012E] text-white"
+                                : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                            }`}
+                          >
+                            Wire
+                          </button>
+                          <button
+                            onClick={() => handleTabChange("ingots")}
+                            className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                              activeTab === "ingots"
+                                ? "bg-[#98012E] text-white"
+                                : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                            }`}
+                          >
+                            Ingots
+                          </button>
+                        </div>
+                        {/* Bottom Row - 3 buttons */}
+                        <div className="grid grid-cols-3 lg:grid-cols-1 gap-2 sm:gap-3 lg:gap-4">
+                          <button
+                            onClick={() => handleTabChange("section-profiles")}
+                            className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center leading-tight ${
+                              activeTab === "section-profiles"
+                                ? "bg-[#98012E] text-white"
+                                : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                            }`}
+                          >
+                            Section & Profiles
+                          </button>
+                          <button
+                            onClick={() => handleTabChange("billet")}
+                            className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                              activeTab === "billet"
+                                ? "bg-[#98012E] text-white"
+                                : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                            }`}
+                          >
+                            Billet
+                          </button>
+                          <button
+                            onClick={() => handleTabChange("hollow")}
+                            className={`px-3 xs:px-4 sm:px-5 md:px-6 lg:px-8 py-2.5 sm:py-3 md:py-3.5 rounded-full font-['DM_Sans'] font-medium text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[17px] transition-all duration-300 min-h-[44px] flex items-center justify-center text-center ${
+                              activeTab === "hollow"
+                                ? "bg-[#98012E] text-white"
+                                : "bg-white text-[#98012E] border-2 border-[#E5C4CC] hover:border-[#98012E]"
+                            }`}
+                          >
+                            Hollow
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    {/* Description */}
+                    <div className="mb-6 sm:mb-8 lg:mb-10">
+                      <p className="font-['Sansation'] text-[#7D7D7D] text-[16px] xs:text-[17px] sm:text-[17px] md:text-[18px] lg:text-[18px] leading-relaxed whitespace-pre-line">
+                        {currentProduct.description}
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Product Cards */}
+                <div className="flex-1 w-full">
+                  {currentProduct.products.length === 1 ? (
+                    // Single Product
+                    <div className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-4 sm:p-6 lg:p-8 bg-linear-to-b from-[#FFF5F7] to-white mb-8 sm:mb-12">
+                      <div className="flex flex-col md:flex-row gap-4 sm:gap-6 lg:gap-8 items-start">
+                        <div className="w-full md:w-[45%] overflow-hidden">
+                          <img
+                            src={currentProduct.products[0].image}
+                            alt={currentProduct.products[0].name}
+                            className="w-full h-auto object-contain"
+                          />
+                        </div>
+                        <div className="w-full md:w-[55%] flex flex-col justify-center">
+                          <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[22px] xs:text-[24px] sm:text-[26px] lg:text-[28px] xl:text-[32px] mb-4 sm:mb-6 lg:mb-8">
+                            {currentProduct.products[0].name}
+                          </h3>
+                          <div className="space-y-4 sm:space-y-5 lg:space-y-6">
+                            <div>
+                              <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] lg:text-[18px] mb-1.5 sm:mb-2">
+                                Metric Size
+                              </p>
+                              <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px]">
+                                {currentProduct.products[0].metricSize}
+                              </p>
+                            </div>
+                            <div>
+                              <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] lg:text-[18px] mb-1.5 sm:mb-2">
+                                Imperial Size
+                              </p>
+                              <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px] lg:text-[16px]">
+                                {currentProduct.products[0].imperialSize}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  ) : (
+                    // Multiple Products
+                    <div className="flex flex-col sm:flex-row gap-4 sm:gap-5 lg:gap-6 mb-8 sm:mb-12 w-full">
+                      {currentProduct.products.map((product, index) => (
+                        <div
+                          key={index}
+                          className="border-2 border-[#E5C4CC] rounded-xl sm:rounded-2xl p-3 sm:p-4 lg:p-5 bg-linear-to-b from-[#FFF5F7] to-white hover:shadow-lg transition-all duration-300 w-full sm:flex-1 min-w-0"
+                        >
+                          <div className={`mb-3 sm:mb-4 flex items-center justify-center ${activeTab === "hollow" ? "w-fit mx-auto" : "aspect-square rounded-lg sm:rounded-xl overflow-hidden w-full"}`}>
+                            <img
+                              src={product.image}
+                              alt={product.name}
+                              className={activeTab === "hollow" ? "h-auto max-w-full object-contain" : "w-full h-full object-cover"}
+                            />
+                          </div>
+                          <h3 className="font-['DM_Sans'] font-bold text-[#98012E] text-[20px] xs:text-[21px] sm:text-[22px] md:text-[24px] mb-3 sm:mb-4 text-center">
+                            {product.name}
+                          </h3>
+                          <div className="space-y-2.5 sm:space-y-3">
+                            <div>
+                              <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] mb-1.5">
+                                Metric Size
+                              </p>
+                              <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px]">
+                                {product.metricSize}
+                              </p>
+                            </div>
+                            <div>
+                              <p className="font-['DM_Sans'] font-bold text-[#98012E] text-[16px] xs:text-[17px] sm:text-[17px] mb-1.5">
+                                Imperial Size
+                              </p>
+                              <p className="font-['Sansation'] text-[#7D7D7D] text-[15px] xs:text-[16px] sm:text-[16px]">
+                                {product.imperialSize}
+                              </p>
+                            </div>
+                          </div>
+                        </div>
+                      ))}
+                    </div>
+                  )}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Applications Across Industries Section */}
+      <section className="relative w-full bg-white flex items-center justify-center py-8 sm:py-10 md:py-12 lg:py-16 overflow-hidden">
+        <div className="w-full px-4 sm:px-6 md:content-padding">
+          <div className="max-w-7xl mx-auto w-full">
+            <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[30px] xs:text-[34px] sm:text-[38px] md:text-[44px] lg:text-[48px] text-center mb-6 sm:mb-8 md:mb-10 lg:mb-12 leading-tight">
+              Applications Across Industries
+            </h2>
+            <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4 sm:gap-5 md:gap-6 lg:gap-6">
+              {currentProduct.industries.map((industryIndex, index) => {
+                const industry = industryData[industryIndex];
+                return (
+                  <div
+                    key={index}
+                    className="flex flex-col items-center justify-center text-center"
+                  >
+                    <div className="w-full aspect-square border border-[#E5C4CC] rounded-xl mb-3 sm:mb-4 flex items-center justify-center bg-white hover:shadow-lg transition-shadow duration-300">
+                      <img
+                        src={industry.image}
+                        alt={industry.name}
+                        className="w-full h-full object-contain p-2"
+                      />
+                    </div>
+                    <p className="font-['Sansation'] font-medium text-[14px] xs:text-[15px] sm:text-[16px] md:text-[17px]">
+                      {industry.name}
+                    </p>
+                  </div>
+                );
+              })}
+            </div>
+          </div>
+        </div>
+      </section>
+    </>
   );
 };
-
