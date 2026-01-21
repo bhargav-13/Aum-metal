@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import aboutHomeIcon from '../../assets/AboutHome.svg';
 
 export const AboutHome = () => {
   const [highlightedIndex, setHighlightedIndex] = useState<number>(0);
@@ -63,7 +62,7 @@ export const AboutHome = () => {
                   <div className="absolute inset-0 flex items-center justify-center pointer-events-none">
                     <div className="relative w-28 h-28 xs:w-32 xs:h-32 sm:w-36 sm:h-36 md:w-40 md:h-40 lg:w-44 lg:h-44">
                       <img
-                        src={aboutHomeIcon}
+                        src="/Group 9.svg"
                         alt=""
                         className={`w-full h-full object-contain transition-all duration-300 ${
                           isHighlighted

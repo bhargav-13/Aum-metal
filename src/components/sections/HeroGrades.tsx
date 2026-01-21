@@ -10,12 +10,10 @@ export const HeroGrades = () => {
         <div className="max-w-7xl mx-auto w-full text-center">
           {/* Tagline/Breadcrumb */}
           <div className="mb-8 sm:mb-12 lg:mb-16">
-            <div className="inline-block">
-              <div className="border-2 border-white/80 rounded-full px-5 xs:px-6 sm:px-8 md:px-10 lg:px-12 py-3 xs:py-3.5 sm:py-4 md:py-5">
-                <p className="font-['Sansation'] font-normal text-white text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] xl:text-[19px] leading-relaxed text-center">
-                  Manufactured to Meet Domestic and Global Standards
-                </p>
-              </div>
+            <div className="inline-flex w-auto max-w-[95vw] sm:max-w-[90vw] h-auto min-h-[42px] sm:min-h-[42px] md:min-h-[45px] rounded-[110px] border border-white/50 py-2.5 sm:py-2.5 px-5 sm:px-6 md:px-7 items-center justify-center gap-2 opacity-100 bg-white/10 backdrop-blur-sm">
+              <p className="text-white font-['Sansation'] font-normal text-[15px] xs:text-[16px] sm:text-[16px] md:text-[17px] lg:text-[18px] text-center">
+                Manufactured to Meet Domestic and Global Standards
+              </p>
             </div>
           </div>
 
