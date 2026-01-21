@@ -106,7 +106,7 @@ const GradeCard = ({ grade }: { grade: GradeItem }) => {
 
 export const GradesContent = () => {
   return (
-    <section className="w-full bg-white py-12 sm:py-16 md:py-20 lg:py-24">
+    <section className="w-full bg-white pt-0 pb-10 sm:pb-14 md:pb-18 lg:pb-20">
       <div className="content-padding">
         {/* Section Title */}
         <h2 className="text-[#98012E] font-['DM_Sans'] font-bold text-[20px] sm:text-[22px] md:text-[24px] mb-8 sm:mb-10 md:mb-12">

@@ -33,8 +33,8 @@ body {
 
 /* Content container: 200px padding from left and right */
 .content-padding {
-  padding-left: 200px;
-  padding-right: 200px;
+  padding-left: 125px;
+  padding-right: 125px;
 }
 
 /* Responsive: reduce padding on smaller screens */

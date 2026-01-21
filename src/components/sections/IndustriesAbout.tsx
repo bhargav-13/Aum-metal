@@ -24,7 +24,7 @@ export const IndustriesAbout = () => {
   ];
 
   return (
-    <section className="relative min-h-0 lg:min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
+    <section className="relative min-h-0 lg:min-h-screen w-full flex items-center justify-center pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden">
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto w-full">
         {/* Heading */}

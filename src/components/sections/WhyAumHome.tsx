@@ -49,7 +49,7 @@ export const WhyAumHome = () => {
   return (
     <section
       id="why-aum-home"
-      className="min-h-0 lg:min-h-screen w-full flex items-center justify-center bg-white py-12 sm:py-16 md:py-20 lg:py-24"
+      className="min-h-0 lg:min-h-screen w-full flex items-center justify-center bg-white pt-6 sm:pt-8 md:pt-10 lg:pt-12 pb-12 sm:pb-16 md:pb-20 lg:pb-24"
     >
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto w-full">

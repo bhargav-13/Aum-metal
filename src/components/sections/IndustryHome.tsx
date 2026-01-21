@@ -43,7 +43,7 @@ export const IndustryHome = () => {
   return (
     <section
       id="industry-home"
-      className="relative min-h-0 lg:min-h-screen w-full flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden bg-white"
+      className="relative min-h-0 lg:min-h-screen w-full flex items-center justify-center pt-12 sm:pt-16 md:pt-20 lg:pt-24 pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden bg-white"
     >
       {/* Background Image */}
       <div className="absolute inset-0 z-0 flex items-center left-0 top-0 bottom-0">

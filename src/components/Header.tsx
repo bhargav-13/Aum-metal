@@ -16,12 +16,12 @@ export const Header = () => {
   return (
     <header className="bg-[#98012E] text-white w-full pt-4">
       <nav className="content-padding pt-4">
-        <div className="flex items-center justify-between">
+        <div className="flex items-center justify-between gap-5 md:gap-[50px] lg:gap-[100px] xl:gap-[150px] 2xl:gap-[200px]">
 
           {/* Logo */}
           <Link
             to="/"
-            className="flex items-center gap-2 hover:opacity-80 transition-opacity"
+            className="flex items-center gap-2 hover:opacity-80 transition-opacity mr-5 md:mr-[50px] lg:mr-[100px] xl:mr-[150px] 2xl:mr-[200px]"
           >
             <img 
               src={logoImg} 

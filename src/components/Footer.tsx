@@ -135,7 +135,7 @@ export const Footer = () => {
                 <li>
                   <a
                     href="mailto:aummetalalloy@gmail.com"
-                    className="font-['Sansation'] font-normal text-[#A05370] text-[14px] sm:text-[14px] lg:text-[14px] hover:text-[#98012E] transition-colors duration-200 whitespace-nowrap"
+                    className="font-['Sansation'] font-normal text-[#A05370] text-[14px] sm:text-[14px] lg:text-[14px] hover:text-[#98012E] transition-colors duration-200 break-all"
                   >
                     aummetalalloy@gmail.com
                   </a>

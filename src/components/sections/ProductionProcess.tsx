@@ -53,7 +53,7 @@ export const ProductionProcess = () => {
             {processes.map((process) => (
               <div
                 key={process.step}
-                className="flex flex-col items-center justify-center w-full h-full p-2 sm:p-3 md:p-4 lg:p-5"
+                className="flex flex-col items-center justify-center w-full h-full py-2 pl-2 pr-0 sm:py-3 sm:pl-3 sm:pr-0 md:py-4 md:pl-4 md:pr-0 lg:py-5 lg:pl-5 lg:pr-0"
               >
                 {/* Step Number and Icon Container - Aligned */}
                 <div className="relative w-full flex items-start justify-center mb-1 sm:mb-1.5">

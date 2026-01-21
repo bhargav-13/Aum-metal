@@ -2,7 +2,7 @@ import ourProfileImg from '../../assets/AboutPage/Our Profile.png';
 
 export const AboutProfile = () => {
   return (
-    <section className="relative min-h-0  w-full flex items-center justify-center bg-white pb-12 sm:pb-16 md:pb-20 lg:pb-24 overflow-hidden">
+    <section className="relative min-h-0  w-full flex items-center justify-center bg-white pb-6 sm:pb-8 md:pb-10 lg:pb-12 overflow-hidden">
       <div className="w-full px-4 sm:px-6 md:content-padding">
         <div className="max-w-7xl mx-auto">
           <div className="flex flex-col lg:grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
