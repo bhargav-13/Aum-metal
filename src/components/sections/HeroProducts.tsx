@@ -17,6 +17,9 @@ import constructionImg from "../../assets/AboutPage/Construction.png";
 import roundhollowImg from "../../assets/product/RoundHello.png";
 import hexagonhollowImg from "../../assets/product/HexagonHello.png";
 import squarehollowImg from "../../assets/product/SquareHello.png";
+import bbimage from "../../assets/product/Brass Billet.png";
+import bpi from "../../assets/product/Brass Product Ingot.png";
+import spimage from "../../assets/product/Section & Profile .png";
 
 export const HeroProducts = () => {
   const [searchParams, setSearchParams] = useSearchParams();
@@ -141,7 +144,7 @@ We offer brass ingots in standard and customized sizes as per customer specifica
       products: [
         {
           name: "Brass Ingots (Square)",
-          image: brassIngotsImg,
+          image: bpi,
           metricSize: "A/F 73 mm",
           imperialSize: "A/F 2.87 (2 7I/8) Inches",
         },
@@ -158,7 +161,7 @@ We produce brass sections and profiles in standard and custom lengths, with cutt
       products: [
         {
           name: "Section & Profile",
-          image: brassBilletsImg,
+          image: spimage,
           metricSize: "Circumscribed Dia 2.5 to 80 mm",
           imperialSize: "Circumscribed Dia 0.10 (3/32) to 3.15 (3 5/32)",
         },
@@ -175,7 +178,7 @@ We manufacture brass billets in standard and customized lengths, with cutting op
       products: [
         {
           name: "Brass Billet",
-          image: brassBilletsImg,
+          image: bbimage,
           metricSize: "Dia 100, 104, 125 and 175",
           imperialSize: "Dia 3.93 (3 15/16), 5 and 6.89 (6 7/8)",
         },
