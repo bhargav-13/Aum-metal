@@ -17,7 +17,8 @@ export const TeamAbout = () => {
 
   return (
     <section className="relative min-h-0 lg:min-h-screen w-full bg-white flex items-center justify-center py-12 sm:py-16 md:py-20 lg:py-24 overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 md:px-12 w-full">
+      <div className="w-full px-4 sm:px-6 md:content-padding">
+        <div className="max-w-7xl mx-auto w-full">
         {/* Heading */}
         <div className="text-center mb-12">
           <h2 className="font-['DM_Sans'] font-black text-[#98012E] text-[32px] xs:text-[36px] sm:text-[40px] md:text-[48px] lg:text-[56px] mb-4 leading-tight">
@@ -49,6 +50,7 @@ export const TeamAbout = () => {
               </p>
             </div>
           ))}
+        </div>
         </div>
       </div>
     </section>
