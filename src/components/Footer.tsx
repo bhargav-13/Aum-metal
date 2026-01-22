@@ -1,6 +1,5 @@
 import { Link } from 'react-router-dom';
 import vectorFooterImg from "../assets/Vector footer.svg";
-import logoImg from "../assets/logofooter.png";
 
 export const Footer = () => {
   return (
@@ -26,7 +25,7 @@ export const Footer = () => {
               <meta itemProp="url" content="https://aummetalalloys.com" />
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-2 sm:mb-3">
                 <img
-                  src={logoImg}
+                  src="/Frame 196.svg"
                   alt="Aum Metal Alloys - Brass Manufacturer Logo"
                   itemProp="logo"
                   className="h-8 sm:h-10 md:h-12 w-auto object-contain"
@@ -179,7 +178,7 @@ export const Footer = () => {
       {/* Large Background Text - Centered and At Bottom */}
       <div className="w-full flex justify-center items-end pb-0 overflow-hidden" aria-hidden="true">
         <div className="max-w-[95%] lg:max-w-[90%] w-full">
-          <p className="font-['DM_Sans'] font-black text-[24px] xs:text-[32px] sm:text-[48px] md:text-[64px] lg:text-[80px] xl:text-[100px] 2xl:text-[120px] opacity-50 text-center leading-none text-[#B8124A] translate-y-[20%] tracking-[5px] xs:tracking-[6px] sm:tracking-[8px] md:tracking-[12px] lg:tracking-[20px] xl:tracking-[20px] 2xl:tracking-[20px]">
+          <p className="font-['DM_Sans'] font-black text-[20px] xs:text-[24px] sm:text-[36px] md:text-[48px] lg:text-[64px] xl:text-[80px] 2xl:text-[100px] opacity-50 text-center leading-none text-[#B8124A] translate-y-[20%] tracking-[3px] xs:tracking-[4px] sm:tracking-[6px] md:tracking-[8px] lg:tracking-[12px] xl:tracking-[16px] 2xl:tracking-[18px] whitespace-nowrap overflow-hidden">
               AUM METAL ALLOYS
           </p>
       </div>

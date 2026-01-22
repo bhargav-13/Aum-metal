@@ -20,14 +20,14 @@ export const CapabilitiesHome = () => {
       title: "Dimensional Accuracy",
       subtitle: "Advanced Processes for Precision Brass Production",
       description:
-        "Engineered brass compositions maintained through controlled melting and casting for consistent strength and machinability.",
+        "Our products are manufactured to meet global dimensional standards, ensuring accurate measurements, tight tolerances, and compatibility with international engineering requirements.",
       image: dimensionalAccuracyImg,
     },
     {
       title: "Consistent Production",
       subtitle: "Advanced Processes for Precision Brass Production",
       description:
-        "Repeatable manufacturing processes deliver uniform quality across batches, supporting long-term and bulk requirements.",
+        "Tight tolerances and uniform profiles across rods, bars, and billets ensure reliable performance in every application.",
       image: consistentProductionImg,
     },
     {
