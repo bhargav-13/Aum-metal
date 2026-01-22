@@ -49,7 +49,7 @@ export const ProductionProcess = () => {
 
         {/* Process Grid */}
         <div className="w-full">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-0 justify-items-center items-center w-full">
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 gap-0 justify-items-center items-center w-full ml-5 sm:ml-14 md:ml-16 lg:ml-20 xl:ml-12">
             {processes.map((process) => (
               <div
                 key={process.step}
