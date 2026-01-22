@@ -81,7 +81,7 @@ export const ContactContent = () => {
   };
 
   return (
-    <section className="w-full bg-white py-10 sm:py-12 md:py-16">
+    <section className="w-full bg-white pt-4 sm:pt-6 md:pt-8 pb-10 sm:pb-12 md:pb-16">
       <div className="content-padding">
         <div className="flex flex-col gap-8 sm:gap-10 md:gap-12">
 

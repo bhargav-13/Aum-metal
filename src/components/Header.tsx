@@ -1,6 +1,5 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import logoImg from '../assets/logo.png'
 
 export const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,7 +23,7 @@ export const Header = () => {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity mr-5 md:mr-[50px] lg:mr-[100px] xl:mr-[150px] 2xl:mr-[200px]"
           >
             <img 
-              src={logoImg} 
+              src="/Frame 195.svg" 
               alt="AUM METAL ALLOY Logo" 
               className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
             />
