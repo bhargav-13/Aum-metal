@@ -17,21 +17,21 @@ export const TestimonialsHome = () => {
 
   const testimonials = [
     {
-      name: "Ankit Mungra",
+      name: "Snehal Gohil",
       role: "Procurement Head",
-      company: "Parmeshwari Brass",
+      company: "Shivam brass etch pvt ltd",
       quote: "Aum Metal Alloys consistently delivers high-quality brass rods and billets with precise dimensions. Their reliability and process discipline make them a trusted supplier for our production requirements.",
     },
     {
-      name: "Rajesh Kumar",
+      name: "Sachin Sojitra",
       role: "Production Manager",
-      company: "Precision Manufacturing Co.",
+      company: "Apollo turnomatic LLP",
       quote: "Excellent quality and on-time delivery. Aum Metal Alloys has been our preferred supplier for brass materials. Their products meet our exact specifications every time.",
     },
     {
-      name: "Priya Sharma",
+      name: "Ravipal Singh",
       role: "Quality Assurance Lead",
-      company: "Industrial Solutions Ltd.",
+      company: "Ranjit Industries",
       quote: "The consistency in quality and dimensional accuracy of their brass rods is outstanding. We've been working with Aum Metal Alloys for years and they never disappoint.",
     },
   ];

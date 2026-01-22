@@ -1,9 +1,9 @@
 import { useState } from "react";
-import precisionAlloyImg from "../../assets/Precision Alloy Control.png";
-import dimensionalAccuracyImg from "../../assets/Dimensional Accuracy.png";
-import consistentProductionImg from "../../assets/Consistent Production.png";
-import customManufacturingImg from "../../assets/Custom Manufacturing.png";
-import industrialReliabilityImg from "../../assets/Industrial Reliability.png";
+import precisionAlloyImg from "../../assets/cap1.png";
+import dimensionalAccuracyImg from "../../assets/cap2.png";
+import consistentProductionImg from "../../assets/cap3.png";
+import customManufacturingImg from "../../assets/cap4.png";
+import industrialReliabilityImg from "../../assets/cap5.png";
 
 export const CapabilitiesHome = () => {
   const [activeTab, setActiveTab] = useState(0);
@@ -27,7 +27,7 @@ export const CapabilitiesHome = () => {
       title: "Consistent Production",
       subtitle: "Advanced Processes for Precision Brass Production",
       description:
-        "Repeatable manufacturing processes deliver uniform quality across batches, supporting long-term and bulk requirements.",
+        "Tight tolerances and uniform profiles across rods, bars, and billets ensure reliable performance in every application.",
       image: consistentProductionImg,
     },
     {
