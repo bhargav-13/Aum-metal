@@ -148,7 +148,7 @@ export const ContactContent = () => {
 
               {/* Address Card - Full width on mobile, normal on desktop */}
               <a
-                href="https://maps.google.com/?q=Plot+No+3640+Phase+III+Dared+Jamnagar"
+                href="https://maps.app.goo.gl/u4TSPW37bucxotxy9"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="col-span-2 sm:col-span-1 bg-[#FFFBFC] border border-[#98012E] rounded-[12px] sm:rounded-[16px] px-4 sm:px-5 py-4 sm:py-5 flex flex-col items-center justify-center gap-2 sm:gap-3 hover:shadow-md transition-shadow"
@@ -272,7 +272,7 @@ export const ContactContent = () => {
             </h2>
             <div className="w-full h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] rounded-[12px] sm:rounded-[16px] border border-[#98012E] overflow-hidden">
               <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3691.5!2d70.0!3d22.47!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjLCsDI4JzEyLjAiTiA3MMKwMDAnMDAuMCJF!5e0!3m2!1sen!2sin!4v1234567890"
+                src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3688.2806359493547!2d70.04350657529595!3d22.418460779601837!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMjLCsDI1JzA2LjUiTiA3MMKwMDInNDUuOSJF!5e0!3m2!1sen!2sin!4v1769069016300!5m2!1sen!2sin"
                 width="100%"
                 height="100%"
                 style={{ border: 0 }}
