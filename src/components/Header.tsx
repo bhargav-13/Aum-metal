@@ -15,7 +15,8 @@ export const Header = () => {
   return (
     <header className="bg-[#98012E] text-white w-full pt-4" itemScope itemType="https://schema.org/WPHeader">
       <nav className="content-padding pt-4" aria-label="Main navigation" itemScope itemType="https://schema.org/SiteNavigationElement">
-        <div className="flex items-center justify-between gap-5 md:gap-[50px] lg:gap-[100px] xl:gap-[150px] 2xl:gap-[200px]">
+        <div className="bg-[#C8778F] border border-[#FCB0C7] rounded-[30px] px-8 py-2 md:px-14 md:py-3">
+          <div className="flex items-center justify-between gap-5 md:gap-[50px] lg:gap-[100px] xl:gap-[150px] 2xl:gap-[200px]">
 
           {/* Logo */}
           <Link
@@ -25,9 +26,9 @@ export const Header = () => {
             itemProp="url"
           >
             <img
-              src="/Frame 195.svg"
+              src="/Frame 194.svg"
               alt="Aum Metal Alloys - Brass Manufacturer India"
-              className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+              className="h-7 sm:h-7 md:h-10 lg:h-12 w-auto object-contain"
               itemProp="logo"
             />
           </Link>
@@ -86,43 +87,44 @@ export const Header = () => {
               aria-hidden="true"
             />
           </button>
-        </div>
+          </div>
 
-        {/* Mobile Menu */}
-        <div
-          id="mobile-menu"
-          className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${
-            isMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
-          }`}
-          aria-hidden={isMenuOpen ? "false" : "true"}
-        >
-          <ul className="flex flex-col gap-4 pb-4" role="menu">
-            {navItems.map(item => (
-              <li key={item.href} role="none">
-                {item.isRoute ? (
-                  <Link
-                    to={item.href}
+          {/* Mobile Menu */}
+          <div
+            id="mobile-menu"
+            className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${
+              isMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
+            }`}
+            aria-hidden={isMenuOpen ? "false" : "true"}
+          >
+            <ul className="flex flex-col gap-4 pb-4" role="menu">
+              {navItems.map(item => (
+                <li key={item.href} role="none">
+                  {item.isRoute ? (
+                    <Link
+                      to={item.href}
+                      onClick={() => setIsMenuOpen(false)}
+                      className="block transition-opacity hover:opacity-80"
+                      role="menuitem"
+                      tabIndex={isMenuOpen ? 0 : -1}
+                    >
+                      {item.label}
+                    </Link>
+                  ) : (
+                  <a
+                    href={item.href}
                     onClick={() => setIsMenuOpen(false)}
                     className="block transition-opacity hover:opacity-80"
                     role="menuitem"
                     tabIndex={isMenuOpen ? 0 : -1}
                   >
                     {item.label}
-                  </Link>
-                ) : (
-                <a
-                  href={item.href}
-                  onClick={() => setIsMenuOpen(false)}
-                  className="block transition-opacity hover:opacity-80"
-                  role="menuitem"
-                  tabIndex={isMenuOpen ? 0 : -1}
-                >
-                  {item.label}
-                </a>
-                )}
-              </li>
-            ))}
-          </ul>
+                  </a>
+                  )}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
 
       </nav>

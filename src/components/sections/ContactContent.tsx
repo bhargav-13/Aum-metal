@@ -142,7 +142,7 @@ export const ContactContent = () => {
                   GSTIN
                 </span>
                 <span className="font-['Sansation'] font-normal text-[#878787] text-[12px] sm:text-[14px] md:text-[15px]">
-                  07AAECR2971C1Z
+                  24ACGFA5333C1ZY
                 </span>
               </div>
 
