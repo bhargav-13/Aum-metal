@@ -11,14 +11,15 @@ export const About = () => {
   return (
     <>
       <SEO
-        title="About Us - AUM Metal Alloys | Brass Manufacturing Excellence"
-        description="Learn about AUM Metal Alloys - our company profile, manufacturing capabilities, production process, team, and commitment to delivering precision brass products with consistent quality and reliable performance."
-        keywords="about AUM Metal Alloys, brass manufacturer profile, brass production process, brass manufacturing capabilities, brass company team, brass quality control"
-        ogTitle="About Us - AUM Metal Alloys | Brass Manufacturing Excellence"
-        ogDescription="Discover AUM Metal Alloys - our manufacturing capabilities, production process, and commitment to precision brass products."
+        title="About Aum Metal Alloys | Leading Brass Manufacturer in Jamnagar, Gujarat, India"
+        description="Learn about Aum Metal Alloys - India's trusted brass manufacturer since 2010. Discover our state-of-the-art manufacturing facility in Jamnagar, Gujarat, our production process, quality control systems, and expert team. We specialize in brass rods, ingots, billets, wires & hollow products for global industries."
+        keywords="about Aum Metal Alloys, Aum Metal company profile, brass manufacturer Jamnagar, brass factory Gujarat, brass production process India, brass manufacturing capabilities, brass company team, brass quality control, brass industry leaders, brass exporter India, precision brass manufacturer, industrial brass supplier, Mr Rajesh Patel, Mr Aum Patel, brass melting, billet casting, hot extrusion, cold drawing, heat treatment brass"
+        ogTitle="About Aum Metal Alloys | Leading Brass Manufacturer in Gujarat, India"
+        ogDescription="Discover Aum Metal Alloys - India's trusted brass manufacturer. State-of-the-art facility in Jamnagar, Gujarat with expertise in brass rods, ingots, billets, wires & hollow products."
+        canonicalUrl="/about"
+        pageType="website"
       />
       <HeroAbout />
-      {/* <CapabilitiesAbout /> */}
       <AboutProfile />
       <ProductsAbout />
       <TeamAbout />
@@ -28,4 +29,3 @@ export const About = () => {
     </>
   )
 }
-

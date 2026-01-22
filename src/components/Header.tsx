@@ -13,39 +13,46 @@ export const Header = () => {
   ]
 
   return (
-    <header className="bg-[#98012E] text-white w-full pt-4">
-      <nav className="content-padding pt-4">
+    <header className="bg-[#98012E] text-white w-full pt-4" itemScope itemType="https://schema.org/WPHeader">
+      <nav className="content-padding pt-4" aria-label="Main navigation" itemScope itemType="https://schema.org/SiteNavigationElement">
         <div className="flex items-center justify-between gap-5 md:gap-[50px] lg:gap-[100px] xl:gap-[150px] 2xl:gap-[200px]">
 
           {/* Logo */}
           <Link
             to="/"
             className="flex items-center gap-2 hover:opacity-80 transition-opacity mr-5 md:mr-[50px] lg:mr-[100px] xl:mr-[150px] 2xl:mr-[200px]"
+            aria-label="Aum Metal Alloys - Home"
+            itemProp="url"
           >
-            <img 
-              src="/Frame 195.svg" 
-              alt="AUM METAL ALLOY Logo" 
+            <img
+              src="/Frame 195.svg"
+              alt="Aum Metal Alloys - Brass Manufacturer India"
               className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
+              itemProp="logo"
             />
           </Link>
 
           {/* Desktop Nav */}
-          <ul className="hidden md:flex items-center gap-6 lg:gap-8">
+          <ul className="hidden md:flex items-center gap-6 lg:gap-8" role="menubar">
             {navItems.map(item => (
-              <li key={item.href}>
+              <li key={item.href} role="none">
                 {item.isRoute ? (
                   <Link
                     to={item.href}
                     className="transition-opacity hover:opacity-80"
+                    role="menuitem"
+                    itemProp="url"
                   >
-                    {item.label}
+                    <span itemProp="name">{item.label}</span>
                   </Link>
                 ) : (
                 <a
                   href={item.href}
                   className="transition-opacity hover:opacity-80"
+                  role="menuitem"
+                  itemProp="url"
                 >
-                  {item.label}
+                  <span itemProp="name">{item.label}</span>
                 </a>
                 )}
               </li>
@@ -55,41 +62,50 @@ export const Header = () => {
           {/* Mobile Button */}
           <button
             className="md:hidden flex flex-col gap-1.5"
-            aria-label="Toggle menu"
+            aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+            aria-expanded={isMenuOpen ? "true" : "false"}
+            aria-controls="mobile-menu"
             onClick={() => setIsMenuOpen(v => !v)}
           >
             <span
               className={`w-6 h-0.5 bg-white transition-transform duration-300 ${
                 isMenuOpen ? 'rotate-45 translate-y-2' : ''
               }`}
+              aria-hidden="true"
             />
             <span
               className={`w-6 h-0.5 bg-white transition-opacity duration-300 ${
                 isMenuOpen ? 'opacity-0' : ''
               }`}
+              aria-hidden="true"
             />
             <span
               className={`w-6 h-0.5 bg-white transition-transform duration-300 ${
                 isMenuOpen ? '-rotate-45 -translate-y-2' : ''
               }`}
+              aria-hidden="true"
             />
           </button>
         </div>
 
         {/* Mobile Menu */}
         <div
+          id="mobile-menu"
           className={`md:hidden overflow-hidden transition-[max-height] duration-300 ${
             isMenuOpen ? 'max-h-96 mt-4' : 'max-h-0'
           }`}
+          aria-hidden={isMenuOpen ? "false" : "true"}
         >
-          <ul className="flex flex-col gap-4 pb-4">
+          <ul className="flex flex-col gap-4 pb-4" role="menu">
             {navItems.map(item => (
-              <li key={item.href}>
+              <li key={item.href} role="none">
                 {item.isRoute ? (
                   <Link
                     to={item.href}
                     onClick={() => setIsMenuOpen(false)}
                     className="block transition-opacity hover:opacity-80"
+                    role="menuitem"
+                    tabIndex={isMenuOpen ? 0 : -1}
                   >
                     {item.label}
                   </Link>
@@ -98,6 +114,8 @@ export const Header = () => {
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
                   className="block transition-opacity hover:opacity-80"
+                  role="menuitem"
+                  tabIndex={isMenuOpen ? 0 : -1}
                 >
                   {item.label}
                 </a>

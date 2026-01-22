@@ -1,0 +1,21 @@
+{
+  "name": "AUM Metal Alloys - Precision Brass Products Manufacturer & Exporter",
+  "short_name": "AUM Metal",
+  "description": "Leading manufacturer and exporter of precision brass rods, ingots, billets, wires, and hollow products. High-quality brass materials for automotive, plumbing, electrical, and industrial applications.",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#B8860B",
+  "orientation": "portrait-primary",
+  "scope": "/",
+  "lang": "en",
+  "categories": ["business", "manufacturing", "industrial"],
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ]
+}

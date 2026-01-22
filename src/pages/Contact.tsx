@@ -6,11 +6,13 @@ export const Contact = () => {
   return (
     <>
       <SEO
-        title="Contact Us - AUM Metal Alloys | Get in Touch"
-        description="Contact AUM Metal Alloys for inquiries about our brass products, custom manufacturing, pricing, and export services. Our team is ready to assist with your brass material requirements."
-        keywords="contact AUM Metal Alloys, brass product inquiry, brass manufacturer contact, brass export inquiry, custom brass manufacturing"
-        ogTitle="Contact Us - AUM Metal Alloys | Get in Touch"
-        ogDescription="Get in touch with AUM Metal Alloys for brass product inquiries, custom manufacturing, and export services."
+        title="Contact Aum Metal Alloys | Brass Manufacturer Inquiry - Jamnagar, Gujarat, India"
+        description="Contact Aum Metal Alloys for brass product inquiries, custom manufacturing quotes, and export services. Phone: +91 92650 39240 | Email: aummetalalloy@gmail.com | Location: Jamnagar, Gujarat, India. Get in touch for brass rods, ingots, billets, wires & hollow products."
+        keywords="contact Aum Metal Alloys, Aum Metal phone number, brass product inquiry, brass manufacturer contact India, brass export inquiry, custom brass manufacturing quote, brass supplier Jamnagar, brass company Gujarat, +91 92650 39240, aummetalalloy@gmail.com, brass factory address, brass dealer contact, bulk brass order, brass price inquiry"
+        ogTitle="Contact Aum Metal Alloys | Brass Manufacturer Inquiry"
+        ogDescription="Get in touch with Aum Metal Alloys for brass product inquiries, quotes, and export services. Phone: +91 92650 39240 | Email: aummetalalloy@gmail.com | Jamnagar, Gujarat, India"
+        canonicalUrl="/contact"
+        pageType="website"
       />
       <HeroContact />
       <ContactContent />
