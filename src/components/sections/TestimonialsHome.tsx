@@ -4,8 +4,10 @@ import trustRightHomeImgMobile from "../../assets/TrustRightHomeMobile.png";
 import trustedHomeImg from "../../assets/trustedHome.png";
 import vectorFooterImg from "../../assets/Vector footer.svg";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 export const TestimonialsHome = () => {
+  const navigate = useNavigate();
   const [isMobile, setIsMobile] = useState(() => {
     if (typeof window !== "undefined") {
       return window.innerWidth < 768;
@@ -18,21 +20,27 @@ export const TestimonialsHome = () => {
   const testimonials = [
     {
       name: "Snehal Gohil",
-      role: "Procurement Head",
+      role: "Managing Director",
       company: "Shivam brass etch pvt ltd",
       quote: "Aum Metal Alloys consistently delivers high-quality brass rods and billets with precise dimensions. Their reliability and process discipline make them a trusted supplier for our production requirements.",
     },
     {
       name: "Sachin Sojitra",
-      role: "Production Manager",
+      role: "Managing Director",
       company: "Apollo turnomatic LLP",
       quote: "Excellent quality and on-time delivery. Aum Metal Alloys has been our preferred supplier for brass materials. Their products meet our exact specifications every time.",
     },
     {
       name: "Ravipal Singh",
-      role: "Quality Assurance Lead",
+      role: "Managing Director",
       company: "Ranjit Industries",
       quote: "The consistency in quality and dimensional accuracy of their brass rods is outstanding. We've been working with Aum Metal Alloys for years and they never disappoint.",
+    },
+    {
+      name: "Ashish bhai",
+      role: "Managing Director",
+      company: "Ashish brass components",
+      quote: "Aum Metal Alloys stands out for their exceptional customer service and technical support. Their team understands our requirements and delivers customized brass solutions that perfectly match our production needs.",
     },
   ];
 
@@ -92,7 +100,19 @@ export const TestimonialsHome = () => {
 
               {/* CTA Button */}
               <div className="relative z-20">
-                <CTAButton text="Contact now" />
+                <CTAButton 
+                  text="Contact now" 
+                  onClick={() => {
+                    navigate('/contact');
+                    // Scroll to contact form after navigation
+                    setTimeout(() => {
+                      const contactForm = document.getElementById('contact-form');
+                      if (contactForm) {
+                        contactForm.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }, 100);
+                  }}
+                />
               </div>
             </div>
           </div>

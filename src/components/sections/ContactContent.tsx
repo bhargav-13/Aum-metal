@@ -167,7 +167,7 @@ export const ContactContent = () => {
           </div>
 
           {/* Get In Touch Form Section */}
-          <div className="flex flex-col gap-3 sm:gap-4">
+          <div id="contact-form" className="flex flex-col gap-3 sm:gap-4">
             <h2 className="text-[#98012E] font-['Sansation'] font-normal text-[18px] sm:text-[20px] md:text-[22px] tracking-[0.01em]">
               Get In Touch
             </h2>

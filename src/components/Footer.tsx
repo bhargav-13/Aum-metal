@@ -25,7 +25,7 @@ export const Footer = () => {
               <meta itemProp="url" content="https://aummetalalloys.com" />
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-2 sm:mb-3">
                 <img
-                  src="/Frame 194.svg"
+                  src="/Frame 194 (2).svg"
                   alt="Aum Metal Alloys - Brass Manufacturer Logo"
                   itemProp="logo"
                   className="h-8 sm:h-10 md:h-12 w-auto object-contain"

@@ -1,7 +1,9 @@
 import { CTAButton } from "../CTAButton";
 import productHomeRightImg from "../../assets/ProductHomeRight.png";
+import { useNavigate } from "react-router-dom";
 
 export const ProductHome = () => {
+  const navigate = useNavigate();
   return (
     <section
       id="product-home"
@@ -38,7 +40,18 @@ export const ProductHome = () => {
 
               {/* CTA Button */}
               <div>
-                <CTAButton />
+                <CTAButton 
+                  onClick={() => {
+                    navigate('/products');
+                    // Scroll to brass product range section after navigation
+                    setTimeout(() => {
+                      const productRange = document.getElementById('brass-product-range');
+                      if (productRange) {
+                        productRange.scrollIntoView({ behavior: 'smooth', block: 'start' });
+                      }
+                    }, 100);
+                  }}
+                />
               </div>
             </div>
 

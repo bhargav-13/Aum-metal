@@ -1,7 +1,9 @@
 import { CTAButton } from "../CTAButton";
 import heroHomeLeftImg from "../../assets/HeroHomeLeft.png";
+import { useNavigate } from "react-router-dom";
 
 export const HeroHome = () => {
+  const navigate = useNavigate();
   return (
     <section 
       id="hero-home" 
@@ -96,7 +98,18 @@ export const HeroHome = () => {
         </p>
 
         {/* CTA Button */}
-        <CTAButton />
+        <CTAButton 
+          onClick={() => {
+            navigate('/about');
+            // Scroll to precision brass products section after navigation
+            setTimeout(() => {
+              const productsSection = document.getElementById('precision-brass-products');
+              if (productsSection) {
+                productsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }
+            }, 100);
+          }}
+        />
       </div>
     </section>
   );
