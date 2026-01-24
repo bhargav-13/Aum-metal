@@ -37,7 +37,7 @@ export const TestimonialsHome = () => {
       quote: "The consistency in quality and dimensional accuracy of their brass rods is outstanding. We've been working with Aum Metal Alloys for years and they never disappoint.",
     },
     {
-      name: "Ashish bhai",
+      name: "Ashish Sharma",
       role: "Managing Director",
       company: "Ashish brass components",
       quote: "Aum Metal Alloys stands out for their exceptional customer service and technical support. Their team understands our requirements and delivers customized brass solutions that perfectly match our production needs.",

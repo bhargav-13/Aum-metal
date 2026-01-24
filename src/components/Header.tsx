@@ -26,7 +26,7 @@ export const Header = () => {
             itemProp="url"
           >
             <img
-              src="/Frame 194 (2).svg"
+              src="/Frame 194 (3).svg"
               alt="Aum Metal Alloys - Brass Manufacturer India"
               className="h-7 sm:h-7 md:h-10 lg:h-12 w-auto object-contain"
               itemProp="logo"
