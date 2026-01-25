@@ -75,7 +75,7 @@ export const Footer = () => {
                   { label: 'Brass Rods', product: 'brass-road' },
                   { label: 'Brass Bars', product: 'ingots' },
                   { label: 'Brass Billets', product: 'billet' },
-                  { label: 'Hexagon Rods', product: 'brass-road' },
+                  { label: 'Section & Profiles', product: 'section-profiles' },
                   { label: 'Brass Hollow', product: 'hollow' },
                 ].map((item) => (
                   <li key={item.label}>
