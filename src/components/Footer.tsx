@@ -1,10 +1,31 @@
 import { Link } from 'react-router-dom';
 import vectorFooterImg from "../assets/Vector footer.svg";
-import logoImg from "../assets/logofooter.png";
 
 export const Footer = () => {
   return (
-    <footer className="bg-[#98012E] pt-12 overflow-hidden relative pb-0">
+    <footer className="bg-[#
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+98012E] pt-12 overflow-hidden relative pb-0">
       {/* Footer Content Card */}
       <div className="z-10 max-w-[95%] lg:max-w-[90%] mx-auto mb-6">
         <div className="bg-[#FFF5F7] rounded-[30px] px-6 sm:px-8 md:px-12 lg:px-16 pt-10 pb-8 relative overflow-hidden">
@@ -23,7 +44,7 @@ export const Footer = () => {
             <div className="w-full text-center lg:text-left">
               <div className="flex items-center justify-center lg:justify-start gap-2 mb-2 sm:mb-3">
                 <img 
-                  src={logoImg} 
+                  src="/Frame 196.svg" 
                   alt="AUM Metal Alloy Logo" 
                   className="h-8 sm:h-10 md:h-12 w-auto object-contain"
                 />

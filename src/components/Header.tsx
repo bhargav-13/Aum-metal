@@ -15,7 +15,7 @@ export const Header = () => {
   return (
     <header className="bg-[#98012E] text-white w-full pt-4">
       <nav className="content-padding pt-4">
-        <div className="flex items-center justify-between gap-5 md:gap-[50px] lg:gap-[100px] xl:gap-[150px] 2xl:gap-[200px]">
+        <div className="flex items-center justify-between gap-5 md:gap-[50px] lg:gap-[100px] xl:gap-[150px] 2xl:gap-[200px] bg-[#CA7A92] border border-[#FCB0C7] rounded-[30px] px-6 sm:px-8 md:px-10 lg:px-12 py-2 sm:py-2.5">
 
           {/* Logo */}
           <Link
@@ -23,7 +23,7 @@ export const Header = () => {
             className="flex items-center gap-2 hover:opacity-80 transition-opacity mr-5 md:mr-[50px] lg:mr-[100px] xl:mr-[150px] 2xl:mr-[200px]"
           >
             <img 
-              src="/Frame 195.svg" 
+              src="/Frame 194.svg" 
               alt="AUM METAL ALLOY Logo" 
               className="h-8 sm:h-10 md:h-12 lg:h-14 w-auto object-contain"
             />
